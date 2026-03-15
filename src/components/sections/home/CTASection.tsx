@@ -1,31 +1,47 @@
-import { Section } from '@/components/ui/Section';
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { homepage } from '@/lib/content';
 
-export function CTASection() {
-  const { cta } = homepage;
+interface CTASectionProps {
+  heading?: string;
+  subtitle?: string;
+  button?: string;
+}
 
+export function CTASection({
+  heading = homepage.cta.heading,
+  subtitle = homepage.cta.subtitle,
+  button = homepage.cta.button,
+}: CTASectionProps) {
   return (
-    <Section variant="light" className="py-20 md:py-32">
-      <Container>
+    <section className="relative overflow-hidden py-20 md:py-32">
+      <Image
+        src="/images/Banner fabriek pallets.jpeg"
+        alt="Stretch film wrapped pallets in factory"
+        fill
+        className="object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-navy-950/85" />
+
+      <Container className="relative z-10">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-3xl leading-tight tracking-tight text-navy-950 md:text-5xl">
-              {cta.heading}
+            <h2 className="font-serif text-3xl leading-tight tracking-tight text-white md:text-5xl">
+              {heading}
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-slate-600">
-              {cta.subtitle}
+            <p className="mt-6 text-lg leading-relaxed text-slate-300">
+              {subtitle}
             </p>
             <div className="mt-10">
               <Button href="/contact" variant="primary" size="lg">
-                {cta.button}
+                {button}
               </Button>
             </div>
           </div>
         </FadeIn>
       </Container>
-    </Section>
+    </section>
   );
 }

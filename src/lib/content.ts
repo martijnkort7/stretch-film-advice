@@ -80,6 +80,7 @@ export const about = {
   header: {
     overline: 'About',
     heading: 'Two Decades of Pallet Wrapping Expertise',
+    subtitle: 'Where most advisors know film or machines, Egbert Kort spent nearly 20 years mastering both.',
   },
   story: {
     heading: 'The Story Behind the Expertise',
@@ -125,6 +126,12 @@ export const about = {
         body: 'Combines both worlds: the right film matched with optimal machine settings for maximum efficiency.',
       },
     ],
+  },
+  cta: {
+    heading: 'Put Two Decades of Expertise to Work',
+    subtitle:
+      "Whether you are a distributor seeking advisory support or an end-user looking to cut film costs, let's explore what's possible.",
+    button: 'Schedule a Conversation',
   },
 };
 
@@ -204,6 +211,12 @@ export const services = {
         'Equal or improved pallet stability',
       ],
     },
+  },
+  cta: {
+    heading: 'See the Difference on Your Own Line',
+    subtitle:
+      'Request a no-obligation assessment of your current wrapping process. Most clients see savings of 30–50% in film usage.',
+    button: 'Request a Free Assessment',
   },
 };
 

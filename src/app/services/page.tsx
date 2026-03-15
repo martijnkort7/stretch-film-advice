@@ -23,7 +23,11 @@ export default function ServicesPage() {
       <ProcessSection />
       <ServiceCards />
       <ResultsSection />
-      <CTASection />
+      <CTASection
+        heading={services.cta.heading}
+        subtitle={services.cta.subtitle}
+        button={services.cta.button}
+      />
     </>
   );
 }

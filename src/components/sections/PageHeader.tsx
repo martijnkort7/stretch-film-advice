@@ -15,11 +15,11 @@ export function PageHeader({ overline, heading, subtitle }: PageHeaderProps) {
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-blue-400">
             {overline}
           </p>
-          <h1 className="max-w-3xl font-serif text-4xl leading-tight tracking-tight text-white md:text-6xl">
+          <h1 className="max-w-4xl font-serif text-4xl leading-tight tracking-tight text-white md:text-6xl">
             {heading}
           </h1>
           {subtitle && (
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-300">
               {subtitle}
             </p>
           )}

@@ -18,11 +18,16 @@ export default function AboutPage() {
       <PageHeader
         overline={about.header.overline}
         heading={about.header.heading}
+        subtitle={about.header.subtitle}
       />
       <StorySection />
       <ExperienceHighlights />
       <WhyDifferent />
-      <CTASection />
+      <CTASection
+        heading={about.cta.heading}
+        subtitle={about.cta.subtitle}
+        button={about.cta.button}
+      />
     </>
   );
 }
