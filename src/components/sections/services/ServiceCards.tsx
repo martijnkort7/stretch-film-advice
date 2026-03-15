@@ -28,7 +28,7 @@ export function ServiceCards() {
         <StaggerChildren className="mt-16 grid gap-8 sm:grid-cols-2">
           {services.offerings.items.map((item, i) => (
             <StaggerItem key={item.heading}>
-              <div className="border border-white/10 p-8 transition-colors hover:border-white/20 md:p-10">
+              <div className="h-full border border-white/10 p-8 transition-colors hover:border-white/20 md:p-10">
                 <svg
                   className="h-8 w-8 text-blue-400"
                   fill="none"
