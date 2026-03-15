@@ -33,6 +33,7 @@ export function WhyDifferent() {
                       : 'border border-slate-200 bg-white',
                   )}
                 >
+                  <div className="mb-4 h-0.5 w-8 bg-red-600" />
                   <h3
                     className={cn(
                       'font-serif text-xl',

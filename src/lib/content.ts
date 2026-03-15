@@ -24,7 +24,7 @@ export const homepage = {
     heading: 'Reduce Your Stretch Film\nCosts by 30-50%',
     subtitle:
       'We supply premium multilayer stretch film through distributors across Europe and advise on optimal film selection and machine settings, backed by 20 years of pallet wrapping experience.',
-    cta: 'Get in Touch',
+    cta: 'Discuss Your Savings Potential',
     ctaSecondary: 'Our Approach',
   },
   stats: [
@@ -57,11 +57,22 @@ export const homepage = {
       linkLabel: 'View services',
     },
   },
+  logos: {
+    heading: 'Trusted Across Europe',
+    items: [
+      { name: 'Partner 1', src: '' },
+      { name: 'Partner 2', src: '' },
+      { name: 'Partner 3', src: '' },
+      { name: 'Partner 4', src: '' },
+      { name: 'Partner 5', src: '' },
+      { name: 'Partner 6', src: '' },
+    ],
+  },
   cta: {
     heading: 'Ready to Optimise Your Stretch Film Usage?',
     subtitle:
       'Get in touch to discuss how we can reduce your film costs while improving pallet stability.',
-    button: 'Get in Touch',
+    button: 'Request a Film Assessment',
   },
 };
 

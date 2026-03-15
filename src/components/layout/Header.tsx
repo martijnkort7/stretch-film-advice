@@ -68,14 +68,14 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'text-sm font-medium transition-colors duration-200',
+                    'text-sm font-medium transition-colors duration-200 border-b-2',
                     pathname === item.href
                       ? showSolid
-                        ? 'text-blue-600'
-                        : 'text-white'
+                        ? 'text-blue-600 border-red-600'
+                        : 'text-white border-red-600'
                       : showSolid
-                        ? 'text-slate-600 hover:text-red-600'
-                        : 'text-white/80 hover:text-white',
+                        ? 'text-slate-600 border-transparent hover:text-red-600'
+                        : 'text-white/80 border-transparent hover:text-white',
                   )}
                 >
                   {item.label}
