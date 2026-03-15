@@ -29,11 +29,11 @@ export function ValueProposition() {
             <FadeIn delay={0.2}>
               <ul className="space-y-6">
                 {value.points.map((point, i) => (
-                  <li key={i} className="flex gap-4">
-                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center bg-blue-600 text-xs font-bold text-white">
+                  <li key={i} className="flex items-start gap-5">
+                    <span className="shrink-0 font-serif text-4xl leading-none text-blue-600">
                       {i + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-slate-700">
+                    <p className="pt-1 text-base leading-relaxed text-slate-700">
                       {point}
                     </p>
                   </li>

@@ -14,10 +14,10 @@ export function AnimatedCounter({
   value,
   suffix = '',
   prefix = '',
-  duration = 1.5,
+  duration = 2,
 }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
   const motionValue = useMotionValue(0);
   const rounded = useTransform(motionValue, (latest) => Math.round(latest));
   const [displayValue, setDisplayValue] = useState(0);
@@ -26,7 +26,7 @@ export function AnimatedCounter({
     if (isInView) {
       const controls = animate(motionValue, value, {
         duration,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0, 0, 0.2, 1],
       });
       return controls.stop;
     }

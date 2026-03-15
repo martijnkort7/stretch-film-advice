@@ -62,7 +62,7 @@ export function Header() {
                         ? 'text-blue-600'
                         : 'text-white'
                       : showSolid
-                        ? 'text-slate-600 hover:text-navy-950'
+                        ? 'text-slate-600 hover:text-red-600'
                         : 'text-white/80 hover:text-white',
                   )}
                 >

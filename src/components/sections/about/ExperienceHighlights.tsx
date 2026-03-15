@@ -22,8 +22,8 @@ export function ExperienceHighlights() {
 
         <StaggerChildren className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {about.highlights.map((item, i) => (
-            <StaggerItem key={item.heading}>
-              <div className="border border-white/10 p-6 md:p-8">
+            <StaggerItem key={item.heading} className="h-full">
+              <div className="h-full border border-white/10 p-6 md:p-8">
                 <svg
                   className="h-8 w-8 text-blue-400"
                   fill="none"

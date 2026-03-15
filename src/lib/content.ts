@@ -6,6 +6,7 @@ export const siteConfig = {
   emailInfo: 'info@stretchfilmadvice.com',
   phone: '+31 651571072',
   phoneDisplay: '+31 6 5157 1072',
+  whatsapp: 'https://wa.me/31651571072',
   linkedin: 'https://www.linkedin.com/in/egbert-kort-73b4b321/',
   kvk: '86668188',
   owner: 'Egbert Kort',
@@ -22,7 +23,7 @@ export const homepage = {
     overline: 'Stretch Film Advisory',
     heading: 'Reduce Your Stretch Film\nCosts by 30-50%',
     subtitle:
-      'Expert advice on optimal film selection and machine settings, backed by 20 years of pallet wrapping experience across Europe.',
+      'We supply premium multilayer stretch film through distributors across Europe and advise on optimal film selection and machine settings, backed by 20 years of pallet wrapping experience.',
     cta: 'Get in Touch',
     ctaSecondary: 'Our Approach',
   },
@@ -60,7 +61,7 @@ export const homepage = {
     heading: 'Ready to Optimise Your Stretch Film Usage?',
     subtitle:
       'Get in touch to discuss how we can reduce your film costs while improving pallet stability.',
-    button: 'Contact Us',
+    button: 'Get in Touch',
   },
 };
 
@@ -74,7 +75,7 @@ export const about = {
     paragraphs: [
       'For nearly 20 years, Egbert Kort sold and serviced pallet wrapping machines across Europe. Working directly with manufacturers and end-users, he developed a deep understanding of how machines, settings, and film interact to create stable, efficient pallet loads.',
       'This hands-on experience revealed a consistent pattern: most companies were using far more stretch film than necessary. The issue was not the machines or the film, it was the lack of knowledge about how to optimise both together.',
-      'That insight led to the founding of Stretch Film Advice. Today, Egbert works with distributors across 17 European countries, helping their customers achieve significant cost reductions through better film selection and optimised machine settings.',
+      'That insight led to the founding of Stretch Film Advice. Today, Egbert supplies premium multilayer stretch film through a network of distributors across 17 European countries, and works alongside them to help end-users achieve significant cost reductions through better film selection and optimised machine settings.',
     ],
   },
   highlights: [
@@ -154,8 +155,8 @@ export const services = {
     heading: 'Our Services',
     items: [
       {
-        heading: 'Film Selection Advisory',
-        body: 'Expert guidance on choosing the right multilayer stretch film for your specific application, products, and wrapping equipment.',
+        heading: 'Film Supply & Selection',
+        body: 'We supply high-performance multilayer stretch film through our distributor network and advise on the right film for your specific application, products, and wrapping equipment.',
       },
       {
         heading: 'Machine Optimisation',
@@ -219,6 +220,6 @@ export const contact = {
 
 export const footer = {
   description:
-    'Expert stretch film advisory, helping distributors and their customers reduce film costs by 30-50% through optimal film selection and machine settings.',
+    'Supplying premium multilayer stretch film through distributors across Europe, with expert advisory to reduce film costs by 30-50% through optimal film selection and machine settings.',
   copyright: `(c) ${new Date().getFullYear()} Stretch Film Advice. All rights reserved.`,
 };

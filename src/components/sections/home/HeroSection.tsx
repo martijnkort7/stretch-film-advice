@@ -63,8 +63,7 @@ export function HeroSection() {
         </div>
       </Container>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      {/* Crisp bottom edge - no gradient */}
     </section>
   );
 }
