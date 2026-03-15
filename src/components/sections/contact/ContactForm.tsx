@@ -6,6 +6,9 @@ import { contact } from '@/lib/content';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
+const inputClasses =
+  'mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-300 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>('idle');
 
@@ -64,7 +67,8 @@ export function ContactForm() {
           name="name"
           required
           autoComplete="name"
-          className="mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 transition-colors focus:border-blue-600 focus:ring-0 focus:outline-none"
+          placeholder="Your full name"
+          className={inputClasses}
         />
       </div>
 
@@ -81,7 +85,8 @@ export function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          className="mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 transition-colors focus:border-blue-600 focus:ring-0 focus:outline-none"
+          placeholder="you@company.com"
+          className={inputClasses}
         />
       </div>
 
@@ -98,7 +103,8 @@ export function ContactForm() {
           name="company"
           required
           autoComplete="organization"
-          className="mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 transition-colors focus:border-blue-600 focus:ring-0 focus:outline-none"
+          placeholder="Your company name"
+          className={inputClasses}
         />
       </div>
 
@@ -114,7 +120,8 @@ export function ContactForm() {
           id="phone"
           name="phone"
           autoComplete="tel"
-          className="mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 transition-colors focus:border-blue-600 focus:ring-0 focus:outline-none"
+          placeholder="+31 6 1234 5678"
+          className={inputClasses}
         />
       </div>
 
@@ -129,8 +136,9 @@ export function ContactForm() {
           id="message"
           name="message"
           required
-          rows={5}
-          className="mt-1.5 block w-full resize-y border border-slate-200 bg-white px-4 py-3 text-navy-950 transition-colors focus:border-blue-600 focus:ring-0 focus:outline-none"
+          rows={6}
+          placeholder="Describe your current wrapping process or specific challenges..."
+          className={`${inputClasses} resize-y`}
         />
       </div>
 
@@ -138,17 +146,20 @@ export function ContactForm() {
         <p className="text-sm text-red-600">{contact.form.error}</p>
       )}
 
-      <Button
-        type="submit"
-        variant="primary"
-        size="lg"
-        disabled={status === 'submitting'}
-        className="w-full sm:w-auto"
-      >
-        {status === 'submitting'
-          ? contact.form.submitting
-          : contact.form.submitLabel}
-      </Button>
+      <div>
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          disabled={status === 'submitting'}
+          className="w-full sm:w-auto"
+        >
+          {status === 'submitting'
+            ? contact.form.submitting
+            : contact.form.submitLabel}
+        </Button>
+        <p className="mt-3 text-xs text-slate-400">{contact.microcopy}</p>
+      </div>
     </form>
   );
 }

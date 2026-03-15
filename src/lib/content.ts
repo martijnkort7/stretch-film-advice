@@ -7,11 +7,6 @@ export const siteConfig = {
   phone: '+31 651571072',
   phoneDisplay: '+31 6 5157 1072',
   linkedin: 'https://www.linkedin.com/in/egbert-kort-73b4b321/',
-  address: {
-    street: 'Kometenstraat 123',
-    city: '1223 CJ Hilversum',
-    country: 'The Netherlands',
-  },
   kvk: '86668188',
   owner: 'Egbert Kort',
 };
@@ -217,8 +212,9 @@ export const contact = {
   },
   info: {
     heading: 'Get in Touch',
-    body: 'Based in the Netherlands, serving distributors and their customers across Europe.',
+    body: 'Based in the Netherlands, we help distributors and end-users across Europe achieve 30-50% reductions in stretch film usage through expert advisory.',
   },
+  microcopy: 'We aim to respond to all inquiries within one business day.',
 };
 
 export const footer = {
