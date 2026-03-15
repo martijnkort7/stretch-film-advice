@@ -26,7 +26,7 @@ export const navigation = [
 export const homepage = {
   hero: {
     overline: 'Stretch Film Advisory',
-    heading: 'Reduce Your Stretch Film\nCosts by 30–50%',
+    heading: 'Reduce Your Stretch Film\nCosts by 30-50%',
     subtitle:
       'Expert advice on optimal film selection and machine settings, backed by 20 years of pallet wrapping experience across Europe.',
     cta: 'Get in Touch',
@@ -40,11 +40,11 @@ export const homepage = {
   value: {
     overline: 'The Problem',
     heading: 'Most Companies Use Far More Stretch Film Than Necessary',
-    body: 'The majority of stretch film users don\u2019t fully utilise the capabilities of modern multilayer films. Combined with suboptimal machine settings, this results in excessive film usage, higher costs, and less stable pallets.',
+    body: 'The majority of stretch film users do not fully utilise the capabilities of modern multilayer films. Combined with suboptimal machine settings, this results in excessive film usage, higher costs, and less stable pallets.',
     points: [
       'Thinner, higher-performance films can replace conventional options',
       'Proper machine settings maximise film pre-stretch and load containment',
-      'The combination of better film and optimised settings delivers 30\u201350% reduction',
+      'The combination of better film and optimised settings delivers 30-50% reduction',
     ],
   },
   expertise: {
@@ -79,7 +79,7 @@ export const about = {
     heading: 'The Story Behind the Expertise',
     paragraphs: [
       'For nearly 20 years, Egbert Kort sold and serviced pallet wrapping machines across Europe. Working directly with manufacturers and end-users, he developed a deep understanding of how machines, settings, and film interact to create stable, efficient pallet loads.',
-      'This hands-on experience revealed a consistent pattern: most companies were using far more stretch film than necessary. The issue wasn\u2019t the machines or the film \u2014 it was the lack of knowledge about how to optimise both together.',
+      'This hands-on experience revealed a consistent pattern: most companies were using far more stretch film than necessary. The issue was not the machines or the film, it was the lack of knowledge about how to optimise both together.',
       'That insight led to the founding of Stretch Film Advice. Today, Egbert works with distributors across 17 European countries, helping their customers achieve significant cost reductions through better film selection and optimised machine settings.',
     ],
   },
@@ -90,7 +90,7 @@ export const about = {
     },
     {
       heading: 'Film Knowledge',
-      body: 'Deep understanding of multilayer stretch film technology \u2014 how different film constructions perform under various conditions and applications.',
+      body: 'Deep understanding of multilayer stretch film technology: how different film constructions perform under various conditions and applications.',
     },
     {
       heading: 'European Network',
@@ -98,13 +98,13 @@ export const about = {
     },
     {
       heading: 'Proven Results',
-      body: 'Hundreds of optimisation projects with consistent results: 30\u201350% less film usage with equal or improved pallet stability.',
+      body: 'Hundreds of optimisation projects with consistent results: 30-50% less film usage with equal or improved pallet stability.',
     },
   ],
   different: {
     overline: 'The Difference',
     heading: 'What Sets This Apart',
-    body: 'Most stretch film sellers know film. Most machine suppliers know machines. Egbert knows both \u2014 and that combination is what delivers results.',
+    body: 'Most stretch film sellers know film. Most machine suppliers know machines. Egbert knows both, and that combination is what delivers results.',
     points: [
       {
         heading: 'Film Sellers',
@@ -112,7 +112,7 @@ export const about = {
       },
       {
         heading: 'Machine Suppliers',
-        body: 'Understand the equipment, but typically don\u2019t advise on optimal film selection for specific applications.',
+        body: 'Understand the equipment, but typically do not advise on optimal film selection for specific applications.',
       },
       {
         heading: 'Stretch Film Advice',
@@ -127,7 +127,7 @@ export const services = {
     overline: 'Services',
     heading: 'From Assessment to Optimisation',
     subtitle:
-      'A structured approach to reducing your stretch film costs while maintaining \u2014 or improving \u2014 pallet stability.',
+      'A structured approach to reducing your stretch film costs while maintaining, or improving, pallet stability.',
   },
   process: {
     overline: 'Our Process',
@@ -151,7 +151,7 @@ export const services = {
       {
         number: '04',
         heading: 'Verification',
-        body: 'We measure the actual savings \u2014 film usage, cost reduction, and pallet stability \u2014 to confirm the results meet expectations.',
+        body: 'We measure the actual savings (film usage, cost reduction, and pallet stability) to confirm the results meet expectations.',
       },
     ],
   },
@@ -165,7 +165,7 @@ export const services = {
       },
       {
         heading: 'Machine Optimisation',
-        body: 'On-site adjustment of pallet wrapping machine settings \u2014 pre-stretch, force, wrap patterns \u2014 to maximise film performance.',
+        body: 'On-site adjustment of pallet wrapping machine settings (pre-stretch, force, wrap patterns) to maximise film performance.',
       },
       {
         heading: 'On-Site Audits & Training',
@@ -173,7 +173,7 @@ export const services = {
       },
       {
         heading: 'Troubleshooting',
-        body: 'Diagnosis and resolution of pallet wrapping issues \u2014 load failures, film breaks, inconsistent results, and equipment problems.',
+        body: 'Diagnosis and resolution of pallet wrapping issues: load failures, film breaks, inconsistent results, and equipment problems.',
       },
     ],
   },
@@ -184,7 +184,7 @@ export const services = {
       heading: 'Before Optimisation',
       points: [
         '23 micron conventional stretch film',
-        'Standard machine pre-stretch (150\u2013200%)',
+        'Standard machine pre-stretch (150-200%)',
         'High film consumption per pallet',
         'Inconsistent load stability',
       ],
@@ -193,8 +193,8 @@ export const services = {
       heading: 'After Optimisation',
       points: [
         '12 micron high-performance multilayer film',
-        'Optimised pre-stretch (280\u2013350%)',
-        '30\u201350% reduction in film usage',
+        'Optimised pre-stretch (280-350%)',
+        '30-50% reduction in film usage',
         'Equal or improved pallet stability',
       ],
     },
@@ -204,15 +204,15 @@ export const services = {
 export const contact = {
   header: {
     overline: 'Contact',
-    heading: 'Let\u2019s Discuss Your Stretch Film Optimisation',
+    heading: 'Discuss Your Stretch Film Optimisation',
     subtitle:
-      'Whether you\u2019re a distributor looking for advisory support or an end-user seeking to reduce costs, we\u2019re here to help.',
+      'Whether you are a distributor looking for advisory support or an end-user seeking to reduce costs, we are here to help.',
   },
   form: {
     submitLabel: 'Send Message',
-    submitting: 'Sending\u2026',
+    submitting: 'Sending...',
     success:
-      'Thank you for your message. We\u2019ll respond within 24 hours.',
+      'Thank you for your message. We will respond within 24 hours.',
     error:
       'Something went wrong. Please try emailing us directly at egbertkort@stretchfilmadvice.com.',
   },
@@ -224,6 +224,6 @@ export const contact = {
 
 export const footer = {
   description:
-    'Expert stretch film advisory \u2014 helping distributors and their customers reduce film costs by 30\u201350% through optimal film selection and machine settings.',
-  copyright: `\u00A9 ${new Date().getFullYear()} Stretch Film Advice. All rights reserved.`,
+    'Expert stretch film advisory, helping distributors and their customers reduce film costs by 30-50% through optimal film selection and machine settings.',
+  copyright: `(c) ${new Date().getFullYear()} Stretch Film Advice. All rights reserved.`,
 };

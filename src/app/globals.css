@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Navy — primary dark backgrounds */
+  /* Navy - primary dark backgrounds */
   --color-navy-950: #0A1628;
   --color-navy-900: #0F1F38;
   --color-navy-800: #162A4A;
   --color-navy-700: #1E3A5F;
   --color-navy-600: #2A4A73;
 
-  /* Blue — primary action / accent */
+  /* Blue - primary action / accent */
   --color-blue-700: #1447C0;
   --color-blue-600: #1B4FD8;
   --color-blue-500: #2563EB;
   --color-blue-400: #3B82F6;
   --color-blue-300: #60A5FA;
 
-  /* Red — secondary accent from client brand */
+  /* Red - secondary accent from client brand */
   --color-red-600: #C8102E;
   --color-red-500: #DC2626;
 

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | Stretch Film Advice',
   },
   description:
-    'Reduce stretch film costs by 30\u201350% with expert advice on film selection and machine optimisation. 20+ years of pallet wrapping experience across 17 European countries.',
+    'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation. 20+ years of pallet wrapping experience across 17 European countries.',
   metadataBase: new URL('https://www.stretchfilmadvice.com'),
   openGraph: {
     type: 'website',
