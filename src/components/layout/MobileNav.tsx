@@ -82,6 +82,29 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 </Link>
               </motion.div>
             ))}
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.1 + navigation.length * 0.05,
+                duration: 0.4,
+              }}
+              className="mt-4 border-t border-white/10 pt-8"
+            >
+              <Link
+                href="/contact"
+                onClick={onClose}
+                className={cn(
+                  'text-sm font-medium uppercase tracking-widest transition-colors',
+                  pathname === '/contact'
+                    ? 'text-white'
+                    : 'text-white/60 hover:text-white',
+                )}
+              >
+                Get in Touch
+              </Link>
+            </motion.div>
           </nav>
         </motion.div>
       )}
