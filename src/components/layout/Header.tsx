@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -39,12 +40,23 @@ export function Header() {
             <Link
               href="/"
               className={cn(
-                'text-xl font-bold tracking-tight transition-colors',
-                showSolid ? 'text-navy-950' : 'text-white',
+                'shrink-0 transition-all duration-300',
+                showSolid
+                  ? ''
+                  : 'rounded-lg bg-white px-3 py-1.5 shadow-sm',
               )}
             >
-              <span className="font-serif">Stretch Film</span>
-              <span className="text-red-600"> Advice</span>
+              <Image
+                src="/images/logo.png"
+                alt="Stretch Film Advice"
+                width={220}
+                height={60}
+                priority
+                className={cn(
+                  'h-10 w-auto',
+                  showSolid && 'mix-blend-multiply',
+                )}
+              />
             </Link>
 
             <nav

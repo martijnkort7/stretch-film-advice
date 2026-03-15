@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { siteConfig, navigation, footer } from '@/lib/content';
 
@@ -9,9 +10,17 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {/* Company */}
           <div>
-            <Link href="/" className="text-xl font-bold tracking-tight">
-              <span className="font-serif">Stretch Film</span>
-              <span className="text-red-600"> Advice</span>
+            <Link
+              href="/"
+              className="inline-block rounded-lg bg-white px-3 py-1.5"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Stretch Film Advice"
+                width={200}
+                height={55}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
               {footer.description}

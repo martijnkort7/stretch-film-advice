@@ -10,7 +10,7 @@ export function ValueProposition() {
   return (
     <Section variant="dark">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-3">
             <FadeIn>
               <SectionHeading
