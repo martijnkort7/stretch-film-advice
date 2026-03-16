@@ -357,33 +357,27 @@ export const services = {
     items: [
       {
         question: 'How much can I realistically save on stretch film costs?',
-        answer:
-          'Most clients achieve 30-50% reduction in film usage through the combination of higher-performance multilayer films and optimised machine settings. The exact savings depend on your current setup, but we provide a detailed projection after the initial assessment.',
+        answer: 'Answer coming soon.',
       },
       {
         question: 'Will thinner film compromise pallet stability?',
-        answer:
-          'No. Modern multilayer films are engineered to outperform thicker conventional films. We verify stability through industry-standard tilt tests (26-degree test) and adjust settings to ensure equal or improved load containment. You will see the proof on your own pallets.',
+        answer: 'Answer coming soon.',
       },
       {
         question: 'Do I need to buy a new wrapping machine?',
-        answer:
-          'In most cases, no. Optimisation works with your existing equipment. We adjust the machine settings (pre-stretch ratio, wrap force, patterns) to maximise performance. Only in rare cases with very old or poorly maintained machines might an upgrade be recommended.',
+        answer: 'Answer coming soon.',
       },
       {
         question: 'How long does the optimisation process take?',
-        answer:
-          'Typically 2-4 weeks from initial contact to full implementation. This includes: assessment visit (1 day), analysis and recommendation (3-5 days), implementation visit (1 day), and verification (1-2 weeks of monitoring). The timeline can be accelerated if needed.',
+        answer: 'Answer coming soon.',
       },
       {
         question: 'Do you work with distributors or end-users?',
-        answer:
-          'Both. We supply film through a network of distributors across 17 European countries and provide advisory services to their clients (end-users). Distributors benefit from technical support and end-users benefit from expert optimisation. Contact us to discuss your specific situation.',
+        answer: 'Answer coming soon.',
       },
       {
         question: 'What if the projected savings are not achieved?',
-        answer:
-          'We stand behind our recommendations. The verification phase measures actual results against projections. If targets are not met, we revisit the settings and make adjustments at no additional cost. Our 40+ years of experience means projections are highly accurate.',
+        answer: 'Answer coming soon.',
       },
     ],
   },
