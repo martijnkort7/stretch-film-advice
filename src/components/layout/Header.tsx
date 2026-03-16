@@ -67,6 +67,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={cn(
                     'text-sm font-medium transition-colors duration-200 border-b-2',
                     pathname === item.href
@@ -85,6 +86,7 @@ export function Header() {
                 href="/contact"
                 variant={showSolid ? 'primary' : 'ghost'}
                 size="sm"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 Get in Touch
               </Button>

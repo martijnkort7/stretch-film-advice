@@ -71,7 +71,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
               >
                 <Link
                   href={item.href}
-                  onClick={onClose}
+                  onClick={() => { onClose(); window.scrollTo({ top: 0 }); }}
                   className={cn(
                     'font-serif text-3xl transition-colors',
                     pathname === item.href
@@ -95,7 +95,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
             >
               <Link
                 href="/contact"
-                onClick={onClose}
+                onClick={() => { onClose(); window.scrollTo({ top: 0 }); }}
                 className={cn(
                   'text-sm font-medium uppercase tracking-widest transition-colors',
                   pathname === '/contact'
