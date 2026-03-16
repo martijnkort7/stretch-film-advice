@@ -9,15 +9,15 @@ export function StorySection() {
     <Section variant="light">
       <Container>
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div className="lg:col-span-2">
             <FadeIn direction="left">
               <Image
                 src="/images/Photo Egbert Kort.jpeg"
-                alt="Egbert Kort — Founder of Stretch Film Advice"
+                alt="Egbert Kort, Founder of Stretch Film Advice"
                 width={640}
                 height={800}
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-square w-full object-cover object-top"
               />
             </FadeIn>
           </div>

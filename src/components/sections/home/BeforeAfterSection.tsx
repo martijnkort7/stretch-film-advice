@@ -3,27 +3,27 @@ import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ComparisonTable } from '@/components/ui/ComparisonTable';
 import { FadeIn } from '@/components/motion/FadeIn';
-import { about } from '@/lib/content';
+import { homepage } from '@/lib/content';
 
-export function WhyDifferent() {
-  const { different } = about;
+export function BeforeAfterSection() {
+  const { beforeAfter } = homepage;
 
   return (
-    <Section variant="light">
+    <Section variant="dark">
       <Container>
         <FadeIn>
           <SectionHeading
-            overline={different.overline}
-            heading={different.heading}
-            subtitle={different.body}
+            overline={beforeAfter.overline}
+            heading={beforeAfter.heading}
+            subtitle={beforeAfter.subtitle}
             align="center"
           />
         </FadeIn>
 
         <FadeIn delay={0.2} className="mt-16">
           <ComparisonTable
-            headers={different.comparison.headers}
-            rows={different.comparison.rows}
+            headers={beforeAfter.headers}
+            rows={beforeAfter.rows}
             highlightColumn={3}
           />
         </FadeIn>

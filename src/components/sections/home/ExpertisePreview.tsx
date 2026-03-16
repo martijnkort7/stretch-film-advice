@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'motion/react';
+import { ClipboardCheck } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -32,6 +34,21 @@ export function ExpertisePreview() {
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="group rounded-sm border border-white/10 bg-white/5 p-8 md:p-10"
               >
+                <div className="mb-5">
+                  {card.icon === 'user' && 'image' in card ? (
+                    <Image
+                      src={card.image}
+                      alt="Egbert Kort"
+                      width={56}
+                      height={56}
+                      className="h-14 w-14 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-400/10">
+                      <ClipboardCheck className="h-7 w-7 text-blue-400" />
+                    </div>
+                  )}
+                </div>
                 <h3 className="font-serif text-2xl text-white">
                   {card.heading}
                 </h3>

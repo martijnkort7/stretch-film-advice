@@ -110,6 +110,27 @@ export function ContactForm() {
 
       <div>
         <label
+          htmlFor="audience"
+          className="block text-sm font-medium text-navy-950"
+        >
+          {contact.form.audienceLabel} <span className="text-red-600">*</span>
+        </label>
+        <select
+          id="audience"
+          name="audience"
+          required
+          className={inputClasses}
+        >
+          {contact.form.audienceOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label
           htmlFor="phone"
           className="block text-sm font-medium text-navy-950"
         >

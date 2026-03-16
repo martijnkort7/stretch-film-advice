@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
 import { Inter, Instrument_Serif } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { ScrollToTop } from '@/components/ui/ScrollToTop';
+import { baseMetadata, localBusinessSchema } from '@/lib/metadata';
 import './globals.css';
 
 const inter = Inter({
@@ -17,20 +18,7 @@ const instrumentSerif = Instrument_Serif({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Stretch Film Advice | Expert Stretch Film Consulting',
-    template: '%s | Stretch Film Advice',
-  },
-  description:
-    'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation. 20+ years of pallet wrapping experience across 17 European countries.',
-  metadataBase: new URL('https://www.stretchfilmadvice.com'),
-  openGraph: {
-    type: 'website',
-    locale: 'en_GB',
-    siteName: 'Stretch Film Advice',
-  },
-};
+export const metadata = baseMetadata;
 
 export default function RootLayout({
   children,
@@ -39,6 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+      </head>
       <body className="antialiased">
         <a
           href="#main-content"
@@ -49,6 +45,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

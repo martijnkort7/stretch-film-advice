@@ -1,16 +1,13 @@
-import type { Metadata } from 'next';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { ProcessSection } from '@/components/sections/services/ProcessSection';
 import { ServiceCards } from '@/components/sections/services/ServiceCards';
 import { ResultsSection } from '@/components/sections/services/ResultsSection';
+import { FAQSection } from '@/components/sections/services/FAQSection';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { services } from '@/lib/content';
+import { servicesMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Services',
-  description:
-    'From assessment to optimisation: film selection advisory, machine optimisation, on-site audits, training, and troubleshooting for stretch film users across Europe.',
-};
+export const metadata = servicesMetadata;
 
 export default function ServicesPage() {
   return (
@@ -23,6 +20,7 @@ export default function ServicesPage() {
       <ProcessSection />
       <ServiceCards />
       <ResultsSection />
+      <FAQSection />
       <CTASection
         heading={services.cta.heading}
         subtitle={services.cta.subtitle}

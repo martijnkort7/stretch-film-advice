@@ -1,17 +1,14 @@
-import type { Metadata } from 'next';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { PageHeader } from '@/components/sections/PageHeader';
+import { AudienceCards } from '@/components/sections/contact/AudienceCards';
 import { ContactForm } from '@/components/sections/contact/ContactForm';
 import { ContactInfo } from '@/components/sections/contact/ContactInfo';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { contact } from '@/lib/content';
+import { contactMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description:
-    'Get in touch with Stretch Film Advice for expert consultation on stretch film optimisation, machine settings, and cost reduction across Europe.',
-};
+export const metadata = contactMetadata;
 
 export default function ContactPage() {
   return (
@@ -21,9 +18,11 @@ export default function ContactPage() {
         heading={contact.header.heading}
         subtitle={contact.header.subtitle}
       />
-      <Section variant="light" className="py-20 md:py-28">
+      <Section variant="light" className="py-12 md:py-20">
         <Container>
-          <div className="grid items-start gap-16 lg:grid-cols-5 lg:gap-20">
+          <AudienceCards />
+
+          <div className="mt-12 grid items-start gap-16 md:mt-16 lg:grid-cols-5 lg:gap-20">
             <FadeIn direction="up" className="lg:col-span-3">
               <ContactForm />
             </FadeIn>

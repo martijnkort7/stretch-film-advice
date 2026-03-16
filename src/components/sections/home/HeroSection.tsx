@@ -60,6 +60,15 @@ export function HeroSection() {
               {hero.ctaSecondary}
             </Button>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="mt-5 text-sm text-slate-400"
+          >
+            {hero.ctaSubtext}
+          </motion.p>
         </div>
       </Container>
 

@@ -1,16 +1,13 @@
-import type { Metadata } from 'next';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { StorySection } from '@/components/sections/about/StorySection';
+import { TimelineSection } from '@/components/sections/about/TimelineSection';
 import { ExperienceHighlights } from '@/components/sections/about/ExperienceHighlights';
 import { WhyDifferent } from '@/components/sections/about/WhyDifferent';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { about } from '@/lib/content';
+import { aboutMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'Nearly 20 years of pallet wrapping machine experience combined with deep stretch film knowledge. Learn about Egbert Kort and Stretch Film Advice.',
-};
+export const metadata = aboutMetadata;
 
 export default function AboutPage() {
   return (
@@ -21,6 +18,7 @@ export default function AboutPage() {
         subtitle={about.header.subtitle}
       />
       <StorySection />
+      <TimelineSection />
       <ExperienceHighlights />
       <WhyDifferent />
       <CTASection
