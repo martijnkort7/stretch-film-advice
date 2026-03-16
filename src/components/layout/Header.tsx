@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { MobileNav } from './MobileNav';
-import { navigation, siteConfig } from '@/lib/content';
+import { navigation, ui } from '@/lib/content';
 import { cn } from '@/lib/utils';
 
 export function Header() {
@@ -68,6 +68,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  aria-current={pathname === item.href ? 'page' : undefined}
                   className={cn(
                     'text-sm font-medium transition-colors duration-200 border-b-2',
                     pathname === item.href
@@ -88,7 +89,7 @@ export function Header() {
                 size="sm"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
-                Get in Touch
+                {ui.getInTouch}
               </Button>
             </nav>
 
@@ -98,7 +99,7 @@ export function Header() {
                 showSolid ? 'text-navy-950' : 'text-white',
               )}
               onClick={() => setMobileOpen(true)}
-              aria-label="Open menu"
+              aria-label={ui.openMenu}
             >
               <span className="block h-0.5 w-6 bg-current" />
               <span className="block h-0.5 w-6 bg-current" />

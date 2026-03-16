@@ -3,7 +3,7 @@ import {
   StaggerChildren,
   StaggerItem,
 } from '@/components/motion/StaggerChildren';
-import { contact } from '@/lib/content';
+import { contact, ui } from '@/lib/content';
 
 const icons = [Users, Building2];
 
@@ -33,7 +33,7 @@ export function AudienceCards() {
                 </p>
                 <div className="mt-4 border-l-2 border-blue-200 pl-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
-                    What to expect
+                    {ui.whatToExpect}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {card.expectation}

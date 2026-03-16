@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { homepage } from '@/lib/content';
@@ -19,9 +20,11 @@ export function LogoBar() {
                 className="flex h-12 items-center justify-center rounded bg-slate-100 grayscale"
               >
                 {logo.src ? (
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.name}
+                    width={120}
+                    height={32}
                     className="h-8 w-auto object-contain"
                   />
                 ) : (

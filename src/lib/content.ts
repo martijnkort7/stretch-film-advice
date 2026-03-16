@@ -73,6 +73,7 @@ export const homepage = {
   },
   expertise: {
     overline: 'Why Stretch Film Advice',
+    heading: 'Expertise Meets Experience',
     advisor: {
       heading: 'The Advisor',
       body: 'With over 40 years in the pallet wrapping industry, Egbert Kort brings a rare combination of machine expertise and film knowledge. He understands both sides of the equation.',
@@ -182,6 +183,10 @@ export const about = {
           'Combined 40+ years of machine and film knowledge into independent advisory',
       },
     ],
+  },
+  highlightsSection: {
+    overline: 'Expertise',
+    heading: 'Core Competencies',
   },
   highlights: [
     {
@@ -435,6 +440,47 @@ export const contact = {
     body: 'Based in the Netherlands, we help distributors and end-users across Europe achieve 30-50% reductions in stretch film usage through expert advisory.',
   },
   microcopy: 'We aim to respond to all inquiries within one business day.',
+};
+
+export const ui = {
+  getInTouch: 'Get in Touch',
+  skipToContent: 'Skip to content',
+  openMenu: 'Open menu',
+  closeMenu: 'Close menu',
+  navigationLabel: 'Navigation',
+  contactLabel: 'Contact',
+  connectOnLinkedIn: 'Connect on LinkedIn',
+  connectOnLinkedInAria: 'Connect with Egbert Kort on LinkedIn',
+  whatsAppLabel: 'WhatsApp',
+  contactViaWhatsApp: 'Contact via WhatsApp',
+  sendAMessage: 'Send a message',
+  linkedInLabel: 'LinkedIn',
+  whatToExpect: 'What to expect',
+  contactInfoEmail: 'Email',
+  contactInfoPhone: 'Phone',
+};
+
+export const notFoundPage = {
+  code: '404',
+  heading: 'Page Not Found',
+  body: "The page you\u2019re looking for doesn\u2019t exist or has been moved.",
+  backToHome: 'Back to Home',
+};
+
+export const formLabels = {
+  name: 'Name',
+  email: 'Email',
+  company: 'Company',
+  phone: 'Phone',
+  message: 'Message',
+  thankYou: 'Thank you',
+  namePlaceholder: 'Your full name',
+  emailPlaceholder: 'you@company.com',
+  companyPlaceholder: 'Your company name',
+  phonePlaceholder: '+31 6 1234 5678',
+  messagePlaceholder:
+    'Describe your current wrapping process or specific challenges...',
+  sendAnother: 'Send another message',
 };
 
 export const footer = {

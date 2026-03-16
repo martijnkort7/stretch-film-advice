@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { navigation } from '@/lib/content';
+import { navigation, ui } from '@/lib/content';
 import { cn } from '@/lib/utils';
 
 interface MobileNavProps {
@@ -14,22 +14,59 @@ interface MobileNavProps {
 
 export function MobileNav({ open, onClose }: MobileNavProps) {
   const pathname = usePathname();
+  const navRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+        return;
+      }
+
+      if (e.key === 'Tab' && navRef.current) {
+        const focusable = navRef.current.querySelectorAll<HTMLElement>(
+          'a, button, [tabindex]:not([tabindex="-1"])',
+        );
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    },
+    [onClose],
+  );
 
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', handleKeyDown);
+      // Focus close button when menu opens
+      requestAnimationFrame(() => closeButtonRef.current?.focus());
     } else {
       document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
     }
     return () => {
       document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [open]);
+  }, [open, handleKeyDown]);
 
   return (
     <AnimatePresence>
       {open && (
         <motion.div
+          ref={navRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -38,9 +75,10 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         >
           <div className="flex h-20 items-center justify-end px-6">
             <button
+              ref={closeButtonRef}
               onClick={onClose}
               className="p-2 text-white"
-              aria-label="Close menu"
+              aria-label={ui.closeMenu}
             >
               <svg
                 width="24"
@@ -71,7 +109,11 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
               >
                 <Link
                   href={item.href}
-                  onClick={() => { onClose(); window.scrollTo({ top: 0 }); }}
+                  onClick={() => {
+                    onClose();
+                    window.scrollTo({ top: 0 });
+                  }}
+                  aria-current={pathname === item.href ? 'page' : undefined}
                   className={cn(
                     'font-serif text-3xl transition-colors',
                     pathname === item.href
@@ -95,7 +137,11 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
             >
               <Link
                 href="/contact"
-                onClick={() => { onClose(); window.scrollTo({ top: 0 }); }}
+                onClick={() => {
+                  onClose();
+                  window.scrollTo({ top: 0 });
+                }}
+                aria-current={pathname === '/contact' ? 'page' : undefined}
                 className={cn(
                   'text-sm font-medium uppercase tracking-widest transition-colors',
                   pathname === '/contact'
@@ -103,7 +149,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                     : 'text-white/60 hover:text-white',
                 )}
               >
-                Get in Touch
+                {ui.getInTouch}
               </Link>
             </motion.div>
           </nav>

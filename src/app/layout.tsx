@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollToTop } from '@/components/ui/ScrollToTop';
 import { baseMetadata, localBusinessSchema } from '@/lib/metadata';
+import { ui } from '@/lib/content';
 import './globals.css';
 
 const inter = Inter({
@@ -40,7 +41,7 @@ export default function RootLayout({
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:rounded focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white"
         >
-          Skip to content
+          {ui.skipToContent}
         </a>
         <Header />
         <main id="main-content">{children}</main>

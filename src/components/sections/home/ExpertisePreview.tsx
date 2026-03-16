@@ -20,7 +20,7 @@ export function ExpertisePreview() {
         <FadeIn>
           <SectionHeading
             overline={expertise.overline}
-            heading="Expertise Meets Experience"
+            heading={expertise.heading}
             dark
             align="center"
           />

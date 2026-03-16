@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/Button';
-import { contact } from '@/lib/content';
+import { contact, formLabels } from '@/lib/content';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -46,8 +46,15 @@ export function ContactForm() {
   if (status === 'success') {
     return (
       <div className="border border-blue-200 bg-blue-50 p-8">
-        <p className="font-serif text-xl text-navy-950">Thank you</p>
+        <p className="font-serif text-xl text-navy-950">{formLabels.thankYou}</p>
         <p className="mt-2 text-slate-600">{contact.form.success}</p>
+        <button
+          type="button"
+          onClick={() => setStatus('idle')}
+          className="mt-4 text-sm font-medium text-blue-600 transition-colors hover:text-red-600"
+        >
+          {formLabels.sendAnother}
+        </button>
       </div>
     );
   }
@@ -59,7 +66,7 @@ export function ContactForm() {
           htmlFor="name"
           className="block text-sm font-medium text-navy-950"
         >
-          Name <span className="text-red-600">*</span>
+          {formLabels.name} <span className="text-red-600">*</span>
         </label>
         <input
           type="text"
@@ -67,7 +74,7 @@ export function ContactForm() {
           name="name"
           required
           autoComplete="name"
-          placeholder="Your full name"
+          placeholder={formLabels.namePlaceholder}
           className={inputClasses}
         />
       </div>
@@ -77,7 +84,7 @@ export function ContactForm() {
           htmlFor="email"
           className="block text-sm font-medium text-navy-950"
         >
-          Email <span className="text-red-600">*</span>
+          {formLabels.email} <span className="text-red-600">*</span>
         </label>
         <input
           type="email"
@@ -85,7 +92,7 @@ export function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          placeholder="you@company.com"
+          placeholder={formLabels.emailPlaceholder}
           className={inputClasses}
         />
       </div>
@@ -95,7 +102,7 @@ export function ContactForm() {
           htmlFor="company"
           className="block text-sm font-medium text-navy-950"
         >
-          Company <span className="text-red-600">*</span>
+          {formLabels.company} <span className="text-red-600">*</span>
         </label>
         <input
           type="text"
@@ -103,7 +110,7 @@ export function ContactForm() {
           name="company"
           required
           autoComplete="organization"
-          placeholder="Your company name"
+          placeholder={formLabels.companyPlaceholder}
           className={inputClasses}
         />
       </div>
@@ -134,14 +141,14 @@ export function ContactForm() {
           htmlFor="phone"
           className="block text-sm font-medium text-navy-950"
         >
-          Phone
+          {formLabels.phone}
         </label>
         <input
           type="tel"
           id="phone"
           name="phone"
           autoComplete="tel"
-          placeholder="+31 6 1234 5678"
+          placeholder={formLabels.phonePlaceholder}
           className={inputClasses}
         />
       </div>
@@ -151,20 +158,20 @@ export function ContactForm() {
           htmlFor="message"
           className="block text-sm font-medium text-navy-950"
         >
-          Message <span className="text-red-600">*</span>
+          {formLabels.message} <span className="text-red-600">*</span>
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={6}
-          placeholder="Describe your current wrapping process or specific challenges..."
+          placeholder={formLabels.messagePlaceholder}
           className={`${inputClasses} resize-y`}
         />
       </div>
 
       {status === 'error' && (
-        <p className="text-sm text-red-600">{contact.form.error}</p>
+        <p role="alert" className="text-sm text-red-600">{contact.form.error}</p>
       )}
 
       <div>

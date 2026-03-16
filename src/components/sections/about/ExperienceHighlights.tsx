@@ -15,8 +15,8 @@ export function ExperienceHighlights() {
     <Section variant="navy">
       <Container>
         <SectionHeading
-          overline="Expertise"
-          heading="Core Competencies"
+          overline={about.highlightsSection.overline}
+          heading={about.highlightsSection.heading}
           dark
           align="center"
         />

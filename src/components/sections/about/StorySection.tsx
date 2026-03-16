@@ -17,6 +17,7 @@ export function StorySection() {
                 alt="Egbert Kort, Founder of Stretch Film Advice"
                 width={640}
                 height={800}
+                priority
                 className="aspect-square w-full object-cover object-top"
               />
             </FadeIn>

@@ -9,7 +9,7 @@ export function FAQSection() {
   const { faq } = services;
 
   return (
-    <Section variant="light" className="pt-0 md:pt-0">
+    <Section variant="dark">
       <Container>
         <FadeIn>
           <SectionHeading

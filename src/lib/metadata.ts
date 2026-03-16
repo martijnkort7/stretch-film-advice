@@ -40,21 +40,12 @@ export const baseMetadata: Metadata = {
     title: 'Stretch Film Advice | Expert Stretch Film Consulting',
     description:
       'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation across Europe.',
-    images: [
-      {
-        url: `${baseUrl}/images/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: 'Stretch Film Advice - Expert Consulting',
-      },
-    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Stretch Film Advice | Expert Stretch Film Consulting',
     description:
       'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation.',
-    images: [`${baseUrl}/images/og-image.jpg`],
   },
   alternates: {
     canonical: baseUrl,

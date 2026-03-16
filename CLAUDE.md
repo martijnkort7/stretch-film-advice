@@ -33,7 +33,7 @@ src/components/layout/       — Header, Footer, MobileNav, Navigation
 src/components/ui/           — Button, Container, Section, SectionHeading
 src/components/motion/       — FadeIn, StaggerChildren, AnimatedCounter
 src/components/sections/     — Page-specific sections grouped by page
-src/lib/                     — content.ts, metadata.ts, types.ts, utils.ts
+src/lib/                     — content.ts, metadata.ts, utils.ts
 ```
 
 ## Code Style
