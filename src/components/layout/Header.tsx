@@ -39,6 +39,11 @@ export function Header() {
           <div className="flex h-20 items-center justify-between">
             <Link
               href="/"
+              onClick={() => {
+                if (isHome) {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
               className={cn(
                 'shrink-0 transition-all duration-300',
                 showSolid
