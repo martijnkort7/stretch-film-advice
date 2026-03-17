@@ -40,7 +40,7 @@ export function AnimatedCounter({
   }, [rounded]);
 
   return (
-    <motion.span ref={ref} className="font-serif text-5xl tracking-tight md:text-7xl">
+    <motion.span ref={ref} className="font-serif text-4xl tracking-tight sm:text-5xl md:text-7xl">
       {prefix}
       {displayValue}
       {suffix}

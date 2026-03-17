@@ -5,7 +5,7 @@ import { siteConfig, navigation, footer, ui } from '@/lib/content';
 
 export function Footer() {
   return (
-    <footer className="bg-navy-950 py-16 text-white md:py-20">
+    <footer className="bg-navy-950 pb-28 pt-16 text-white md:py-20">
       <Container>
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {/* Company */}

@@ -454,6 +454,8 @@ export const ui = {
   whatsAppLabel: 'WhatsApp',
   contactViaWhatsApp: 'Contact via WhatsApp',
   sendAMessage: 'Send a message',
+  callNow: 'Call',
+  callNowAria: 'Call Stretch Film Advice',
   linkedInLabel: 'LinkedIn',
   whatToExpect: 'What to expect',
   contactInfoEmail: 'Email',

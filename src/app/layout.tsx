@@ -2,6 +2,7 @@ import { Inter, Instrument_Serif } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollToTop } from '@/components/ui/ScrollToTop';
+import { MobileContactBar } from '@/components/ui/MobileContactBar';
 import { baseMetadata, localBusinessSchema } from '@/lib/metadata';
 import { ui } from '@/lib/content';
 import './globals.css';
@@ -47,6 +48,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <ScrollToTop />
+        <MobileContactBar />
       </body>
     </html>
   );
