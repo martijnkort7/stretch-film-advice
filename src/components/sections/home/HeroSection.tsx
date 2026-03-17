@@ -9,11 +9,11 @@ export function HeroSection() {
   const { hero } = homepage;
 
   return (
-    <section className="relative flex min-h-screen items-center bg-navy-950">
+    <section className="relative flex min-h-[85vh] min-h-[85dvh] bg-navy-950 md:min-h-screen md:items-center">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
 
-      <Container className="relative z-10 py-24 sm:py-32 md:py-40">
+      <Container className="relative z-10 pt-28 pb-12 sm:py-32 md:py-40">
         <div className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
