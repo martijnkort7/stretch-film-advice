@@ -10,7 +10,7 @@ import { about } from '@/lib/content';
 export function TimelineSection() {
   const { timeline } = about;
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-25%' });
 
   return (
     <Section variant="dark">
@@ -27,7 +27,7 @@ export function TimelineSection() {
                 className="absolute left-0 top-0 h-0.5 origin-left bg-blue-400"
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-                transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 4, ease: [0.16, 1, 0.3, 1] }}
                 style={{ width: '100%' }}
               />
             </div>
@@ -42,8 +42,8 @@ export function TimelineSection() {
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : { scale: 0 }}
                     transition={{
-                      delay: 0.5 + i * 0.5,
-                      duration: 0.6,
+                      delay: 0.8 + i * 0.8,
+                      duration: 0.8,
                       ease: [0.16, 1, 0.3, 1],
                     }}
                   >
@@ -55,8 +55,8 @@ export function TimelineSection() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
                     transition={{
-                      delay: 0.8 + i * 0.5,
-                      duration: 0.7,
+                      delay: 1.1 + i * 0.8,
+                      duration: 0.9,
                       ease: [0.16, 1, 0.3, 1],
                     }}
                   >
@@ -84,7 +84,7 @@ export function TimelineSection() {
                 className="absolute left-[9px] top-0 w-0.5 origin-top bg-blue-400"
                 initial={{ scaleY: 0 }}
                 animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-                transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 4, ease: [0.16, 1, 0.3, 1] }}
                 style={{ height: '100%' }}
               />
 
