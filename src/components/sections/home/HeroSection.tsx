@@ -3,15 +3,19 @@
 import { motion } from 'motion/react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
+import { BackgroundBeams } from '@/components/ui/BackgroundBeams';
 import { homepage } from '@/lib/content';
 
 export function HeroSection() {
   const { hero } = homepage;
 
   return (
-    <section className="relative flex min-h-[85vh] min-h-[85dvh] bg-navy-950 md:min-h-screen md:items-center">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
+    <section className="relative flex min-h-[85vh] min-h-[85dvh] overflow-hidden bg-black md:min-h-screen md:items-center">
+      {/* Dark overlay for beam contrast */}
+      <div className="absolute inset-0 bg-black" />
+
+      {/* Animated background beams */}
+      <BackgroundBeams />
 
       <Container className="relative z-10 pt-28 pb-12 sm:py-32 md:py-40">
         <div className="max-w-3xl">
