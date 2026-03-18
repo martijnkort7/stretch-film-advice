@@ -71,6 +71,7 @@ export const BackgroundBeams = React.memo(
           height="100%"
           viewBox="0 0 696 316"
           fill="none"
+          preserveAspectRatio="xMidYMid slice"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -85,8 +86,8 @@ export const BackgroundBeams = React.memo(
               key={`path-` + index}
               d={path}
               stroke={`url(#linearGradient-${index})`}
-              strokeOpacity="0.4"
-              strokeWidth="0.5"
+              strokeOpacity="0.6"
+              strokeWidth="0.7"
             ></motion.path>
           ))}
           <defs>
