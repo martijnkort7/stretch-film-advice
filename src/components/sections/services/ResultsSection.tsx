@@ -46,21 +46,59 @@ export function ResultsSection() {
           </FadeIn>
 
           <FadeIn delay={0.2} className="mt-10">
-            <div className="mx-auto max-w-lg overflow-hidden rounded-sm border border-slate-200 shadow-sm">
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src={results.tiltTest.image}
-                  alt={results.tiltTest.imageAlt}
-                  fill
-                  className="object-cover"
-                />
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="overflow-hidden rounded-sm border border-slate-200 shadow-sm">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={results.tiltTest.image}
+                    alt={results.tiltTest.imageAlt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="border-t border-slate-100 bg-slate-50 px-4 py-3">
+                  <p className="text-xs leading-relaxed text-slate-600">
+                    26° tilt test with plastic cans
+                  </p>
+                </div>
               </div>
-              <div className="border-t border-slate-100 bg-slate-50 p-5">
-                <p className="text-sm leading-relaxed text-slate-600">
-                  {results.tiltTest.caption}
-                </p>
+              <div className="overflow-hidden rounded-sm border border-slate-200 shadow-sm">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/images/tilt-test-watertest.webp"
+                    alt="Tilt test with heavy rolls on pallet at 26-degree incline, load remains fully stable"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="border-t border-slate-100 bg-slate-50 px-4 py-3">
+                  <p className="text-xs leading-relaxed text-slate-600">
+                    26° tilt test with heavy rolls
+                  </p>
+                </div>
+              </div>
+              <div className="overflow-hidden rounded-sm border border-slate-200 shadow-sm">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/images/tilt-test-dupont.webp"
+                    alt="Tilt test with DuPont bags on pallet at 26-degree incline, demonstrating containment force"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="border-t border-slate-100 bg-slate-50 px-4 py-3">
+                  <p className="text-xs leading-relaxed text-slate-600">
+                    26° tilt test with 25kg bags
+                  </p>
+                </div>
               </div>
             </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3} className="mt-6">
+            <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-slate-600">
+              {results.tiltTest.caption}
+            </p>
           </FadeIn>
         </div>
       </Container>

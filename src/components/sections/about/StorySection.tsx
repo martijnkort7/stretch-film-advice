@@ -8,23 +8,25 @@ export function StorySection() {
   return (
     <Section variant="light">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Photo */}
-          <div className="lg:col-span-2">
+          <div>
             <FadeIn direction="left">
-              <Image
-                src="/images/Photo Egbert Kort.jpeg"
-                alt="Egbert Kort, Founder of Stretch Film Advice"
-                width={640}
-                height={800}
-                priority
-                className="aspect-square w-full object-cover object-top"
-              />
+              <div className="overflow-hidden rounded-sm border border-slate-200">
+                <Image
+                  src="/images/egbert-factory-inspection.webp"
+                  alt="Egbert Kort conducting a holding force measurement at a client facility"
+                  width={640}
+                  height={800}
+                  priority
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
             </FadeIn>
           </div>
 
           {/* Story */}
-          <div className="lg:col-span-3">
+          <div>
             <FadeIn>
               <h2 className="font-serif text-3xl tracking-tight text-navy-950 md:text-4xl">
                 {about.story.heading}

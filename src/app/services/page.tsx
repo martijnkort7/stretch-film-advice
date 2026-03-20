@@ -2,6 +2,7 @@ import { PageHeader } from '@/components/sections/PageHeader';
 import { ProcessSection } from '@/components/sections/services/ProcessSection';
 import { ServiceCards } from '@/components/sections/services/ServiceCards';
 import { ResultsSection } from '@/components/sections/services/ResultsSection';
+import { VideoShowcase } from '@/components/sections/services/VideoShowcase';
 import { FAQSection } from '@/components/sections/services/FAQSection';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { services } from '@/lib/content';
@@ -20,6 +21,7 @@ export default function ServicesPage() {
       <ProcessSection />
       <ServiceCards />
       <ResultsSection />
+      <VideoShowcase />
       <FAQSection />
       <CTASection
         heading={services.cta.heading}

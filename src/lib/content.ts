@@ -351,7 +351,7 @@ export const services = {
       body: 'Every optimisation project includes a 26-degree tilt test to verify that pallet stability meets or exceeds the original configuration. This industry-standard test demonstrates maximum containment force and confirms that reduced film usage does not compromise load security.',
       caption:
         'A 26-degree tilt test validates maximum containment force. This pallet, wrapped with optimised 12 micron film, exceeds the stability of conventional 23 micron wrapping.',
-      image: '/images/26 degree test with plastic cans.jpeg',
+      image: '/images/tilt-test-cans.webp',
       imageAlt:
         '26-degree tilt test demonstrating pallet stability after film optimisation',
     },

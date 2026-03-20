@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -23,11 +24,8 @@ export function ValueProposition() {
                 {value.body}
               </p>
             </FadeIn>
-          </div>
-
-          <div className="lg:col-span-2">
-            <FadeIn delay={0.2}>
-              <ul className="space-y-6">
+            <FadeIn delay={0.15}>
+              <ul className="mt-8 space-y-6">
                 {value.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-5">
                     <span className="shrink-0 font-serif text-4xl leading-none text-blue-600">
@@ -39,6 +37,20 @@ export function ValueProposition() {
                   </li>
                 ))}
               </ul>
+            </FadeIn>
+          </div>
+
+          <div className="lg:col-span-2">
+            <FadeIn delay={0.2}>
+              <div className="overflow-hidden rounded-sm border border-white/10">
+                <Image
+                  src="/images/film-usage-comparison.webp"
+                  alt="Before and after film usage comparison — the larger ball represents excessive film use, the smaller ball shows optimised usage with less material"
+                  width={1920}
+                  height={1080}
+                  className="w-full object-cover"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
