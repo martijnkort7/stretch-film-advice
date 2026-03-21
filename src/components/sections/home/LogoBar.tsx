@@ -10,7 +10,7 @@ export function LogoBar() {
     <section className="border-b border-slate-100 bg-white py-12 md:py-16">
       <Container>
         <FadeIn>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
+          <p className="text-center text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
             {logos.heading}
           </p>
           <div className="mt-8 grid grid-cols-3 items-center gap-8 md:grid-cols-6">

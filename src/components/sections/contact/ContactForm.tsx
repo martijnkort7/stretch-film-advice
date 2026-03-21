@@ -1,19 +1,89 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState, useRef, type FormEvent } from 'react';
 import { Button } from '@/components/ui/Button';
 import { contact, formLabels } from '@/lib/content';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 const inputClasses =
-  'mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-300 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+  'mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-400 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+
+const errorInputClasses =
+  'mt-1.5 block w-full border border-red-400 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-400 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>('idle');
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [values, setValues] = useState<Record<string, string>>({});
+  const formRef = useRef<HTMLFormElement>(null);
+
+  function handleBlur(field: string) {
+    setTouched((prev) => ({ ...prev, [field]: true }));
+  }
+
+  function handleChange(field: string, value: string) {
+    setValues((prev) => ({ ...prev, [field]: value }));
+  }
+
+  function getError(field: string): string | null {
+    if (!touched[field]) return null;
+    const value = values[field]?.trim() ?? '';
+
+    if (field === 'email') {
+      if (!value) return formLabels.required;
+      if (!isValidEmail(value)) return formLabels.invalidEmail;
+      return null;
+    }
+
+    if (['name', 'company', 'message'].includes(field)) {
+      if (!value) return formLabels.required;
+    }
+
+    return null;
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const requiredFields = ['name', 'email', 'company', 'message'];
+    const allTouched: Record<string, boolean> = {};
+    requiredFields.forEach((f) => (allTouched[f] = true));
+    setTouched((prev) => ({ ...prev, ...allTouched }));
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const currentValues: Record<string, string> = {};
+    requiredFields.forEach((f) => {
+      currentValues[f] = (formData.get(f) as string) ?? '';
+    });
+    setValues((prev) => ({ ...prev, ...currentValues }));
+
+    const hasErrors = requiredFields.some((f) => {
+      const val = currentValues[f]?.trim() ?? '';
+      if (!val) return true;
+      if (f === 'email' && !isValidEmail(val)) return true;
+      return false;
+    });
+
+    if (hasErrors) {
+      const firstErrorField = requiredFields.find((f) => {
+        const val = currentValues[f]?.trim() ?? '';
+        if (!val) return true;
+        if (f === 'email' && !isValidEmail(val)) return true;
+        return false;
+      });
+      if (firstErrorField) {
+        const el = form.querySelector<HTMLElement>(`#${firstErrorField}`);
+        el?.focus();
+      }
+      return;
+    }
+
     setStatus('submitting');
 
     const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
@@ -22,19 +92,18 @@ export function ContactForm() {
       return;
     }
 
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
     try {
       const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: 'POST',
-        body: data,
+        body: formData,
         headers: { Accept: 'application/json' },
       });
 
       if (response.ok) {
         setStatus('success');
         form.reset();
+        setTouched({});
+        setValues({});
       } else {
         setStatus('error');
       }
@@ -46,7 +115,9 @@ export function ContactForm() {
   if (status === 'success') {
     return (
       <div className="border border-blue-200 bg-blue-50 p-8">
-        <p className="font-serif text-xl text-navy-950">{formLabels.thankYou}</p>
+        <p className="text-navy-950 font-serif text-xl">
+          {formLabels.thankYou}
+        </p>
         <p className="mt-2 text-slate-600">{contact.form.success}</p>
         <button
           type="button"
@@ -59,12 +130,22 @@ export function ContactForm() {
     );
   }
 
+  const nameError = getError('name');
+  const emailError = getError('email');
+  const companyError = getError('company');
+  const messageError = getError('message');
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="space-y-6"
+      noValidate
+    >
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-navy-950"
+          className="text-navy-950 block text-sm font-medium"
         >
           {formLabels.name} <span className="text-red-600">*</span>
         </label>
@@ -75,14 +156,23 @@ export function ContactForm() {
           required
           autoComplete="name"
           placeholder={formLabels.namePlaceholder}
-          className={inputClasses}
+          aria-describedby={nameError ? 'name-error' : undefined}
+          aria-invalid={nameError ? true : undefined}
+          onBlur={() => handleBlur('name')}
+          onChange={(e) => handleChange('name', e.target.value)}
+          className={nameError ? errorInputClasses : inputClasses}
         />
+        {nameError && (
+          <p id="name-error" role="alert" className="mt-1 text-sm text-red-600">
+            {nameError}
+          </p>
+        )}
       </div>
 
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-navy-950"
+          className="text-navy-950 block text-sm font-medium"
         >
           {formLabels.email} <span className="text-red-600">*</span>
         </label>
@@ -93,14 +183,27 @@ export function ContactForm() {
           required
           autoComplete="email"
           placeholder={formLabels.emailPlaceholder}
-          className={inputClasses}
+          aria-describedby={emailError ? 'email-error' : undefined}
+          aria-invalid={emailError ? true : undefined}
+          onBlur={() => handleBlur('email')}
+          onChange={(e) => handleChange('email', e.target.value)}
+          className={emailError ? errorInputClasses : inputClasses}
         />
+        {emailError && (
+          <p
+            id="email-error"
+            role="alert"
+            className="mt-1 text-sm text-red-600"
+          >
+            {emailError}
+          </p>
+        )}
       </div>
 
       <div>
         <label
           htmlFor="company"
-          className="block text-sm font-medium text-navy-950"
+          className="text-navy-950 block text-sm font-medium"
         >
           {formLabels.company} <span className="text-red-600">*</span>
         </label>
@@ -111,23 +214,31 @@ export function ContactForm() {
           required
           autoComplete="organization"
           placeholder={formLabels.companyPlaceholder}
-          className={inputClasses}
+          aria-describedby={companyError ? 'company-error' : undefined}
+          aria-invalid={companyError ? true : undefined}
+          onBlur={() => handleBlur('company')}
+          onChange={(e) => handleChange('company', e.target.value)}
+          className={companyError ? errorInputClasses : inputClasses}
         />
+        {companyError && (
+          <p
+            id="company-error"
+            role="alert"
+            className="mt-1 text-sm text-red-600"
+          >
+            {companyError}
+          </p>
+        )}
       </div>
 
       <div>
         <label
           htmlFor="audience"
-          className="block text-sm font-medium text-navy-950"
+          className="text-navy-950 block text-sm font-medium"
         >
           {contact.form.audienceLabel} <span className="text-red-600">*</span>
         </label>
-        <select
-          id="audience"
-          name="audience"
-          required
-          className={inputClasses}
-        >
+        <select id="audience" name="audience" required className={inputClasses}>
           {contact.form.audienceOptions.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
@@ -139,7 +250,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="phone"
-          className="block text-sm font-medium text-navy-950"
+          className="text-navy-950 block text-sm font-medium"
         >
           {formLabels.phone}
         </label>
@@ -156,7 +267,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-navy-950"
+          className="text-navy-950 block text-sm font-medium"
         >
           {formLabels.message} <span className="text-red-600">*</span>
         </label>
@@ -166,12 +277,27 @@ export function ContactForm() {
           required
           rows={6}
           placeholder={formLabels.messagePlaceholder}
-          className={`${inputClasses} resize-y`}
+          aria-describedby={messageError ? 'message-error' : undefined}
+          aria-invalid={messageError ? true : undefined}
+          onBlur={() => handleBlur('message')}
+          onChange={(e) => handleChange('message', e.target.value)}
+          className={`${messageError ? errorInputClasses : inputClasses} resize-y`}
         />
+        {messageError && (
+          <p
+            id="message-error"
+            role="alert"
+            className="mt-1 text-sm text-red-600"
+          >
+            {messageError}
+          </p>
+        )}
       </div>
 
       {status === 'error' && (
-        <p role="alert" className="text-sm text-red-600">{contact.form.error}</p>
+        <p role="alert" className="text-sm text-red-600">
+          {contact.form.error}
+        </p>
       )}
 
       <div>

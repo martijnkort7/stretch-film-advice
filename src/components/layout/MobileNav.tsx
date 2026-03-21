@@ -71,7 +71,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] bg-navy-950"
+          className="bg-navy-950 fixed inset-0 z-[100]"
         >
           <div className="flex h-20 items-center justify-end px-6">
             <button
@@ -143,7 +143,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 }}
                 aria-current={pathname === '/contact' ? 'page' : undefined}
                 className={cn(
-                  'text-sm font-medium uppercase tracking-widest transition-colors',
+                  'text-sm font-medium tracking-widest uppercase transition-colors',
                   pathname === '/contact'
                     ? 'text-white'
                     : 'text-white/60 hover:text-white',

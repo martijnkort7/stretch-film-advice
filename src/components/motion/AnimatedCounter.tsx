@@ -1,7 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useInView, motion, useMotionValue, useTransform, animate } from 'motion/react';
+import {
+  useInView,
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+} from 'motion/react';
 
 interface AnimatedCounterProps {
   value: number;
@@ -40,7 +46,10 @@ export function AnimatedCounter({
   }, [rounded]);
 
   return (
-    <motion.span ref={ref} className="font-serif text-4xl tracking-tight sm:text-5xl md:text-7xl">
+    <motion.span
+      ref={ref}
+      className="font-serif text-4xl tracking-tight sm:text-5xl md:text-7xl"
+    >
       {prefix}
       {displayValue}
       {suffix}

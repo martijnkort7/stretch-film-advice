@@ -9,10 +9,22 @@ import {
 import { services } from '@/lib/content';
 
 const processImages = [
-  { src: '/images/egbert-machine-inspection.webp', alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment' },
-  { src: '/images/containment-force-measurement.webp', alt: 'Measuring containment force on wrapped pallet with professional gauge' },
-  { src: '/images/film-stretch-percentage.webp', alt: 'Stretch film with pre-stretch percentage markings during implementation' },
-  { src: '/images/tilt-test-boxes.webp', alt: 'Wrapped pallet on 26-degree tilt test verifying load stability' },
+  {
+    src: '/images/egbert-machine-inspection.webp',
+    alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
+  },
+  {
+    src: '/images/containment-force-measurement.webp',
+    alt: 'Measuring containment force on wrapped pallet with professional gauge',
+  },
+  {
+    src: '/images/film-stretch-percentage.webp',
+    alt: 'Stretch film with pre-stretch percentage markings during implementation',
+  },
+  {
+    src: '/images/tilt-test-boxes.webp',
+    alt: 'Wrapped pallet on 26-degree tilt test verifying load stability',
+  },
 ];
 
 export function ProcessSection() {
@@ -21,10 +33,7 @@ export function ProcessSection() {
   return (
     <Section variant="light">
       <Container>
-        <SectionHeading
-          overline={process.overline}
-          heading={process.heading}
-        />
+        <SectionHeading overline={process.overline} heading={process.heading} />
 
         <StaggerChildren className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {process.steps.map((step, i) => (
@@ -42,7 +51,7 @@ export function ProcessSection() {
                 <span className="font-serif text-6xl text-blue-100">
                   {step.number}
                 </span>
-                <h3 className="mt-2 font-serif text-xl text-navy-950">
+                <h3 className="text-navy-950 mt-2 font-serif text-xl">
                   {step.heading}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">

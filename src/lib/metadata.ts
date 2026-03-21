@@ -40,15 +40,27 @@ export const baseMetadata: Metadata = {
     title: 'Stretch Film Advice | Expert Stretch Film Consulting',
     description:
       'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation across Europe.',
+    images: [
+      {
+        url: `${baseUrl}/images/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Stretch Film Advice - Reduce stretch film costs by 30-50%',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Stretch Film Advice | Expert Stretch Film Consulting',
     description:
       'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation.',
+    images: [`${baseUrl}/images/og-image.jpg`],
   },
   alternates: {
     canonical: baseUrl,
+  },
+  other: {
+    'theme-color': '#0A1628',
   },
 };
 
@@ -151,3 +163,24 @@ export const localBusinessSchema = {
   },
   sameAs: ['https://www.linkedin.com/in/egbert-kort-73b4b321/'],
 };
+
+export function breadcrumbSchema(pageName: string, pageUrl: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: pageName,
+        item: pageUrl,
+      },
+    ],
+  };
+}

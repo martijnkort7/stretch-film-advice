@@ -31,6 +31,7 @@ export function ExpertisePreview() {
             <FadeIn key={card.heading} delay={0.1 + i * 0.1}>
               <motion.div
                 whileHover={{ y: -5 }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="group rounded-sm border border-white/10 bg-white/5 p-8 md:p-10"
               >

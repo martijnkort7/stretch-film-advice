@@ -21,10 +21,13 @@ export function TimelineSection() {
           {/* Desktop: horizontal layout */}
           <div className="hidden md:block">
             {/* Horizontal draw line */}
-            <div className="relative mx-auto" style={{ width: 'calc(100% - 8rem)' }}>
-              <div className="absolute left-0 right-0 top-0 h-0.5 bg-slate-200" />
+            <div
+              className="relative mx-auto"
+              style={{ width: 'calc(100% - 8rem)' }}
+            >
+              <div className="absolute top-0 right-0 left-0 h-0.5 bg-slate-200" />
               <motion.div
-                className="absolute left-0 top-0 h-0.5 origin-left bg-blue-400"
+                className="absolute top-0 left-0 h-0.5 origin-left bg-blue-400"
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
                 transition={{ duration: 4, ease: [0.16, 1, 0.3, 1] }}
@@ -53,7 +56,9 @@ export function TimelineSection() {
                   {/* Text content */}
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+                    animate={
+                      isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }
+                    }
                     transition={{
                       delay: 1.1 + i * 0.8,
                       duration: 0.9,
@@ -63,7 +68,7 @@ export function TimelineSection() {
                     <span className="inline-block rounded bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                       {item.year}
                     </span>
-                    <h3 className="mt-3 font-serif text-lg text-navy-950">
+                    <h3 className="text-navy-950 mt-3 font-serif text-lg">
                       {item.label}
                     </h3>
                     <p className="mt-1 text-sm text-slate-500">
@@ -79,9 +84,9 @@ export function TimelineSection() {
           <div className="md:hidden">
             <div className="relative pl-8">
               {/* Vertical draw line */}
-              <div className="absolute bottom-0 left-[9px] top-0 w-0.5 bg-slate-200" />
+              <div className="absolute top-0 bottom-0 left-[9px] w-0.5 bg-slate-200" />
               <motion.div
-                className="absolute left-[9px] top-0 w-0.5 origin-top bg-blue-400"
+                className="absolute top-0 left-[9px] w-0.5 origin-top bg-blue-400"
                 initial={{ scaleY: 0 }}
                 animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
                 transition={{ duration: 4, ease: [0.16, 1, 0.3, 1] }}
@@ -93,7 +98,7 @@ export function TimelineSection() {
                   <div key={item.year} className="relative">
                     {/* Circle marker */}
                     <motion.div
-                      className="absolute -left-8 top-1"
+                      className="absolute top-1 -left-8"
                       initial={{ scale: 0 }}
                       animate={isInView ? { scale: 1 } : { scale: 0 }}
                       transition={{
@@ -108,7 +113,9 @@ export function TimelineSection() {
                     {/* Text content */}
                     <motion.div
                       initial={{ opacity: 0, y: 12 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+                      animate={
+                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }
+                      }
                       transition={{
                         delay: 0.8 + i * 0.5,
                         duration: 0.7,
@@ -118,7 +125,7 @@ export function TimelineSection() {
                       <span className="inline-block rounded bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                         {item.year}
                       </span>
-                      <h3 className="mt-2 font-serif text-lg text-navy-950">
+                      <h3 className="text-navy-950 mt-2 font-serif text-lg">
                         {item.label}
                       </h3>
                       <p className="mt-1 text-sm text-slate-500">

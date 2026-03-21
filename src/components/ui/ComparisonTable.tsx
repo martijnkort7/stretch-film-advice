@@ -68,14 +68,14 @@ export function ComparisonTable({
                   <th
                     key={i}
                     className={cn(
-                      'border-b px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.2em]',
+                      'border-b px-5 py-4 text-left text-xs font-semibold tracking-[0.2em] uppercase',
                       i === 0 && 'w-[30%]',
                       i === highlightColumn &&
                         !isDark &&
                         'bg-navy-950/[0.05] text-navy-950 font-bold',
                       i === highlightColumn &&
                         isDark &&
-                        'bg-white/10 text-white font-bold',
+                        'bg-white/10 font-bold text-white',
                       i !== highlightColumn &&
                         isDark &&
                         'border-white/10 text-slate-400',
@@ -104,7 +104,7 @@ export function ComparisonTable({
                         'border-b px-5 py-4 font-medium',
                         isDark
                           ? 'border-white/10 text-white'
-                          : 'border-slate-200 text-navy-950',
+                          : 'text-navy-950 border-slate-200',
                       )}
                     >
                       {row[labelKey] as string}
@@ -157,7 +157,7 @@ export function ComparisonTable({
                   'border-b px-4 py-3 font-medium',
                   isDark
                     ? 'border-white/10 bg-white/5 text-white'
-                    : 'border-slate-200 bg-slate-50 text-navy-950',
+                    : 'text-navy-950 border-slate-200 bg-slate-50',
                 )}
               >
                 {row[labelKey] as string}
@@ -179,7 +179,7 @@ export function ComparisonTable({
                     >
                       <span
                         className={cn(
-                          'text-xs font-semibold uppercase tracking-[0.15em]',
+                          'text-xs font-semibold tracking-[0.15em] uppercase',
                           isHighlighted && !isDark && 'text-navy-950',
                           isHighlighted && isDark && 'text-white',
                           !isHighlighted && isDark && 'text-slate-400',
@@ -191,7 +191,9 @@ export function ComparisonTable({
                       <span
                         className={cn(
                           'text-sm',
-                          isHighlighted && !isDark && 'font-medium text-navy-950',
+                          isHighlighted &&
+                            !isDark &&
+                            'text-navy-950 font-medium',
                           isHighlighted && isDark && 'font-medium text-white',
                           !isHighlighted && isDark && 'text-slate-300',
                           !isHighlighted && !isDark && 'text-slate-600',

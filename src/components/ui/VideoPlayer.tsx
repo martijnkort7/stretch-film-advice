@@ -9,7 +9,12 @@ interface VideoPlayerProps {
   className?: string;
 }
 
-export function VideoPlayer({ src, poster, alt, className = '' }: VideoPlayerProps) {
+export function VideoPlayer({
+  src,
+  poster,
+  alt,
+  className = '',
+}: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -43,7 +48,7 @@ export function VideoPlayer({ src, poster, alt, className = '' }: VideoPlayerPro
         >
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform hover:scale-110">
             <svg
-              className="ml-1 h-7 w-7 text-navy-950"
+              className="text-navy-950 ml-1 h-7 w-7"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

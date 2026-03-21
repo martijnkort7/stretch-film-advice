@@ -18,8 +18,8 @@ export function Section({
       id={id}
       className={cn(
         'py-16 md:py-24',
-        variant === 'light' && 'bg-white text-navy-950',
-        variant === 'dark' && 'bg-slate-50 text-navy-950',
+        variant === 'light' && 'text-navy-950 bg-white',
+        variant === 'dark' && 'text-navy-950 bg-slate-50',
         variant === 'navy' && 'bg-navy-950 text-white',
         className,
       )}

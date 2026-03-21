@@ -28,7 +28,7 @@ export function StorySection() {
           {/* Story */}
           <div>
             <FadeIn>
-              <h2 className="font-serif text-3xl tracking-tight text-navy-950 md:text-4xl">
+              <h2 className="text-navy-950 font-serif text-3xl tracking-tight md:text-4xl">
                 {about.story.heading}
               </h2>
             </FadeIn>

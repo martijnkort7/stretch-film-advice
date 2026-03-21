@@ -4,7 +4,7 @@ import { siteConfig, ui } from '@/lib/content';
 
 export function MobileContactBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-navy-950 md:hidden">
+    <div className="bg-navy-950 fixed right-0 bottom-0 left-0 z-50 border-t border-white/10 md:hidden">
       <div className="grid grid-cols-2">
         <a
           href={`tel:${siteConfig.phone}`}

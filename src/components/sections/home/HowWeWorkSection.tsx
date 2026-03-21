@@ -10,10 +10,22 @@ import {
 import { homepage } from '@/lib/content';
 
 const stepImages = [
-  { src: '/images/egbert-factory-inspection.webp', alt: 'Egbert Kort conducting on-site assessment at a pallet wrapping facility' },
-  { src: '/images/force-diagram-screen.webp', alt: 'Film Edge Force analysis diagram showing containment force measurements' },
-  { src: '/images/film-stretch-percentage.webp', alt: 'Stretch film with pre-stretch percentage markings during implementation' },
-  { src: '/images/holding-force-test.webp', alt: 'Holding force test verifying pallet load containment after optimisation' },
+  {
+    src: '/images/egbert-factory-inspection.webp',
+    alt: 'Egbert Kort conducting on-site assessment at a pallet wrapping facility',
+  },
+  {
+    src: '/images/force-diagram-screen.webp',
+    alt: 'Film Edge Force analysis diagram showing containment force measurements',
+  },
+  {
+    src: '/images/film-stretch-percentage.webp',
+    alt: 'Stretch film with pre-stretch percentage markings during implementation',
+  },
+  {
+    src: '/images/holding-force-test.webp',
+    alt: 'Holding force test verifying pallet load containment after optimisation',
+  },
 ];
 
 export function HowWeWorkSection() {
@@ -44,7 +56,7 @@ export function HowWeWorkSection() {
                 <span className="font-serif text-5xl text-blue-100">
                   {step.number}
                 </span>
-                <h3 className="mt-2 font-serif text-xl text-navy-950">
+                <h3 className="text-navy-950 mt-2 font-serif text-xl">
                   {step.heading}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">

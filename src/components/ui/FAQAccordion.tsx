@@ -40,8 +40,8 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
             value={`item-${i}`}
             className="overflow-hidden border border-slate-200 bg-white"
           >
-            <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-slate-50">
-              <span className="pr-8 font-serif text-lg text-navy-950">
+            <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none">
+              <span className="text-navy-950 pr-8 font-serif text-lg">
                 {item.question}
               </span>
               <ChevronDown
@@ -50,7 +50,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
               />
             </Accordion.Trigger>
             <Accordion.Content className="overflow-hidden data-[state=closed]:animate-[accordion-up_0.3s_ease-out] data-[state=open]:animate-[accordion-down_0.3s_ease-out]">
-              <div className="px-6 pb-5 pt-1 text-base leading-relaxed text-slate-600">
+              <div className="px-6 pt-1 pb-5 text-base leading-relaxed text-slate-600">
                 {item.answer}
               </div>
             </Accordion.Content>

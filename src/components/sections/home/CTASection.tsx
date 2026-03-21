@@ -18,12 +18,12 @@ export function CTASection({
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       <Image
-        src="/images/Banner fabriek pallets.jpeg"
+        src="/images/banner-factory-pallets.webp"
         alt="Stretch film wrapped pallets in factory"
         fill
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-navy-950/85" />
+      <div className="bg-navy-950/85 absolute inset-0" />
 
       <Container className="relative z-10">
         <FadeIn>

@@ -14,7 +14,7 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    'bg-blue-600 text-white hover:bg-red-600 focus-visible:ring-blue-500',
+    'bg-blue-600 text-white hover:bg-red-700 hover:shadow-md focus-visible:ring-blue-500',
   secondary:
     'border border-navy-950 text-navy-950 hover:bg-navy-950 hover:text-white focus-visible:ring-navy-950',
   ghost:
@@ -38,7 +38,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+    'inline-flex items-center justify-center font-medium transition-[color,background-color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
     variants[variant],
     sizes[size],
     disabled && 'cursor-not-allowed opacity-50',

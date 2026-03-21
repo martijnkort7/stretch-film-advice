@@ -80,7 +80,7 @@ export const homepage = {
       link: '/about',
       linkLabel: 'Learn more',
       icon: 'user' as const,
-      image: '/images/Photo Egbert Kort.jpeg',
+      image: '/images/egbert-kort.webp',
     },
     approach: {
       heading: 'The Approach',
@@ -162,14 +162,12 @@ export const about = {
       {
         year: '1981',
         label: 'Started in stretch wrapping',
-        description:
-          'Began selling stretch wrappers at Matco BV',
+        description: 'Began selling stretch wrappers at Matco BV',
       },
       {
         year: '1999',
         label: 'Moved into stretch film',
-        description:
-          'Senior Account Manager Industrial Stretch Films at AFP',
+        description: 'Senior Account Manager Industrial Stretch Films at AFP',
       },
       {
         year: '2020',
@@ -211,12 +209,7 @@ export const about = {
     heading: 'What Sets This Apart',
     body: 'Most stretch film sellers know film. Most machine suppliers know machines. Egbert knows both, and that combination is what delivers results.',
     comparison: {
-      headers: [
-        '',
-        'Film Sellers',
-        'Machine Suppliers',
-        'Stretch Film Advice',
-      ],
+      headers: ['', 'Film Sellers', 'Machine Suppliers', 'Stretch Film Advice'],
       rows: [
         {
           feature: 'Film selection expertise',
@@ -318,7 +311,12 @@ export const services = {
     overline: 'Typical Results',
     heading: 'What You Can Expect',
     subtitle: 'Real-world data from actual optimisation projects.',
-    headers: ['Metric', 'Before Optimisation', 'After Optimisation', 'Improvement'],
+    headers: [
+      'Metric',
+      'Before Optimisation',
+      'After Optimisation',
+      'Improvement',
+    ],
     rows: [
       {
         metric: 'Film Specification',
@@ -423,8 +421,7 @@ export const contact = {
   form: {
     submitLabel: 'Send Message',
     submitting: 'Sending...',
-    success:
-      'Thank you for your message. We will respond within 24 hours.',
+    success: 'Thank you for your message. We will respond within 24 hours.',
     error:
       'Something went wrong. Please try emailing us directly at egbertkort@stretchfilmadvice.com.',
     audienceLabel: 'I am a...',
@@ -465,7 +462,7 @@ export const ui = {
 export const notFoundPage = {
   code: '404',
   heading: 'Page Not Found',
-  body: "The page you\u2019re looking for doesn\u2019t exist or has been moved.",
+  body: 'The page you\u2019re looking for doesn\u2019t exist or has been moved.',
   backToHome: 'Back to Home',
 };
 
@@ -483,6 +480,8 @@ export const formLabels = {
   messagePlaceholder:
     'Describe your current wrapping process or specific challenges...',
   sendAnother: 'Send another message',
+  required: 'This field is required',
+  invalidEmail: 'Please enter a valid email address',
 };
 
 export const footer = {

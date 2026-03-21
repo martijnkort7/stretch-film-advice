@@ -46,9 +46,7 @@ export function Header() {
               }}
               className={cn(
                 'shrink-0 transition-all duration-300',
-                showSolid
-                  ? ''
-                  : 'rounded-lg bg-white px-3 py-1.5 shadow-sm',
+                showSolid ? '' : 'rounded-lg bg-white px-3 py-1.5 shadow-sm',
               )}
             >
               <Image
@@ -57,10 +55,7 @@ export function Header() {
                 width={220}
                 height={60}
                 priority
-                className={cn(
-                  'h-10 w-auto',
-                  showSolid && 'mix-blend-multiply',
-                )}
+                className={cn('h-10 w-auto', showSolid && 'mix-blend-multiply')}
               />
             </Link>
 
@@ -72,17 +67,19 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }
                   aria-current={pathname === item.href ? 'page' : undefined}
                   className={cn(
-                    'text-sm font-medium transition-colors duration-200 border-b-2',
+                    'rounded-sm border-b-2 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none',
                     pathname === item.href
                       ? showSolid
-                        ? 'text-blue-600 border-red-600'
-                        : 'text-white border-red-600'
+                        ? 'border-red-600 text-blue-600'
+                        : 'border-red-600 text-white'
                       : showSolid
-                        ? 'text-slate-600 border-transparent hover:text-red-600'
-                        : 'text-white/80 border-transparent hover:text-white',
+                        ? 'border-transparent text-slate-600 hover:text-red-600'
+                        : 'border-transparent text-white/80 hover:text-white',
                   )}
                 >
                   {item.label}
@@ -100,7 +97,7 @@ export function Header() {
 
             <button
               className={cn(
-                'flex flex-col gap-1.5 p-2 md:hidden',
+                'flex flex-col gap-1.5 rounded-sm p-2 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none md:hidden',
                 showSolid ? 'text-navy-950' : 'text-white',
               )}
               onClick={() => setMobileOpen(true)}

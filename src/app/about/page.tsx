@@ -5,13 +5,24 @@ import { ExperienceHighlights } from '@/components/sections/about/ExperienceHigh
 import { WhyDifferent } from '@/components/sections/about/WhyDifferent';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { about } from '@/lib/content';
-import { aboutMetadata } from '@/lib/metadata';
+import { aboutMetadata, breadcrumbSchema } from '@/lib/metadata';
 
 export const metadata = aboutMetadata;
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema(
+              'About',
+              'https://www.stretchfilmadvice.com/about',
+            ),
+          ),
+        }}
+      />
       <PageHeader
         overline={about.header.overline}
         heading={about.header.heading}

@@ -33,10 +33,10 @@ export function ResultsSection() {
         <div className="mt-20">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+              <p className="mb-4 text-xs font-semibold tracking-[0.2em] text-slate-500 uppercase">
                 {results.tiltTest.overline}
               </p>
-              <h3 className="font-serif text-2xl text-navy-950 md:text-3xl">
+              <h3 className="text-navy-950 font-serif text-2xl md:text-3xl">
                 {results.tiltTest.heading}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-slate-600">

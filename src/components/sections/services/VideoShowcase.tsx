@@ -27,7 +27,8 @@ export function VideoShowcase() {
               alt="Pallet stability push test demonstrating holding force after optimised stretch film wrapping"
             />
             <p className="mt-3 text-sm text-slate-400">
-              Push test demonstrating pallet stability after optimised wrapping with multilayer stretch film.
+              Push test demonstrating pallet stability after optimised wrapping
+              with multilayer stretch film.
             </p>
           </FadeIn>
 
@@ -38,7 +39,8 @@ export function VideoShowcase() {
               alt="Automatic pallet wrapping machine in operation at industrial facility"
             />
             <p className="mt-3 text-sm text-slate-400">
-              Automatic pallet wrapping machine in operation — the type of equipment we optimise settings for.
+              Automatic pallet wrapping machine in operation — the type of
+              equipment we optimise settings for.
             </p>
           </FadeIn>
         </div>

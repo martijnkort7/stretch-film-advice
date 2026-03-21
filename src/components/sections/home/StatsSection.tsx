@@ -17,7 +17,7 @@ export function StatsSection() {
                   prefix={stat.prefix}
                 />
               </div>
-              <p className="mt-3 text-sm font-medium uppercase tracking-[0.15em] text-slate-500">
+              <p className="mt-3 text-sm font-medium tracking-[0.15em] text-slate-500 uppercase">
                 {stat.label}
               </p>
             </div>

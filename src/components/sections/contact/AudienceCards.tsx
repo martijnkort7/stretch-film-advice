@@ -12,7 +12,7 @@ export function AudienceCards() {
 
   return (
     <div>
-      <h2 className="mb-8 text-center font-serif text-2xl text-navy-950">
+      <h2 className="text-navy-950 mb-8 text-center font-serif text-2xl">
         {audiences.heading}
       </h2>
 
@@ -25,14 +25,14 @@ export function AudienceCards() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-50">
                   <Icon className="h-6 w-6 text-blue-600" aria-hidden="true" />
                 </div>
-                <h3 className="font-serif text-xl text-navy-950">
+                <h3 className="text-navy-950 font-serif text-xl">
                   {card.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
                   {card.description}
                 </p>
                 <div className="mt-4 border-l-2 border-blue-200 pl-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
+                  <p className="text-xs font-semibold tracking-[0.15em] text-slate-500 uppercase">
                     {ui.whatToExpect}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
