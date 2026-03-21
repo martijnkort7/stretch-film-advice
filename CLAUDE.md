@@ -59,7 +59,7 @@ src/lib/                     — content.ts, metadata.ts, utils.ts
 
 ## Content
 
-- Client: Egbert Kort, ~20 years pallet wrapping machine experience
+- Client: Egbert Kort, ~40 years pallet wrapping machine experience
 - USP: Deep machine knowledge + film expertise = 30-50% film reduction
 - Tone: Authoritative expert advisor, not salesy. Think management consulting.
 - Contact: egbertkort@stretchfilmadvice.com, +31 651571072, LinkedIn

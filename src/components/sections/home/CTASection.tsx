@@ -28,6 +28,7 @@ export function CTASection({
       <Container className="relative z-10">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto mb-6 h-0.5 w-12 bg-red-600" />
             <h2 className="font-serif text-3xl leading-tight tracking-tight text-white md:text-5xl">
               {heading}
             </h2>
