@@ -10,16 +10,16 @@ import { services } from '@/lib/content';
 
 const processImages = [
   {
-    src: '/images/egbert-machine-inspection.webp',
-    alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
-  },
-  {
-    src: '/images/containment-force-measurement.webp',
-    alt: 'Measuring containment force on wrapped pallet with professional gauge',
+    src: '/images/bad-stacked-boxes.JPG',
+    alt: 'Poorly stacked pallet with boxes falling off due to incorrect wrapping',
   },
   {
     src: '/images/film-stretch-percentage.webp',
     alt: 'Stretch film with pre-stretch percentage markings during implementation',
+  },
+  {
+    src: '/images/egbert-machine-inspection.webp',
+    alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
   },
   {
     src: '/images/tilt-test-boxes.webp',
