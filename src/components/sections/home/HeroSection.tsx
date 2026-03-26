@@ -57,25 +57,38 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-10"
           >
-            <Link
-              href="/contact"
-              className="group relative inline-flex h-14 cursor-pointer items-center overflow-hidden rounded-full bg-blue-600 p-1 ps-7 pe-16 text-base font-medium text-white transition-all duration-500 hover:bg-red-700 hover:pe-7 hover:ps-16 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-            >
-              <span className="relative z-10 transition-all duration-500">
+            {/* Mobile: rectangular buttons */}
+            <div className="flex flex-col gap-4 sm:hidden">
+              <Button href="/contact" variant="primary" size="lg">
                 {hero.cta}
-              </span>
-              <div className="absolute right-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-blue-600 transition-all duration-500 group-hover:right-[calc(100%-52px)] group-hover:rotate-45 group-hover:text-red-700">
-                <ArrowUpRight size={16} />
-              </div>
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex h-14 items-center justify-center rounded-full border border-white/30 px-10 text-base font-medium text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            >
-              {hero.ctaSecondary}
-            </Link>
+              </Button>
+              <Button href="/services" variant="ghost" size="lg">
+                {hero.ctaSecondary}
+              </Button>
+            </div>
+
+            {/* Desktop: pill buttons with sliding icon animation */}
+            <div className="hidden gap-4 sm:flex sm:flex-row">
+              <Link
+                href="/contact"
+                className="group relative inline-flex h-14 cursor-pointer items-center overflow-hidden rounded-full bg-blue-600 p-1 ps-7 pe-16 text-base font-medium text-white transition-all duration-500 hover:bg-red-700 hover:pe-7 hover:ps-16 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+              >
+                <span className="relative z-10 transition-all duration-500">
+                  {hero.cta}
+                </span>
+                <div className="absolute right-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-blue-600 transition-all duration-500 group-hover:right-[calc(100%-52px)] group-hover:rotate-45 group-hover:text-red-700">
+                  <ArrowUpRight size={16} />
+                </div>
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex h-14 items-center justify-center rounded-full border border-white/30 px-10 text-base font-medium text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              >
+                {hero.ctaSecondary}
+              </Link>
+            </div>
           </motion.div>
 
           <motion.p
