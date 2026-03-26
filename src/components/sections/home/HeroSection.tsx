@@ -73,12 +73,12 @@ export function HeroSection() {
             <div className="hidden gap-4 sm:flex sm:flex-row">
               <Link
                 href="/contact"
-                className="group relative inline-flex h-14 cursor-pointer items-center overflow-hidden rounded-full bg-blue-600 p-1 ps-7 pe-16 text-base font-medium text-white transition-all duration-500 hover:bg-red-700 hover:pe-7 hover:ps-16 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="group relative inline-flex h-14 cursor-pointer items-center overflow-hidden rounded-full bg-blue-600 p-1 ps-7 pe-16 text-base font-medium text-white transition-all duration-500 hover:bg-white hover:text-blue-600 hover:pe-7 hover:ps-16 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 <span className="relative z-10 transition-all duration-500">
                   {hero.cta}
                 </span>
-                <div className="absolute right-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-blue-600 transition-all duration-500 group-hover:right-[calc(100%-52px)] group-hover:rotate-45 group-hover:text-red-700">
+                <div className="absolute right-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-blue-600 transition-all duration-500 group-hover:right-[calc(100%-52px)] group-hover:rotate-45 group-hover:text-blue-600">
                   <ArrowUpRight size={16} />
                 </div>
               </Link>
