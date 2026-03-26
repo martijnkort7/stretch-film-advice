@@ -24,6 +24,7 @@ export function ResultsSection() {
         <FadeIn delay={0.2} className="mt-16">
           <ComparisonTable
             headers={results.headers}
+            mobileHeaders={['Metric', 'Before', 'After', 'Improvement']}
             rows={results.rows}
             highlightColumn={3}
           />

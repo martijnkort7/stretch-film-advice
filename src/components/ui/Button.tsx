@@ -18,7 +18,7 @@ const variants = {
   secondary:
     'border border-navy-950 text-navy-950 hover:bg-navy-950 hover:text-white focus-visible:ring-navy-950',
   ghost:
-    'border border-white/30 text-white hover:bg-white/10 focus-visible:ring-white',
+    'border border-white/50 bg-white/5 text-white hover:bg-white/10 focus-visible:ring-white',
 };
 
 const sizes = {

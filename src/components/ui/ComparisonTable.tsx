@@ -7,6 +7,7 @@ interface ComparisonRow {
 
 interface ComparisonTableProps {
   headers: string[];
+  mobileHeaders?: string[];
   rows: ComparisonRow[];
   highlightColumn?: number;
   variant?: 'light' | 'dark';
@@ -50,10 +51,12 @@ function CellValue({
 
 export function ComparisonTable({
   headers,
+  mobileHeaders,
   rows,
   highlightColumn,
   variant = 'light',
 }: ComparisonTableProps) {
+  const mobileHeaderList = mobileHeaders || headers;
   const isDark = variant === 'dark';
 
   return (
@@ -186,7 +189,7 @@ export function ComparisonTable({
                           !isHighlighted && !isDark && 'text-slate-500',
                         )}
                       >
-                        {headers[columnIndex]}
+                        {mobileHeaderList[columnIndex]}
                       </span>
                       <span
                         className={cn(

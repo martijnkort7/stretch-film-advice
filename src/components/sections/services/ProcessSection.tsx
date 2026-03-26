@@ -6,6 +6,7 @@ import {
   StaggerChildren,
   StaggerItem,
 } from '@/components/motion/StaggerChildren';
+import { ExpandableText } from '@/components/ui/ExpandableText';
 import { services } from '@/lib/content';
 
 const processImages = [
@@ -54,9 +55,7 @@ export function ProcessSection() {
                 <h3 className="text-navy-950 mt-2 font-serif text-xl">
                   {step.heading}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                  {step.body}
-                </p>
+                <ExpandableText text={step.body} className="mt-3" />
               </div>
             </StaggerItem>
           ))}

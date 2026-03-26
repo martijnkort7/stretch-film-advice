@@ -17,7 +17,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        'py-16 md:py-24',
+        'py-12 md:py-24',
         variant === 'light' && 'text-navy-950 bg-white',
         variant === 'dark' && 'text-navy-950 bg-slate-50',
         variant === 'navy' && 'bg-navy-950 text-white',
