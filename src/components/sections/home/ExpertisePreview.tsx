@@ -28,12 +28,12 @@ export function ExpertisePreview() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           {cards.map((card, i) => (
-            <FadeIn key={card.heading} delay={0.1 + i * 0.1}>
+            <FadeIn key={card.heading} delay={0.1 + i * 0.1} className="h-full">
               <motion.div
                 whileHover={{ y: -5 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
-                className="group rounded-sm border border-white/10 bg-white/5 p-8 md:p-10"
+                className="group flex h-full flex-col rounded-sm border border-white/10 bg-white/5 p-8 md:p-10"
               >
                 <div className="mb-5">
                   {card.icon === 'user' && 'image' in card ? (
@@ -58,7 +58,7 @@ export function ExpertisePreview() {
                 </p>
                 <Link
                   href={card.link}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+                  className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
                 >
                   {card.linkLabel}
                   <span

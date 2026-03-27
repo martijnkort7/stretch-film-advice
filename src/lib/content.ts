@@ -16,58 +16,60 @@ export const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
+  { label: 'Results', href: '/results' },
 ];
 
 export const homepage = {
   hero: {
     overline: 'Stretch Film Advisory',
-    heading: 'Reduce Your Stretch Film\nCosts by 30-50%',
+    heading: 'Cut Your Stretch Film\nCosts by 30-50%',
     subtitle:
-      'We supply premium multilayer stretch film through distributors across Europe and advise on optimal film selection and machine settings, backed by over 40 years of pallet wrapping experience.',
+      'I help companies across Europe use less stretch film and get more stable pallets. Through the right multilayer film and proper machine settings, most clients save 30-50% on film costs, with results visible on the first day.',
     cta: 'Request a Free Film Assessment',
-    ctaSecondary: 'See How We Work',
+    ctaSecondary: 'See How It Works',
     ctaSubtext:
-      'Receive a detailed report on your current film usage and savings potential, completely free of obligation.',
+      'I visit your site for half a day, measure everything, and deliver a detailed savings report. Completely free.',
   },
   stats: [
-    { value: 40, suffix: '+', label: 'Years of Experience' },
-    { value: 17, suffix: '', label: 'European Countries' },
+    { value: 45, suffix: '+', label: 'Years of Experience' },
+    { value: 25, suffix: '+', label: 'Countries Across Europe' },
+    { value: 1000, suffix: '+', label: 'Sites Assessed' },
     { value: 50, suffix: '%', prefix: 'up to ', label: 'Cost Reduction' },
   ],
   value: {
     overline: 'The Problem',
-    heading: 'Most Companies Use Far More Stretch Film Than Necessary',
-    body: 'The majority of stretch film users do not fully utilise the capabilities of modern multilayer films. Combined with suboptimal machine settings, this results in excessive film usage, higher costs, and less stable pallets.',
+    heading: 'You Are Probably Using Twice the Film You Need',
+    body: 'Most companies I visit have good machines, but the wrong settings. Their pre-stretch is set to 200% when 300% is achievable. They use 23-micron film when 10-micron performs better. They wrap five times when three would hold. The root cause is always the same: not knowing what modern film and proper settings can do.',
     points: [
-      'Thinner, higher-performance films can replace conventional options',
-      'Proper machine settings maximise film pre-stretch and load containment',
-      'The combination of better film and optimised settings delivers 30-50% reduction',
+      'A company wrapping 200 pallets a day can save over €30,000 per year',
+      'Modern 67-layer multilayer film outperforms conventional film at half the thickness',
+      '95% of my assessments achieve more than 30% film reduction',
     ],
   },
   howWeWork: {
-    overline: 'Our Process',
-    heading: 'How We Work',
+    overline: 'The Process',
+    heading: 'How It Works',
     linkLabel: 'View full process',
     steps: [
       {
         number: '01',
         heading: 'Assessment',
-        body: 'On-site analysis of your current film usage and machine settings.',
+        body: 'I visit your site for half a day. I measure holding force, stretch percentage, film weight per pallet, and wrap patterns.',
       },
       {
         number: '02',
         heading: 'Recommendation',
-        body: 'Optimal film type and machine configuration for your specific needs.',
+        body: 'Within a week, you receive a detailed report: current situation with photos, recommended changes, and projected savings in euros.',
       },
       {
         number: '03',
         heading: 'Implementation',
-        body: 'We adjust settings and trial the recommended film with your team.',
+        body: 'I configure your machines on-site, adjusting pre-stretch ratios, wrap force, and overlap patterns. I train your operators on the new settings.',
       },
       {
         number: '04',
         heading: 'Verification',
-        body: 'Measure actual savings and confirm results meet expectations.',
+        body: 'Results are measured the same day. I verify holding force to confirm pallet stability equals or exceeds your previous setup.',
       },
     ],
   },
@@ -76,7 +78,7 @@ export const homepage = {
     heading: 'Expertise Meets Experience',
     advisor: {
       heading: 'The Advisor',
-      body: 'With over 40 years in the pallet wrapping industry, Egbert Kort brings a rare combination of machine expertise and film knowledge. He understands both sides of the equation.',
+      body: '45 years in pallet wrapping. Over 1,000 sites assessed across 25+ countries. I was one of the first people in Europe to sell pallet wrapping machines, back in 1981. I know roughly 40 different machine brands and types, and I know exactly how to set each one for minimum film usage.',
       link: '/about',
       linkLabel: 'Learn more',
       icon: 'user' as const,
@@ -84,7 +86,7 @@ export const homepage = {
     },
     approach: {
       heading: 'The Approach',
-      body: 'A structured process from assessment to implementation. We analyse your current setup, recommend optimal film and settings, and verify the results on-site.',
+      body: 'A half-day assessment, a detailed report within a week, and same-day verified results. The assessment is completely free. I work as an agent for the world\u2019s largest stretch film producer, so my costs are covered through film supply.',
       link: '/services',
       linkLabel: 'View services',
       icon: 'clipboard-check' as const,
@@ -93,32 +95,32 @@ export const homepage = {
   beforeAfter: {
     overline: 'Typical Results',
     heading: 'Real-World Impact',
-    subtitle: 'See what optimisation achieves in actual operations.',
+    subtitle: 'Real numbers from an actual client assessment.',
     headers: ['Metric', 'Before', 'After', 'Improvement'],
     rows: [
       {
         metric: 'Film Thickness',
         before: '23 micron conventional',
-        after: '12 micron multilayer',
-        improvement: '48% thinner',
+        after: '10 micron Elite multilayer',
+        improvement: '57% thinner',
       },
       {
         metric: 'Pre-stretch',
-        before: '150-200%',
-        after: '280-350%',
-        improvement: '+87% efficiency',
+        before: '0% (no pre-stretch)',
+        after: '300%',
+        improvement: 'From zero to full pre-stretch',
       },
       {
         metric: 'Film per Pallet',
-        before: 'High consumption',
-        after: '30-50% reduction',
-        improvement: 'Significant savings',
+        before: '540 grams',
+        after: '200 grams',
+        improvement: '63% less film',
       },
       {
         metric: 'Load Stability',
-        before: 'Inconsistent',
-        after: 'Equal or better',
-        improvement: 'Tilt-test verified',
+        before: 'Adequate',
+        after: 'Equal or improved',
+        improvement: 'Holding force verified',
       },
     ],
   },
@@ -134,26 +136,28 @@ export const homepage = {
     ],
   },
   cta: {
-    heading: 'Ready to Optimise Your Stretch Film Usage?',
+    heading: 'Find Out How Much Film You Are Wasting',
     subtitle:
-      'Get in touch to discuss how we can reduce your film costs while improving pallet stability.',
-    button: 'Get Your Free Savings Report',
+      'The assessment is free and takes half a day. Most companies discover they can cut film costs by 30-50% while improving pallet stability.',
+    button: 'Book Your Free Assessment',
   },
 };
 
 export const about = {
   header: {
     overline: 'About',
-    heading: 'Two Decades of Pallet Wrapping Expertise',
+    heading: '45 Years of Pallet Wrapping, from Day One',
     subtitle:
-      'Where most advisors know film or machines, Egbert Kort spent over 40 years mastering both.',
+      'I was one of the first people in Europe to sell pallet wrapping machines. Since 1981, I have assessed over 1,000 sites in 25+ countries, and I still find savings at almost every one.',
   },
   story: {
     heading: 'The Story Behind the Expertise',
+    quote:
+      'We were among the first in Europe. We had to sell the concept of pallet wrapping itself.',
     paragraphs: [
-      'For over 40 years, Egbert Kort has worked in the pallet wrapping industry across Europe. Working directly with manufacturers and end-users, he developed a deep understanding of how machines, settings, and film interact to create stable, efficient pallet loads.',
-      'This hands-on experience revealed a consistent pattern: most companies were using far more stretch film than necessary. The issue was not the machines or the film, it was the lack of knowledge about how to optimise both together.',
-      'That insight led to the founding of Stretch Film Advice. Today, Egbert supplies premium multilayer stretch film through a network of distributors across 17 European countries, and works alongside them to help end-users achieve significant cost reductions through better film selection and optimised machine settings.',
+      'In 1981, I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Most companies had never seen a machine wrap a pallet. My first sale was a Full Web machine to Bendien in Naarden (The Netherlands), a company producing Pokon and Cysal, using 150-centimetre wide film.',
+      'Over the following decades, I worked across the full supply chain. Matco was acquired by Bordex, which became part of AEP, the American packaging group. That evolved into AFP, and later Trioworld. Through every transition, I deepened my knowledge of both machines and film, a combination that very few people in this industry have.',
+      'After retiring, I found I could not sit still. I had spent over four decades building expertise that companies across Europe still need. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer. Today, I visit sites across Europe, and the pattern I see everywhere is the same: companies wasting thousands of euros on film because nobody has shown them what is possible with modern 67-layer multilayer technology and proper machine settings.',
     ],
   },
   timeline: {
@@ -162,23 +166,26 @@ export const about = {
       {
         year: '1981',
         label: 'Started in stretch wrapping',
-        description: 'Began selling stretch wrappers at Matco BV',
+        description:
+          'Began selling some of Europe\u2019s first pallet wrapping machines at Matco BV. Had to sell the concept of pallet wrapping to an industry that had never seen it.',
       },
       {
         year: '1999',
         label: 'Moved into stretch film',
-        description: 'Senior Account Manager Industrial Stretch Films at AFP',
+        description:
+          'Moved from machines to film as Senior Account Manager at AFP, gaining deep expertise in multilayer stretch film technology.',
       },
       {
         year: '2020',
         label: 'Broadened industry expertise',
-        description: 'Senior Sales Engineer at Trioworld',
+        description:
+          'Senior Sales Engineer at Trioworld, combining machine and film knowledge across 25+ European markets.',
       },
       {
         year: '2022',
         label: 'Stretch Film Advice founded',
         description:
-          'Combined 40+ years of machine and film knowledge into independent advisory',
+          'Founded Stretch Film Advice as an independent expert, representing the world\u2019s largest stretch film producer. Over 1,000 sites assessed and counting.',
       },
     ],
   },
@@ -189,25 +196,25 @@ export const about = {
   highlights: [
     {
       heading: 'Machine Expertise',
-      body: 'Over 40 years of selling and configuring pallet wrapping machines provides unmatched technical knowledge of settings, pre-stretch systems, and load containment.',
+      body: 'I know approximately 40 different machine brands and types. From manual turntables to fully automatic ring wrappers, I understand exactly which settings (gear ratios, pre-stretch percentages, wrap force, overlap patterns) deliver the best results for each machine.',
     },
     {
       heading: 'Film Knowledge',
-      body: 'Deep understanding of multilayer stretch film technology: how different film constructions perform under various conditions and applications.',
+      body: 'As an agent for the world\u2019s largest stretch film producer, I work with the latest 67-layer multilayer technology. I know which film construction works for which application, and why a 10-micron multilayer film can outperform a 23-micron conventional film.',
     },
     {
       heading: 'European Network',
-      body: 'An established network of distributors across 17 European countries, enabling efficient advisory services throughout the continent.',
+      body: 'Active in over 25 European countries, from Latvia to Greece and everywhere in between. I work with a network of distributors and visit end-users directly, wherever the pallets are.',
     },
     {
       heading: 'Proven Results',
-      body: 'Hundreds of optimisation projects with consistent results: 30-50% less film usage with equal or improved pallet stability.',
+      body: '95% of my assessments achieve more than 30% savings. In the most dramatic case, a client went from 540 grams of film per pallet to 200 grams, achieving over 63% reduction with a more stable load.',
     },
   ],
   different: {
     overline: 'The Difference',
-    heading: 'What Sets This Apart',
-    body: 'Most stretch film sellers know film. Most machine suppliers know machines. Egbert knows both, and that combination is what delivers results.',
+    heading: 'Why the Combination Matters',
+    body: 'Film sellers know film. Machine suppliers know machines. I have spent 45 years working with both. That is why I can walk onto a site, look at the machine, look at the film, and tell you within minutes where the waste is and how to fix it.',
     comparison: {
       headers: ['', 'Film Sellers', 'Machine Suppliers', 'Stretch Film Advice'],
       rows: [
@@ -245,110 +252,110 @@ export const about = {
     },
   },
   cta: {
-    heading: 'Put Two Decades of Expertise to Work',
+    heading: '45 Years of Experience, One Phone Call Away',
     subtitle:
-      "Whether you are a distributor seeking advisory support or an end-user looking to cut film costs, let's explore what's possible.",
-    button: 'Schedule a Conversation',
+      'Whether you distribute stretch film or use it on your own line, I can show you exactly where your savings are. The first step is always a conversation.',
+    button: 'Let\u2019s Talk',
   },
 };
 
 export const services = {
   header: {
     overline: 'Services',
-    heading: 'From Assessment to Optimisation',
+    heading: 'From Assessment to Verified Savings',
     subtitle:
-      'A structured approach to reducing your stretch film costs while maintaining, or improving, pallet stability.',
+      'A proven 4-step process that has delivered measurable results at over 1,000 sites across Europe. The assessment is completely free.',
   },
   process: {
-    overline: 'Our Process',
-    heading: 'How We Work',
+    overline: 'The Process',
+    heading: 'How I Work',
     steps: [
       {
         number: '01',
         heading: 'Assessment',
-        body: 'We visit your facility to conduct a comprehensive analysis of your current stretch film usage, pallet wrapping machine settings, and load patterns. This includes measuring actual film consumption per pallet, evaluating pre-stretch percentages, observing operator techniques, and assessing pallet stability after wrapping. The assessment gives us a complete baseline to identify improvement opportunities.',
+        body: 'I visit your facility for half a day. Using printed stretch film, I measure the exact pre-stretch percentage your machine achieves. I weigh the film on every pallet. I measure holding force to assess load stability. I photograph everything. By the end of the visit, I know exactly where your film is being wasted and how much you can save.',
       },
       {
         number: '02',
         heading: 'Recommendation',
-        body: 'Based on the assessment findings, we develop a tailored optimisation plan. This includes selecting the optimal multilayer film specification for your specific products and load types, calculating the ideal machine settings (pre-stretch ratio, wrap force, overlap percentage, top and bottom wraps), and projecting the expected film reduction and cost savings. You receive a detailed report with clear recommendations.',
+        body: 'Within a week, you receive a detailed report. It covers your current situation with photos and measurements, the specific improvements I recommend (including film specification, machine settings, and wrap patterns) and the projected savings in euros per pallet and per year. No vague promises: concrete numbers based on what I measured on your floor.',
       },
       {
         number: '03',
         heading: 'Implementation',
-        body: 'We return to your site to implement the changes hands-on. This involves adjusting your pallet wrapping machine settings to the optimal configuration, introducing the recommended film, and running test wraps with your team present. Your operators learn the new settings and see the immediate results. We ensure everyone understands the changes and can maintain the optimised process going forward.',
+        body: 'For fully automatic lines, I return on-site to configure your machines myself. This typically takes two or more hours per machine: adjusting gear ratios for optimal pre-stretch, setting wrap force profiles, and programming wrap patterns. I train your operators on the new settings, teach them how to monitor performance, and establish control procedures so the savings stick long-term.',
       },
       {
         number: '04',
         heading: 'Verification',
-        body: 'After implementation, we measure and verify the actual results against our projections. This includes calculating the exact film reduction achieved (typically 30-50%), confirming cost savings, and conducting load stability tests such as the 26-degree tilt test to verify that pallet integrity meets or exceeds previous standards. You receive documented proof of the improvements.',
+        body: 'Results are verified the same day as implementation. I measure holding force on the newly wrapped pallets to confirm stability meets or exceeds your previous configuration. I weigh the film per pallet to calculate the exact reduction achieved. You receive a complete before-and-after report with photos, measurements, and verified savings.',
       },
     ],
   },
   offerings: {
-    overline: 'What We Offer',
-    heading: 'Our Services',
+    overline: 'What I Offer',
+    heading: 'Services',
     items: [
       {
         heading: 'Film Supply & Selection',
-        body: 'We supply high-performance multilayer stretch film through our distributor network and advise on the right film for your specific application, products, and wrapping equipment.',
+        body: 'I supply high-performance multilayer stretch film from the world\u2019s largest producer through a network of distributors across 25+ European countries. I match the right film to your specific products, pallet configurations, and wrapping equipment.',
       },
       {
-        heading: 'Machine Optimisation',
-        body: 'On-site adjustment of pallet wrapping machine settings (pre-stretch, force, wrap patterns) to maximise film performance.',
+        heading: 'Machine Configuration',
+        body: 'On-site adjustment of your pallet wrapping machines. I work with approximately 40 different brands and types, configuring pre-stretch ratios, wrap force, rotation speed, and wrap patterns for maximum performance with minimum film.',
       },
       {
         heading: 'On-Site Audits & Training',
-        body: 'Comprehensive audits of your pallet wrapping process, plus training for your team and distributor sales staff.',
+        body: 'Comprehensive audit of your pallet wrapping process. I train your operators on optimal settings, monitoring procedures, and what to check when film performance drops. For distributors, I train your sales teams to have informed conversations about film performance.',
       },
       {
         heading: 'Troubleshooting',
-        body: 'Diagnosis and resolution of pallet wrapping issues: load failures, film breaks, inconsistent results, and equipment problems.',
+        body: 'When pallets fail in transit, film breaks during wrapping, or results are inconsistent, I diagnose the root cause, whether it is the machine, the film, the settings, or the combination. Most problems I can solve in a single visit.',
       },
     ],
   },
   results: {
     overline: 'Typical Results',
     heading: 'What You Can Expect',
-    subtitle: 'Real-world data from actual optimisation projects.',
+    subtitle: 'Real numbers from actual client assessments.',
     headers: [
       'Metric',
-      'Before Optimisation',
-      'After Optimisation',
+      'Before',
+      'After',
       'Improvement',
     ],
     rows: [
       {
         metric: 'Film Specification',
         before: '23 micron conventional stretch film',
-        after: '12 micron high-performance multilayer film',
-        improvement: '48% thinner film',
+        after: '10 micron Elite multilayer film',
+        improvement: '57% thinner film',
       },
       {
         metric: 'Machine Pre-stretch',
-        before: 'Standard setting: 150-200%',
-        after: 'Optimised setting: 280-350%',
-        improvement: '+87% stretch efficiency',
+        before: '0% (no pre-stretch)',
+        after: '300%',
+        improvement: 'From zero to full pre-stretch',
       },
       {
         metric: 'Film Consumption',
-        before: 'High usage per pallet',
-        after: '30-50% reduction in film per pallet',
-        improvement: 'Significant cost savings',
+        before: '540 grams per pallet',
+        after: '200 grams per pallet',
+        improvement: '63% less film',
       },
       {
         metric: 'Load Stability',
-        before: 'Inconsistent containment force',
-        after: 'Equal or improved stability (tilt-test verified)',
-        improvement: 'Verified improvement',
+        before: 'Adequate containment force',
+        after: 'Equal or improved (holding force verified)',
+        improvement: 'More stable with less film',
       },
     ],
     tiltTest: {
       overline: 'Proof of Performance',
-      heading: 'How We Prove Results',
-      body: 'Every optimisation project includes a 26-degree tilt test to verify that pallet stability meets or exceeds the original configuration. This industry-standard test demonstrates maximum containment force and confirms that reduced film usage does not compromise load security.',
+      heading: 'How I Verify Results',
+      body: 'Every assessment includes holding force measurement, the most reliable indicator of pallet stability. Holding force tells you exactly how tightly the film grips the load, regardless of product type or pallet shape. In some cases, I also perform the 26-degree tilt test as an additional visual demonstration of load integrity.',
       caption:
-        'A 26-degree tilt test validates maximum containment force. This pallet, wrapped with optimised 12 micron film, exceeds the stability of conventional 23 micron wrapping.',
+        'The 26-degree tilt test provides a visual demonstration of load stability. These pallets, wrapped with optimised multilayer film, exceed the stability of their previous conventional wrapping despite using significantly less film.',
       image: '/images/tilt-test-cans.webp',
       imageAlt:
         '26-degree tilt test demonstrating pallet stability after film optimisation',
@@ -360,35 +367,178 @@ export const services = {
     items: [
       {
         question: 'How much can I realistically save on stretch film costs?',
-        answer: 'Answer coming soon.',
+        answer:
+          'In 95% of my assessments, I achieve more than 30% savings on film costs. The most dramatic result I have seen was over 50%. One client using 23-micron film with no pre-stretch switched to 10-micron Elite film and went from 540 grams per pallet to 200 grams. For a company wrapping 200 pallets a day, that translates to over \u20AC30,000 per year. The exact savings depend on your current setup, but the results are visible immediately during the test.',
       },
       {
         question: 'Will thinner film compromise pallet stability?',
-        answer: 'Answer coming soon.',
+        answer:
+          'No. In fact, most clients end up with more stable pallets after the switch. Modern 67-layer multilayer film at 10 microns has superior holding force compared to conventional 23-micron film. I verify this on every project by measuring holding force before and after. Holding force is the most reliable indicator of pallet stability, and it consistently improves with the right film and settings combination.',
       },
       {
         question: 'Do I need to buy a new wrapping machine?',
-        answer: 'Answer coming soon.',
+        answer:
+          'Almost never. The issue is rarely the machine. It is the settings. Most companies have good equipment running at a fraction of its capability. A machine set to 150% or 200% pre-stretch can often achieve 300% with the right gear ratio. I work with approximately 40 different machine brands and types, and the vast majority can be configured on-site without any hardware changes.',
       },
       {
-        question: 'How long does the optimisation process take?',
-        answer: 'Answer coming soon.',
+        question: 'How long does the process take?',
+        answer:
+          'The initial assessment takes half a day. You receive a detailed report with recommendations within a week. Implementation, where I configure your machines and train your operators, typically takes two or more hours per machine. Verification happens the same day: I measure holding force and film weight per pallet to confirm the results before I leave. From first visit to verified savings, most projects are completed within two weeks.',
       },
       {
         question: 'Do you work with distributors or end-users?',
-        answer: 'Answer coming soon.',
+        answer:
+          'Both. The process is essentially the same. I work with distributors who want to offer their clients a value-added service, proving that a better film combined with proper machine settings saves money. And I work directly with end-users who want to cut their wrapping costs. Whether I am contacted by a distributor or an end-user, the first step is always a phone call to understand the situation.',
       },
       {
         question: 'What if the projected savings are not achieved?',
-        answer: 'Answer coming soon.',
+        answer:
+          'In 45 years and over 1,000 site visits, 95% of my tests achieve more than 30% savings. The results are visible immediately during the assessment. You see the film weight drop on every pallet in real time. If the savings are not there, you have lost nothing: the assessment is completely free.',
       },
     ],
   },
   cta: {
-    heading: 'See the Difference on Your Own Line',
+    heading: 'See the Results on Your Own Pallets',
     subtitle:
-      'Request a no-obligation assessment of your current wrapping process. Most clients see savings of 30-50% in film usage.',
-    button: 'Request a Free Assessment',
+      'I will visit your site, measure your current setup, and show you exactly how much film you can save. The assessment is free and takes half a day.',
+    button: 'Book Your Free Assessment',
+  },
+};
+
+export const results = {
+  header: {
+    overline: 'Results',
+    heading: 'Real Savings, Real Clients',
+    subtitle:
+      'Every number on this page comes from an actual on-site assessment. These are not projections. These are verified results.',
+  },
+  intro: {
+    heading: 'Proof, Not Promises',
+    body: 'I measure before, I measure after. Every assessment produces a detailed report with photos, weights, and holding force readings. The cases below are representative of what I see across the industry: companies using far more film than necessary, simply because nobody showed them what is possible.',
+    stats: [
+      { value: '95%', label: 'of assessments achieve 30%+ savings' },
+      { value: '1,000+', label: 'sites assessed across Europe' },
+      { value: '€30,000+', label: 'typical annual savings (200 pallets/day)' },
+    ],
+  },
+  cases: [
+    {
+      id: 'dm-hungary',
+      title: 'Retail Distribution Centre',
+      industry: 'Retail / FMCG',
+      country: 'Hungary',
+      client: 'DM Keten',
+      challenge:
+        'High film consumption across multiple automatic wrapping lines. Conventional film with suboptimal machine settings resulted in excessive cost per pallet.',
+      solution:
+        'Switched to high-performance multilayer film. Reconfigured pre-stretch ratios and wrap patterns on all automatic lines. Trained operators on monitoring procedures.',
+      metrics: {
+        filmBefore: 'Conventional stretch film',
+        filmAfter: 'Multilayer high-performance film',
+        savingsPercent: '30%+',
+        palletStability: 'Equal or improved',
+      },
+      image: '',
+      imageAlt: 'Pallet wrapping optimisation at retail distribution centre in Hungary',
+      quote: '',
+    },
+    {
+      id: 'no-prestretch',
+      title: 'From 540g to 200g Per Pallet',
+      industry: 'Manufacturing',
+      country: 'Europe',
+      client: '',
+      challenge:
+        'Client was using a wrapping machine without pre-stretch, applying 23-micron conventional film. Film consumption was 540 grams per pallet, far above what was necessary.',
+      solution:
+        'Switched to 10-micron Elite multilayer film. Even without a pre-stretch unit on the machine, the superior film technology delivered dramatically better results.',
+      metrics: {
+        filmBefore: '23 micron conventional, 540g per pallet',
+        filmAfter: '10 micron Elite multilayer, 200g per pallet',
+        savingsPercent: '63%',
+        palletStability: 'More stable than before (holding force verified)',
+      },
+      image: '',
+      imageAlt: 'Before and after film optimisation showing 63% reduction in film usage',
+      quote:
+        'Over 50% savings in film consumption and a more stable pallet. This is what modern multilayer film can do, even on a machine without pre-stretch.',
+    },
+    {
+      id: 'high-volume',
+      title: '€30,000+ Annual Savings',
+      industry: 'Logistics',
+      country: 'Europe',
+      client: '',
+      challenge:
+        'High-volume operation wrapping 200 pallets per day. Using conventional film with standard machine settings. Annual film costs were significantly higher than necessary.',
+      solution:
+        'Implemented high-performance multilayer film combined with optimised machine settings. Adjusted pre-stretch ratios and wrap patterns to reduce film consumption per pallet.',
+      metrics: {
+        filmBefore: 'Conventional film, standard settings',
+        filmAfter: 'Multilayer film, optimised settings',
+        savingsPercent: '30-50%',
+        palletStability: 'Equal or improved',
+      },
+      image: '',
+      imageAlt: 'High-volume pallet wrapping operation achieving over 30000 euros annual savings',
+      quote: '',
+    },
+    {
+      id: 'case-4',
+      title: 'Case Study Coming Soon',
+      industry: 'TBD',
+      country: 'Europe',
+      client: '',
+      challenge: 'Detailed case study with full test report data will be added here.',
+      solution: 'Pending. Awaiting test report from Egbert.',
+      metrics: {
+        filmBefore: 'TBD',
+        filmAfter: 'TBD',
+        savingsPercent: 'TBD',
+        palletStability: 'TBD',
+      },
+      image: '',
+      imageAlt: '',
+      quote: '',
+    },
+    {
+      id: 'case-5',
+      title: 'Case Study Coming Soon',
+      industry: 'TBD',
+      country: 'Europe',
+      client: '',
+      challenge: 'Detailed case study with full test report data will be added here.',
+      solution: 'Pending. Awaiting test report from Egbert.',
+      metrics: {
+        filmBefore: 'TBD',
+        filmAfter: 'TBD',
+        savingsPercent: 'TBD',
+        palletStability: 'TBD',
+      },
+      image: '',
+      imageAlt: '',
+      quote: '',
+    },
+  ],
+  slider: {
+    overline: 'Case Studies',
+    heading: 'Verified Results from the Field',
+    caseLabel: 'Case',
+    ofLabel: 'of',
+    challengeLabel: 'Challenge',
+    solutionLabel: 'Solution',
+    beforeLabel: 'Before',
+    afterLabel: 'After',
+    savingsLabel: 'Savings',
+    stabilityLabel: 'Stability',
+    previousCase: 'Previous case study',
+    nextCase: 'Next case study',
+  },
+  cta: {
+    heading: 'These Results Are Typical, Not Exceptional',
+    subtitle:
+      'I see the same pattern at almost every site I visit. Let me show you what is possible at your facility. The assessment is free.',
+    button: 'Book Your Free Assessment',
   },
 };
 
@@ -397,33 +547,33 @@ export const contact = {
     overline: 'Contact',
     heading: 'Request Your Free Film Assessment',
     subtitle:
-      'Whether you are a distributor looking for advisory support or an end-user seeking to reduce costs, we are here to help.',
+      'Whether you distribute stretch film or use it on your production line, the first step is always a conversation. Tell me about your situation and I will get back to you within 48 hours.',
   },
   audiences: {
-    heading: 'Who We Work With',
+    heading: 'Who I Work With',
     cards: [
       {
         title: 'End-Users',
         description:
-          'Companies using pallet wrapping machines looking to reduce film costs and improve load stability.',
+          'Companies using pallet wrapping machines who want to cut film costs and improve load stability. Whether you wrap 50 pallets a day or 500, the process is the same.',
         expectation:
-          'Get a detailed assessment of your current setup, tailored recommendations, on-site implementation, and verified results within 2-4 weeks.',
+          'I visit your site for half a day, deliver a detailed report within a week, and verify the results on the same day as implementation. Most projects are completed within two weeks.',
       },
       {
         title: 'Distributors',
         description:
-          'Stretch film distributors seeking technical advisory support for their clients across Europe.',
+          'Stretch film distributors looking to offer their clients proven cost savings through better film and proper machine settings.',
         expectation:
-          'Partner with an expert who provides on-site assessments, technical training for your sales team, and proven results that strengthen client relationships.',
+          'I provide on-site assessments at your clients\u2019 facilities, train your sales team on film performance, and deliver measurable results that strengthen your client relationships.',
       },
     ],
   },
   form: {
     submitLabel: 'Send Message',
     submitting: 'Sending...',
-    success: 'Thank you for your message. We will respond within 24 hours.',
+    success: 'Thank you for your message. I will get back to you within 48 hours.',
     error:
-      'Something went wrong. Please try emailing us directly at egbertkort@stretchfilmadvice.com.',
+      'Something went wrong. Please try emailing me directly at egbertkort@stretchfilmadvice.com.',
     audienceLabel: 'I am a...',
     audienceOptions: [
       { value: '', label: 'Select one...' },
@@ -434,9 +584,9 @@ export const contact = {
   },
   info: {
     heading: 'Get in Touch',
-    body: 'Based in the Netherlands, we help distributors and end-users across Europe achieve 30-50% reductions in stretch film usage through expert advisory.',
+    body: 'Based in the Netherlands, active across 25+ European countries. I help distributors and end-users achieve 30-50% reductions in stretch film costs through the right combination of film and machine settings.',
   },
-  microcopy: 'We aim to respond to all inquiries within one business day.',
+  microcopy: 'I respond to all inquiries within 48 hours. If urgent, call or WhatsApp directly.',
 };
 
 export const ui = {
@@ -486,7 +636,7 @@ export const formLabels = {
 
 export const footer = {
   description:
-    'Supplying premium multilayer stretch film through distributors across Europe, with expert advisory to reduce film costs by 30-50% through optimal film selection and machine settings.',
-  europeanCoverage: 'Active in 17 European countries',
+    'Independent stretch film expert. I supply premium multilayer film from the world\u2019s largest producer through distributors across Europe, and advise on machine settings to reduce film costs by 30-50%.',
+  europeanCoverage: 'Active in 25+ European countries',
   copyright: `\u00A9 ${new Date().getFullYear()} Stretch Film Advice. All rights reserved.`,
 };

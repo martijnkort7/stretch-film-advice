@@ -7,7 +7,7 @@ export function StatsSection() {
   return (
     <Section variant="light" className="py-16 md:py-28">
       <Container>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
+        <div className="grid grid-cols-2 gap-12 md:grid-cols-4 md:gap-8">
           {homepage.stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-navy-950">

@@ -41,7 +41,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
             className="overflow-hidden border border-slate-200 bg-white"
           >
             <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none">
-              <span className="text-navy-950 pr-8 font-serif text-lg">
+              <span className="text-navy-950 pr-8 font-serif text-lg font-medium">
                 {item.question}
               </span>
               <ChevronDown

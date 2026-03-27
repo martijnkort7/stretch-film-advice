@@ -9,7 +9,7 @@ export const baseMetadata: Metadata = {
     template: '%s | Stretch Film Advice',
   },
   description:
-    'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation. 40+ years of pallet wrapping experience across 17 European countries.',
+    'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings. 45+ years of pallet wrapping experience across 25+ European countries.',
   keywords: [
     'stretch film',
     'pallet wrapping',
@@ -39,13 +39,13 @@ export const baseMetadata: Metadata = {
     siteName: 'Stretch Film Advice',
     title: 'Stretch Film Advice | Expert Stretch Film Consulting',
     description:
-      'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation across Europe.',
+      'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings across 25+ European countries.',
     images: [
       {
         url: `${baseUrl}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Stretch Film Advice - Reduce stretch film costs by 30-50%',
+        alt: 'Stretch Film Advice - Cut stretch film costs by 30-50%',
       },
     ],
   },
@@ -53,7 +53,7 @@ export const baseMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stretch Film Advice | Expert Stretch Film Consulting',
     description:
-      'Reduce stretch film costs by 30-50% with expert advice on film selection and machine optimisation.',
+      'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings.',
     images: [`${baseUrl}/images/og-image.jpg`],
   },
   alternates: {
@@ -66,45 +66,60 @@ export const baseMetadata: Metadata = {
 
 export const homeMetadata: Metadata = {
   description:
-    'Reduce your stretch film costs by 30-50%. Expert advisory on optimal film selection and machine settings, backed by over 40 years of pallet wrapping experience across Europe.',
+    'Cut your stretch film costs by 30-50%. Expert advisory on film selection and machine settings, backed by 45+ years of pallet wrapping experience across 25+ European countries.',
   alternates: {
     canonical: baseUrl,
   },
   openGraph: {
     url: baseUrl,
-    title: 'Expert Stretch Film Consulting | Reduce Costs by 30-50%',
+    title: 'Expert Stretch Film Consulting | Cut Costs by 30-50%',
     description:
-      'Expert stretch film advisory across 17 European countries. Achieve 30-50% cost reduction through optimal film selection and machine settings.',
+      'Expert stretch film advisory across 25+ European countries. Achieve 30-50% cost reduction through optimal film selection and machine settings.',
   },
 };
 
 export const aboutMetadata: Metadata = {
   title: 'About',
   description:
-    'With over 40 years in the pallet wrapping industry across Europe, Egbert Kort combines machine expertise with film knowledge to deliver measurable savings.',
+    'With 45+ years in the pallet wrapping industry across Europe, Egbert Kort combines machine expertise with film knowledge to deliver measurable savings at over 1,000 sites.',
   alternates: {
     canonical: `${baseUrl}/about`,
   },
   openGraph: {
     url: `${baseUrl}/about`,
-    title: 'About Egbert Kort | 40+ Years of Pallet Wrapping Expertise',
+    title: 'About Egbert Kort | 45+ Years of Pallet Wrapping Expertise',
     description:
-      'Over 40 years of pallet wrapping machine experience combined with deep stretch film knowledge.',
+      '45+ years of pallet wrapping machine experience combined with deep stretch film knowledge. Over 1,000 sites assessed across 25+ countries.',
   },
 };
 
 export const servicesMetadata: Metadata = {
   title: 'Services',
   description:
-    'From on-site assessment to verified results: a structured 4-step process to optimise your stretch film usage and pallet stability.',
+    'From on-site assessment to verified results: a proven 4-step process to cut your stretch film costs by 30-50%. Free assessment, over 1,000 sites assessed.',
   alternates: {
     canonical: `${baseUrl}/services`,
   },
   openGraph: {
     url: `${baseUrl}/services`,
-    title: 'Services | Film Assessment, Machine Optimisation & Training',
+    title: 'Services | Film Assessment, Machine Configuration & Training',
     description:
-      'Comprehensive stretch film services: on-site assessments, film selection advisory, machine optimisation, training, and troubleshooting.',
+      'Comprehensive stretch film services: free on-site assessments, film selection advisory, machine configuration, training, and troubleshooting.',
+  },
+};
+
+export const resultsMetadata: Metadata = {
+  title: 'Results',
+  description:
+    'Real case studies with verified savings. See how companies across Europe cut stretch film costs by 30-50% through better film and proper machine settings.',
+  alternates: {
+    canonical: `${baseUrl}/results`,
+  },
+  openGraph: {
+    url: `${baseUrl}/results`,
+    title: 'Results | Verified Stretch Film Savings Across Europe',
+    description:
+      'Real numbers from real assessments. 95% of projects achieve 30%+ savings on stretch film costs.',
   },
 };
 
@@ -119,7 +134,7 @@ export const contactMetadata: Metadata = {
     url: `${baseUrl}/contact`,
     title: 'Contact | Request Your Free Stretch Film Assessment',
     description:
-      'Get in touch for a free stretch film assessment. Serving distributors and end-users across 17 European countries.',
+      'Get in touch for a free stretch film assessment. Serving distributors and end-users across 25+ European countries.',
   },
 };
 
@@ -128,7 +143,7 @@ export const localBusinessSchema = {
   '@type': 'ProfessionalService',
   name: 'Stretch Film Advice',
   description:
-    'Expert stretch film consulting: reduce costs by 30-50% through optimal film selection and machine settings.',
+    'Expert stretch film consulting: cut costs by 30-50% through optimal film selection and machine settings.',
   url: baseUrl,
   logo: `${baseUrl}/images/logo.png`,
   telephone: '+31651571072',

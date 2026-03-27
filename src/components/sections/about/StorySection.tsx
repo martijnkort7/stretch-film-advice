@@ -10,7 +10,7 @@ export function StorySection() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Photo */}
-          <div>
+          <div className="flex items-center">
             <FadeIn direction="left">
               <div className="overflow-hidden rounded-sm border border-slate-200">
                 <Image
@@ -22,6 +22,11 @@ export function StorySection() {
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
+              <blockquote className="mt-6 border-l-2 border-red-600 pl-5">
+                <p className="font-serif text-lg italic text-slate-700">
+                  &ldquo;{about.story.quote}&rdquo;
+                </p>
+              </blockquote>
             </FadeIn>
           </div>
 
