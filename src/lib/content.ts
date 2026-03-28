@@ -25,10 +25,10 @@ export const homepage = {
     heading: 'Cut Your Stretch Film\nCosts by 30-50%',
     subtitle:
       'I help companies across Europe use less stretch film and get more stable pallets. Through the right multilayer film and proper machine settings, most clients save 30-50% on film costs, with results visible on the first day.',
-    cta: 'Request a Free Film Assessment',
+    cta: 'Get Your Free Savings Report',
     ctaSecondary: 'See How It Works',
     ctaSubtext:
-      'I visit your site for half a day, measure everything, and deliver a detailed savings report. Completely free.',
+      'No obligation. I visit your site for half a day, measure everything, and deliver a detailed savings report within one week.',
   },
   stats: [
     { value: 45, suffix: '+', label: 'Years of Experience' },
@@ -124,22 +124,37 @@ export const homepage = {
       },
     ],
   },
-  logos: {
-    heading: 'Trusted Across Europe',
+  industries: {
+    overline: 'Industries We Serve',
+    heading: 'Saving Film Across Every Sector',
     items: [
-      { name: 'Partner 1', src: '' },
-      { name: 'Partner 2', src: '' },
-      { name: 'Partner 3', src: '' },
-      { name: 'Partner 4', src: '' },
-      { name: 'Partner 5', src: '' },
-      { name: 'Partner 6', src: '' },
+      {
+        heading: 'Manufacturing',
+        body: 'From automotive parts to building materials. High-volume lines with the most to gain from optimised settings and modern multilayer film.',
+        icon: 'factory' as const,
+      },
+      {
+        heading: 'FMCG & Food',
+        body: 'Fast-moving consumer goods require stable pallets and consistent wrapping. I optimise for speed and stability on high-throughput lines.',
+        icon: 'package' as const,
+      },
+      {
+        heading: 'Logistics & 3PL',
+        body: 'Distribution centres wrapping hundreds of pallets daily. Even small per-pallet savings add up to tens of thousands per year.',
+        icon: 'truck' as const,
+      },
+      {
+        heading: 'Retail & Distribution',
+        body: 'Mixed loads, varying pallet heights, multiple product types. I configure machines to handle the full range without film waste.',
+        icon: 'store' as const,
+      },
     ],
   },
   cta: {
     heading: 'Find Out How Much Film You Are Wasting',
     subtitle:
       'The assessment is free and takes half a day. Most companies discover they can cut film costs by 30-50% while improving pallet stability.',
-    button: 'Book Your Free Assessment',
+    button: 'See How Much You Can Save',
   },
 };
 
@@ -401,7 +416,7 @@ export const services = {
     heading: 'See the Results on Your Own Pallets',
     subtitle:
       'I will visit your site, measure your current setup, and show you exactly how much film you can save. The assessment is free and takes half a day.',
-    button: 'Book Your Free Assessment',
+    button: 'Get Your Free Savings Report',
   },
 };
 
@@ -502,7 +517,7 @@ export const results = {
     heading: 'These Results Are Typical, Not Exceptional',
     subtitle:
       'I see the same pattern at almost every site I visit. Let me show you what is possible at your facility. The assessment is free.',
-    button: 'Book Your Free Assessment',
+    button: 'See How Much You Can Save',
   },
 };
 

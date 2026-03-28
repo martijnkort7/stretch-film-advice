@@ -6,7 +6,7 @@ const baseUrl = 'https://www.stretchfilmadvice.com';
 export const baseMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Stretch Film Advice | Expert Stretch Film Consulting',
+    default: 'Stretch Film Advice | Cut Stretch Film Costs by 30-50%',
     template: '%s | Stretch Film Advice',
   },
   description:
@@ -24,6 +24,16 @@ export const baseMetadata: Metadata = {
     'stretch film consultant Europe',
     'stretch film assessment',
     'pallet wrapping optimization',
+    'how to reduce stretch film costs',
+    'pallet wrapping machine settings optimization',
+    'stretch film thickness comparison',
+    'multilayer vs conventional stretch film',
+    'stretch film waste reduction',
+    'pallet load stability testing',
+    'stretch film pre-stretch settings',
+    'pallet wrap cost calculator',
+    '67 layer stretch film',
+    'stretch film holding force',
   ],
   authors: [{ name: 'Egbert Kort' }],
   creator: 'Stretch Film Advice',
@@ -43,7 +53,7 @@ export const baseMetadata: Metadata = {
     locale: 'en_GB',
     url: baseUrl,
     siteName: 'Stretch Film Advice',
-    title: 'Stretch Film Advice | Expert Stretch Film Consulting',
+    title: 'Stretch Film Advice | Cut Stretch Film Costs by 30-50%',
     description:
       'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings across 25+ European countries.',
     images: [
@@ -57,7 +67,7 @@ export const baseMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stretch Film Advice | Expert Stretch Film Consulting',
+    title: 'Stretch Film Advice | Cut Stretch Film Costs by 30-50%',
     description:
       'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings.',
     images: [`${baseUrl}/images/og-image.jpg`],
@@ -100,30 +110,30 @@ export const aboutMetadata: Metadata = {
 };
 
 export const servicesMetadata: Metadata = {
-  title: 'Stretch Film Services — Free Assessment & Verified Savings',
+  title: 'Free Stretch Film Assessment — Save 30-50% on Film Costs',
   description:
-    'From on-site assessment to verified results: a proven 4-step process to cut your stretch film costs by 30-50%. Free assessment, over 1,000 sites assessed.',
+    'From on-site assessment to verified results: a proven 4-step process to cut your stretch film costs by 30-50%. Free half-day assessment, detailed report within one week. Over 1,000 sites assessed.',
   alternates: {
     canonical: `${baseUrl}/services`,
   },
   openGraph: {
     url: `${baseUrl}/services`,
-    title: 'Services | Film Assessment, Machine Configuration & Training',
+    title: 'Free Stretch Film Assessment — Save 30-50% on Film Costs',
     description:
       'Comprehensive stretch film services: free on-site assessments, film selection advisory, machine configuration, training, and troubleshooting.',
   },
 };
 
 export const resultsMetadata: Metadata = {
-  title: 'Case Studies — Verified Stretch Film Savings Across Europe',
+  title: 'Stretch Film Savings — Real Results from 1,000+ Assessments',
   description:
-    'Real case studies with verified savings. See how companies across Europe cut stretch film costs by 30-50% through better film and proper machine settings.',
+    'Real case studies with verified savings. See how companies across Europe cut stretch film costs by 30-63% through better multilayer film and proper machine settings. 95% success rate.',
   alternates: {
     canonical: `${baseUrl}/results`,
   },
   openGraph: {
     url: `${baseUrl}/results`,
-    title: 'Results | Verified Stretch Film Savings Across Europe',
+    title: 'Stretch Film Savings — Real Results from 1,000+ Assessments',
     description:
       'Real numbers from real assessments. 95% of projects achieve 30%+ savings on stretch film costs.',
   },
@@ -176,6 +186,16 @@ export const localBusinessSchema = {
     'Finland',
     'Portugal',
     'Ireland',
+    'Hungary',
+    'Romania',
+    'Greece',
+    'Croatia',
+    'Slovakia',
+    'Slovenia',
+    'Latvia',
+    'Lithuania',
+    'Estonia',
+    'Bulgaria',
   ],
   founder: {
     '@type': 'Person',
@@ -183,6 +203,111 @@ export const localBusinessSchema = {
     jobTitle: 'Founder & Stretch Film Consultant',
   },
   sameAs: ['https://www.linkedin.com/in/egbert-kort-73b4b321/'],
+  knowsAbout: [
+    'stretch film optimization',
+    'pallet wrapping machine settings',
+    'multilayer stretch film technology',
+    'pre-stretch configuration',
+    'load stability testing',
+    'holding force measurement',
+  ],
+};
+
+export const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Reduce Stretch Film Costs by 30-50%',
+  description:
+    'A proven 4-step process to cut stretch film costs through proper film selection and machine settings optimisation.',
+  totalTime: 'P14D',
+  estimatedCost: {
+    '@type': 'MonetaryAmount',
+    currency: 'EUR',
+    value: '0',
+  },
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'On-Site Assessment',
+      text: 'A half-day on-site visit to measure pre-stretch percentage, film weight per pallet, holding force, and wrap patterns. Every measurement is documented with photos.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Detailed Recommendation',
+      text: 'Within one week, receive a detailed report covering your current situation, recommended film specification, machine settings, wrap patterns, and projected savings in euros.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'On-Site Implementation',
+      text: 'Machine configuration on-site: adjusting gear ratios for optimal pre-stretch, setting wrap force profiles, programming wrap patterns, and training operators.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Same-Day Verification',
+      text: 'Results verified the same day by measuring holding force and film weight per pallet. A complete before-and-after report confirms the achieved savings.',
+    },
+  ],
+};
+
+export const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Stretch Film Consulting',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Stretch Film Advice',
+    url: baseUrl,
+  },
+  areaServed: {
+    '@type': 'Place',
+    name: 'Europe',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Stretch Film Advisory Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Free On-Site Assessment',
+          description:
+            'Half-day on-site measurement of pre-stretch, film weight, holding force, and wrap patterns with a detailed savings report within one week.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Machine Configuration',
+          description:
+            'On-site adjustment of pallet wrapping machines including pre-stretch ratios, wrap force, rotation speed, and wrap patterns for approximately 40 machine brands.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Film Supply & Selection',
+          description:
+            'High-performance 67-layer multilayer stretch film supply through a European distributor network, matched to specific products and equipment.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'On-Site Audits & Training',
+          description:
+            'Comprehensive pallet wrapping process audit with operator training on optimal settings, monitoring procedures, and performance maintenance.',
+        },
+      },
+    ],
+  },
 };
 
 export function breadcrumbSchema(pageName: string, pageUrl: string) {
