@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { services } from '@/lib/content';
 
 const baseUrl = 'https://www.stretchfilmadvice.com';
 
@@ -18,6 +19,11 @@ export const baseMetadata: Metadata = {
     'multilayer stretch film',
     'cost reduction',
     'pallet wrapping consultant',
+    'stretch film cost savings',
+    'pallet wrapping machine settings',
+    'stretch film consultant Europe',
+    'stretch film assessment',
+    'pallet wrapping optimization',
   ],
   authors: [{ name: 'Egbert Kort' }],
   creator: 'Stretch Film Advice',
@@ -79,9 +85,9 @@ export const homeMetadata: Metadata = {
 };
 
 export const aboutMetadata: Metadata = {
-  title: 'About',
+  title: 'About Egbert Kort — 45+ Years of Stretch Film Expertise',
   description:
-    'With 45+ years in the pallet wrapping industry across Europe, Egbert Kort combines machine expertise with film knowledge to deliver measurable savings at over 1,000 sites.',
+    'With 45+ years in the pallet wrapping industry across Europe, Egbert Kort combines machine expertise with film knowledge to deliver measurable savings at over 1,000 sites. Learn his story.',
   alternates: {
     canonical: `${baseUrl}/about`,
   },
@@ -94,7 +100,7 @@ export const aboutMetadata: Metadata = {
 };
 
 export const servicesMetadata: Metadata = {
-  title: 'Services',
+  title: 'Stretch Film Services — Free Assessment & Verified Savings',
   description:
     'From on-site assessment to verified results: a proven 4-step process to cut your stretch film costs by 30-50%. Free assessment, over 1,000 sites assessed.',
   alternates: {
@@ -109,7 +115,7 @@ export const servicesMetadata: Metadata = {
 };
 
 export const resultsMetadata: Metadata = {
-  title: 'Results',
+  title: 'Case Studies — Verified Stretch Film Savings Across Europe',
   description:
     'Real case studies with verified savings. See how companies across Europe cut stretch film costs by 30-50% through better film and proper machine settings.',
   alternates: {
@@ -124,9 +130,9 @@ export const resultsMetadata: Metadata = {
 };
 
 export const contactMetadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact — Request Your Free Stretch Film Assessment',
   description:
-    'Request a free stretch film assessment. Get a detailed report on your savings potential - no obligation.',
+    'Request a free stretch film assessment for your facility. Get a detailed savings report within one week, covering film selection and machine settings. No obligation, serving 25+ European countries.',
   alternates: {
     canonical: `${baseUrl}/contact`,
   },
@@ -199,3 +205,16 @@ export function breadcrumbSchema(pageName: string, pageUrl: string) {
     ],
   };
 }
+
+export const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: services.faq.items.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};

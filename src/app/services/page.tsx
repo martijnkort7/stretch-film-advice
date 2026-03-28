@@ -6,7 +6,7 @@ import { VideoShowcase } from '@/components/sections/services/VideoShowcase';
 import { FAQSection } from '@/components/sections/services/FAQSection';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { services } from '@/lib/content';
-import { servicesMetadata, breadcrumbSchema } from '@/lib/metadata';
+import { servicesMetadata, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 
 export const metadata = servicesMetadata;
 
@@ -22,6 +22,12 @@ export default function ServicesPage() {
               'https://www.stretchfilmadvice.com/services',
             ),
           ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
         }}
       />
       <PageHeader
