@@ -32,7 +32,7 @@ export function HowWeWorkSection() {
   const { howWeWork } = homepage;
 
   return (
-    <Section variant="light">
+    <Section variant="dark">
       <Container>
         <SectionHeading
           overline={howWeWork.overline}
