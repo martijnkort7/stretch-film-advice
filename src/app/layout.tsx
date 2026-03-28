@@ -1,4 +1,5 @@
 import { Inter, Instrument_Serif } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollToTop } from '@/components/ui/ScrollToTop';
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <MobileContactBar />
+        <Analytics />
       </body>
     </html>
   );

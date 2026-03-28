@@ -11,7 +11,7 @@ import { services } from '@/lib/content';
 
 const processImages = [
   {
-    src: '/images/bad-stacked-boxes.JPG',
+    src: '/images/bad-stacked-boxes.webp',
     alt: 'Poorly stacked pallet with boxes falling off due to incorrect wrapping',
   },
   {
