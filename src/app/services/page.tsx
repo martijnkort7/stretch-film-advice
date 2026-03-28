@@ -13,41 +13,17 @@ import {
   howToSchema,
   serviceSchema,
 } from '@/lib/metadata';
+import { SchemaScript } from '@/components/ui/SchemaScript';
 
 export const metadata = servicesMetadata;
 
 export default function ServicesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbSchema(
-              'Services',
-              'https://www.stretchfilmadvice.com/services',
-            ),
-          ),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(howToSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
+      <SchemaScript schema={breadcrumbSchema('Services', 'https://www.stretchfilmadvice.com/services')} />
+      <SchemaScript schema={faqSchema} />
+      <SchemaScript schema={howToSchema} />
+      <SchemaScript schema={serviceSchema} />
       <PageHeader
         overline={services.header.overline}
         heading={services.header.heading}

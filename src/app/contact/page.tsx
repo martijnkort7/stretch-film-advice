@@ -6,23 +6,14 @@ import { ContactInfo } from '@/components/sections/contact/ContactInfo';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { contact } from '@/lib/content';
 import { contactMetadata, breadcrumbSchema } from '@/lib/metadata';
+import { SchemaScript } from '@/components/ui/SchemaScript';
 
 export const metadata = contactMetadata;
 
 export default function ContactPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbSchema(
-              'Contact',
-              'https://www.stretchfilmadvice.com/contact',
-            ),
-          ),
-        }}
-      />
+      <SchemaScript schema={breadcrumbSchema('Contact', 'https://www.stretchfilmadvice.com/contact')} />
       <PageHeader
         overline={contact.header.overline}
         heading={contact.header.heading}

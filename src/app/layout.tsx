@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { ScrollToTop } from '@/components/ui/ScrollToTop';
 import { MobileContactBar } from '@/components/ui/MobileContactBar';
 import { baseMetadata, localBusinessSchema } from '@/lib/metadata';
+import { SchemaScript } from '@/components/ui/SchemaScript';
 import { ui } from '@/lib/content';
 import './globals.css';
 
@@ -30,12 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
-          }}
-        />
+        <SchemaScript schema={localBusinessSchema} />
       </head>
       <body className="antialiased">
         <a
