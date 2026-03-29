@@ -1,4 +1,7 @@
+'use client';
+
 import { Users, Building2 } from 'lucide-react';
+import { motion } from 'motion/react';
 import {
   StaggerChildren,
   StaggerItem,
@@ -20,10 +23,15 @@ export function AudienceCards() {
         {audiences.cards.map((card, i) => {
           const Icon = icons[i];
           return (
-            <StaggerItem key={card.title}>
-              <div className="h-full border border-slate-200 bg-white p-6 md:p-8">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-50">
-                  <Icon className="h-6 w-6 text-blue-600" aria-hidden="true" />
+            <StaggerItem key={card.title} className="h-full">
+              <motion.div
+                whileHover={{ y: -8 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="group flex h-full flex-col border border-slate-200 bg-white p-6 transition-shadow duration-300 hover:border-blue-200 hover:shadow-lg md:p-8"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100">
+                  <Icon className="h-6 w-6 text-blue-600 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
                 </div>
                 <h3 className="text-navy-950 font-serif text-xl">
                   {card.title}
@@ -39,7 +47,7 @@ export function AudienceCards() {
                     {card.expectation}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </StaggerItem>
           );
         })}

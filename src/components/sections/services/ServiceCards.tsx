@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'motion/react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -27,10 +30,15 @@ export function ServiceCards() {
 
         <StaggerChildren className="mt-16 grid gap-8 sm:grid-cols-2">
           {services.offerings.items.map((item, i) => (
-            <StaggerItem key={item.heading}>
-              <div className="h-full border border-white/10 p-8 transition-colors hover:border-white/20 md:p-10">
+            <StaggerItem key={item.heading} className="h-full">
+              <motion.div
+                whileHover={{ y: -8 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="group flex h-full flex-col border border-white/10 p-8 transition-colors duration-300 hover:border-white/30 md:p-10"
+              >
                 <svg
-                  className="h-8 w-8 text-blue-400"
+                  className="h-8 w-8 text-blue-400 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -49,7 +57,7 @@ export function ServiceCards() {
                 <p className="mt-3 text-sm leading-relaxed text-slate-400">
                   {item.body}
                 </p>
-              </div>
+              </motion.div>
             </StaggerItem>
           ))}
         </StaggerChildren>

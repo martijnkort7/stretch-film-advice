@@ -268,7 +268,7 @@ export function CaseStudySlider() {
                   scrollSnapType: 'x mandatory',
                   scrollBehavior: 'auto',
                   paddingLeft: `${SCROLL_LEADING}px`,
-                  paddingRight: '20vw', // trailing space so last card can snap
+                  paddingRight: '12vw', // trailing space so last card can snap
                   scrollPaddingLeft: `${SCROLL_LEADING}px`,
                 }}
               >
@@ -279,7 +279,7 @@ export function CaseStudySlider() {
                       key={c.id}
                       className="relative aspect-[16/9] flex-none overflow-hidden rounded-sm"
                       style={{
-                        width: '80vw',
+                        width: '88vw',
                         scrollSnapAlign: 'start',
                         marginRight: i < cases.length - 1 ? '12px' : '0',
                       }}

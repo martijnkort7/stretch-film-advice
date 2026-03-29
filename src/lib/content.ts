@@ -163,18 +163,17 @@ export const about = {
     overline: 'About',
     heading: '45 Years of Pallet Wrapping, from Day One',
     subtitle:
-      'I was one of the first people in Europe to sell pallet wrapping machines. Since 1981, I have assessed over 1,000 sites in 25+ countries, and I still find savings at almost every one.',
+      'In 1981, I started selling pallet wrapping machines across Europe, back when pallet wrapping was a new concept most companies had never seen. Since then, I have assessed over 1,000 sites in 25+ countries, and I still find savings at almost every one.',
   },
   story: {
     heading: 'The Story Behind the Expertise',
     quote:
       'We were among the first in Europe. We had to sell the concept of pallet wrapping itself.',
     paragraphs: [
-      'My name is Egbert, and in 1981 I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Most companies had never seen a machine wrap a pallet. My first sale was a Full Web machine to Bendien in Naarden (The Netherlands), a company producing Pokon and Cysal, using 150-centimetre wide film.',
-      'Over the following decades, I worked across the full supply chain. Matco was acquired by Bordex, which became part of AEP, the American packaging group. That evolved into AFP, and later Trioworld. Through every transition, I deepened my knowledge of both machines and film, a combination that very few people in this industry have.',
-      'After I retired, I found I couldn\u2019t sit still. I had spent over four decades building expertise that companies across Europe still need. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer.',
-      'Today, I visit sites across Europe, and the pattern I see everywhere is the same: companies wasting thousands of euros on film. Not because they\u2019re doing anything wrong, but because no one has shown them what is possible with modern 67-layer multilayer technology and proper machine settings.',
-      'I\u2019m based in the Netherlands, and I still enjoy travelling and being on site, working with teams and solving practical problems. After all these years, that\u2019s what keeps it interesting: there\u2019s almost always a smarter way to wrap a pallet.',
+      'My name is Egbert, and in 1981 I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Over the following decades, through multiple company transitions, I deepened my knowledge of both machines and film. A combination very few people in this industry have.',
+      'After I retired, I found I couldn\u2019t sit still. Four decades of expertise, and companies across Europe still needed it. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer.',
+      'Today, I visit sites across Europe and see the same pattern: companies wasting thousands of euros on film. Not because they\u2019re doing anything wrong, but because no one has shown them what\u2019s possible with modern 67-layer multilayer technology and proper machine settings.',
+      'I\u2019m based in the Netherlands and still enjoy travelling and being on site, working with teams and solving practical problems. After all these years, there\u2019s almost always a smarter way to wrap a pallet.',
     ],
   },
   timeline: {
