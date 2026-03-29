@@ -515,6 +515,7 @@ export const results = {
     stabilityLabel: 'Stability',
     previousCase: 'Previous case study',
     nextCase: 'Next case study',
+    swipeLabel: 'Swipe to navigate',
   },
   cta: {
     heading: 'These Results Are Typical, Not Exceptional',

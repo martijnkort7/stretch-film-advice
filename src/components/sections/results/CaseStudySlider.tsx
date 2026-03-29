@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useCallback } from 'react';
-import { AnimatePresence, motion, type PanInfo } from 'motion/react';
+import { useState, useCallback, useEffect, useRef } from 'react';
+import { AnimatePresence, motion, useAnimate, useReducedMotion, type PanInfo } from 'motion/react';
 import { ChevronLeft, ChevronRight, Store, Factory, Truck } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
@@ -27,12 +27,37 @@ const slideVariants = {
 
 const transition = { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const };
 
+function getSessionFlag(key: string): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    return sessionStorage.getItem(key) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function setSessionFlag(key: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    sessionStorage.setItem(key, '1');
+  } catch {
+    // private browsing may throw QuotaExceededError
+  }
+}
+
 export function CaseStudySlider() {
   const cases = results.cases.filter((c) => c.metrics.filmBefore !== 'TBD');
   const { slider } = results;
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+
+  const [scope, animate] = useAnimate<HTMLDivElement>();
+  const hasNudgedRef = useRef(false);
+  const prefersReducedMotion = useReducedMotion();
+
+  const [showSwipeLabel, setShowSwipeLabel] = useState(false);
+  const swipeLabelTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const activeCase = cases[activeIndex];
 
@@ -54,6 +79,9 @@ export function CaseStudySlider() {
 
   const handleDragEnd = useCallback(
     (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+      setShowSwipeLabel(false);
+      if (swipeLabelTimerRef.current) clearTimeout(swipeLabelTimerRef.current);
+
       if (info.offset.x < -SWIPE_THRESHOLD && activeIndex < cases.length - 1) {
         goNext();
       } else if (info.offset.x > SWIPE_THRESHOLD && activeIndex > 0) {
@@ -62,6 +90,35 @@ export function CaseStudySlider() {
     },
     [activeIndex, cases.length, goNext, goPrev],
   );
+
+  // Swipe hint nudge — plays once per session on mobile, skipped if reduced motion
+  useEffect(() => {
+    if (prefersReducedMotion || hasNudgedRef.current || getSessionFlag('caseStudyNudgeSeen')) {
+      return;
+    }
+
+    const timer = setTimeout(async () => {
+      if (hasNudgedRef.current) return; // StrictMode guard
+      hasNudgedRef.current = true;
+      setSessionFlag('caseStudyNudgeSeen');
+      setShowSwipeLabel(true);
+
+      await animate(scope.current, { x: -20 }, { duration: 0.25, ease: 'easeOut' });
+      await animate(scope.current, { x: 0 }, { type: 'spring', stiffness: 300, damping: 20 });
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, [animate, prefersReducedMotion, scope]);
+
+  // Auto-dismiss swipe label after 2.5s
+  useEffect(() => {
+    if (!showSwipeLabel) return;
+
+    swipeLabelTimerRef.current = setTimeout(() => setShowSwipeLabel(false), 2500);
+    return () => {
+      if (swipeLabelTimerRef.current) clearTimeout(swipeLabelTimerRef.current);
+    };
+  }, [showSwipeLabel]);
 
   const Icon = industryIcons[activeCase.industry] || Factory;
 
@@ -77,6 +134,7 @@ export function CaseStudySlider() {
         <div className="mt-10 md:mt-14">
           {/* Swipeable slider area */}
           <motion.div
+            ref={scope}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.1}
@@ -216,55 +274,122 @@ export function CaseStudySlider() {
           </motion.div>
 
           {/* Navigation bar */}
-          <div className="mt-6 flex items-center justify-between border-t border-slate-200 pt-5">
-            {/* Numbered tabs */}
-            <div className="flex gap-2">
-              {cases.map((c, i) => (
+          <div className="mt-6 border-t border-slate-200 pt-5">
+
+            {/* Mobile layout */}
+            <div className="flex items-center justify-between md:hidden">
+              <div className="flex flex-col items-start gap-2">
+                {/* Pill dots */}
+                <div className="flex items-center gap-1.5" role="tablist" aria-label="Case study navigation">
+                  {cases.map((c, i) => (
+                    <button
+                      key={c.id}
+                      role="tab"
+                      aria-selected={i === activeIndex}
+                      aria-label={`${slider.caseLabel} ${i + 1}: ${c.title}`}
+                      onClick={() => goTo(i)}
+                      className={cn(
+                        'h-2 rounded-full transition-all duration-300',
+                        i === activeIndex ? 'w-6 bg-navy-950' : 'w-2 bg-slate-300',
+                      )}
+                    />
+                  ))}
+                </div>
+
+                {/* Swipe affordance label */}
+                <AnimatePresence>
+                  {showSwipeLabel && (
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      aria-hidden="true"
+                      className="flex select-none items-center gap-1 text-xs text-slate-400"
+                    >
+                      <ChevronLeft className="h-3 w-3" />
+                      {slider.swipeLabel}
+                      <ChevronRight className="h-3 w-3" />
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Arrow buttons */}
+              <div className="flex gap-2">
                 <button
-                  key={c.id}
-                  onClick={() => goTo(i)}
-                  aria-label={`${slider.caseLabel} ${i + 1}: ${c.title}`}
+                  onClick={goPrev}
+                  disabled={activeIndex === 0}
+                  aria-label={slider.previousCase}
                   className={cn(
-                    'flex h-11 w-11 items-center justify-center rounded-sm text-sm font-medium transition-colors duration-200',
-                    i === activeIndex
-                      ? 'bg-navy-950 text-white'
-                      : 'bg-white text-slate-600 hover:bg-slate-100',
+                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
+                    activeIndex === 0 ? 'cursor-not-allowed opacity-30' : 'active:bg-white',
                   )}
                 >
-                  {i + 1}
+                  <ChevronLeft className="h-5 w-5" />
                 </button>
-              ))}
+                <button
+                  onClick={goNext}
+                  disabled={activeIndex === cases.length - 1}
+                  aria-label={slider.nextCase}
+                  className={cn(
+                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
+                    activeIndex === cases.length - 1 ? 'cursor-not-allowed opacity-30' : 'active:bg-white',
+                  )}
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
             </div>
 
-            {/* Arrow buttons */}
-            <div className="flex gap-2">
-              <button
-                onClick={goPrev}
-                disabled={activeIndex === 0}
-                aria-label={slider.previousCase}
-                className={cn(
-                  'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
-                  activeIndex === 0
-                    ? 'cursor-not-allowed opacity-30'
-                    : 'hover:bg-white',
-                )}
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={goNext}
-                disabled={activeIndex === cases.length - 1}
-                aria-label={slider.nextCase}
-                className={cn(
-                  'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
-                  activeIndex === cases.length - 1
-                    ? 'cursor-not-allowed opacity-30'
-                    : 'hover:bg-white',
-                )}
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
+            {/* Desktop layout */}
+            <div className="hidden items-center justify-between md:flex">
+              {/* Numbered tabs */}
+              <div className="flex gap-2">
+                {cases.map((c, i) => (
+                  <button
+                    key={c.id}
+                    onClick={() => goTo(i)}
+                    aria-label={`${slider.caseLabel} ${i + 1}: ${c.title}`}
+                    className={cn(
+                      'flex h-11 w-11 items-center justify-center rounded-sm text-sm font-medium transition-colors duration-200',
+                      i === activeIndex
+                        ? 'bg-navy-950 text-white'
+                        : 'bg-white text-slate-600 hover:bg-slate-100',
+                    )}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+              </div>
+
+              {/* Arrow buttons */}
+              <div className="flex gap-2">
+                <button
+                  onClick={goPrev}
+                  disabled={activeIndex === 0}
+                  aria-label={slider.previousCase}
+                  className={cn(
+                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
+                    activeIndex === 0 ? 'cursor-not-allowed opacity-30' : 'hover:bg-white',
+                  )}
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={goNext}
+                  disabled={activeIndex === cases.length - 1}
+                  aria-label={slider.nextCase}
+                  className={cn(
+                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
+                    activeIndex === cases.length - 1 ? 'cursor-not-allowed opacity-30' : 'hover:bg-white',
+                  )}
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
             </div>
+
           </div>
         </div>
       </Container>
