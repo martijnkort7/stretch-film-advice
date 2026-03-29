@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { BackgroundBeams } from '@/components/ui/BackgroundBeams';
 import { homepage } from '@/lib/content';
 
 export function HeroSection() {
@@ -14,12 +13,6 @@ export function HeroSection() {
 
   return (
     <section className="relative flex min-h-[85vh] min-h-[85dvh] overflow-hidden bg-black md:min-h-screen md:items-center">
-      {/* Dark overlay for beam contrast */}
-      <div className="absolute inset-0 bg-black" />
-
-      {/* Animated background beams */}
-      <BackgroundBeams />
-
       {/* Egbert portrait — desktop only, blended right side */}
       <motion.div
         initial={{ opacity: 0 }}
