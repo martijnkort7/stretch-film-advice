@@ -11,20 +11,20 @@ import { homepage } from '@/lib/content';
 
 const stepImages = [
   {
-    src: '/images/egbert-factory-inspection.webp',
-    alt: 'Egbert Kort conducting on-site assessment at a pallet wrapping facility',
+    src: '/images/Holding%20Force%20meten%20.jpg',
+    alt: 'Measuring holding force on a wrapped pallet with a digital scale',
   },
   {
-    src: '/images/force-diagram-screen.webp',
-    alt: 'Film Edge Force analysis diagram showing containment force measurements',
+    src: '/images/Improved%20pre%20stretch.jpg',
+    alt: 'Pre-stretch percentage marking written on wrapped pallet film',
   },
   {
-    src: '/images/film-stretch-percentage.webp',
-    alt: 'Stretch film with pre-stretch percentage markings during implementation',
+    src: '/images/egbert-machine-inspection.webp',
+    alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
   },
   {
-    src: '/images/holding-force-test.webp',
-    alt: 'Holding force test verifying pallet load containment after optimisation',
+    src: '/images/26%20degrees%20tilt%20test.JPG',
+    alt: 'Wrapped pallet on 26-degree tilt test verifying load stability',
   },
 ];
 
