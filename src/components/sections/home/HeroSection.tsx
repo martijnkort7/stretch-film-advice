@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -18,6 +19,32 @@ export function HeroSection() {
 
       {/* Animated background beams */}
       <BackgroundBeams />
+
+      {/* Egbert portrait — desktop only, blended right side */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4, delay: 0.5 }}
+        className="pointer-events-none absolute right-16 top-1/2 hidden h-[70%] w-[22%] -translate-y-1/2 lg:block"
+        aria-hidden="true"
+      >
+        <Image
+          src="/images/egbert-kort.webp"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          style={{
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 12%, black 82%, transparent 100%)',
+            maskComposite: 'intersect',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 12%, black 82%, transparent 100%)',
+            WebkitMaskComposite: 'source-in',
+            opacity: 0.7,
+          }}
+        />
+      </motion.div>
 
       <Container className="relative z-10 pt-28 pb-12 sm:py-32 md:py-40">
         <div className="max-w-3xl">
