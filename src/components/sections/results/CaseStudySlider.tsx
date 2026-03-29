@@ -19,6 +19,27 @@ const industryIcons: Record<string, ElementType> = {
 
 const SWIPE_THRESHOLD = 50;
 
+function SwipeHint() {
+  return (
+    <motion.div
+      aria-hidden="true"
+      className="flex select-none items-center gap-1.5"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <ChevronLeft className="h-3 w-3 text-slate-400" />
+      <motion.div
+        className="h-4 w-6 rounded-sm border border-slate-300 bg-slate-100"
+        animate={{ x: [0, 6, 0] }}
+        transition={{ duration: 0.9, ease: 'easeInOut', repeat: 2, repeatDelay: 0.2 }}
+      />
+      <ChevronRight className="h-3 w-3 text-slate-400" />
+    </motion.div>
+  );
+}
+
 const slideVariants = {
   enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
   center: { x: 0, opacity: 1 },
@@ -158,7 +179,7 @@ export function CaseStudySlider() {
 
     return () => {
       container.removeEventListener('scrollend', syncIndex);
-      container.removeEventListener('scroll', syncIndex);
+      container.removeEventListener('scroll', handleScroll);
       clearTimeout(scrollFallbackTimer);
     };
   }, [activeIndex, goTo]);
@@ -215,8 +236,29 @@ export function CaseStudySlider() {
           {/* ── MOBILE LAYOUT ── */}
           <div className="md:hidden">
 
+            {/* Case label + title above the image */}
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={activeCase.id}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={transition}
+              >
+                <p className="text-xs font-semibold tracking-[0.2em] text-blue-600 uppercase">
+                  {slider.caseLabel} {activeIndex + 1} {slider.ofLabel}{' '}
+                  {cases.length}
+                </p>
+                <h3 className="mt-2 font-serif text-xl leading-tight tracking-tight text-navy-950">
+                  {activeCase.title}
+                </h3>
+              </motion.div>
+            </AnimatePresence>
+
             {/* Peek image carousel — extends to screen edges with -mx-6 */}
-            <div className="-mx-6">
+            <div className="-mx-6 mt-4">
               <div
                 ref={scrollRef}
                 className="flex [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -263,7 +305,7 @@ export function CaseStudySlider() {
               </div>
             </div>
 
-            {/* Mobile text content */}
+            {/* Mobile text content (tags + details) */}
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={activeCase.id}
@@ -275,16 +317,7 @@ export function CaseStudySlider() {
                 transition={transition}
                 className="mt-5 flex flex-col"
               >
-                <p className="text-xs font-semibold tracking-[0.2em] text-blue-600 uppercase">
-                  {slider.caseLabel} {activeIndex + 1} {slider.ofLabel}{' '}
-                  {cases.length}
-                </p>
-
-                <h3 className="mt-2 font-serif text-xl leading-tight tracking-tight text-navy-950">
-                  {activeCase.title}
-                </h3>
-
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-0 flex flex-wrap gap-2">
                   <span className="rounded-sm bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700">
                     {activeCase.industry}
                   </span>
@@ -524,22 +557,9 @@ export function CaseStudySlider() {
                   ))}
                 </div>
 
-                {/* Swipe affordance label */}
+                {/* Swipe affordance indicator */}
                 <AnimatePresence>
-                  {showSwipeLabel && (
-                    <motion.span
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      aria-hidden="true"
-                      className="flex select-none items-center gap-1 text-xs text-slate-400"
-                    >
-                      <ChevronLeft className="h-3 w-3" />
-                      {slider.swipeLabel}
-                      <ChevronRight className="h-3 w-3" />
-                    </motion.span>
-                  )}
+                  {showSwipeLabel && <SwipeHint />}
                 </AnimatePresence>
               </div>
 
