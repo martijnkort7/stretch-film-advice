@@ -194,7 +194,7 @@ export const about = {
         year: '2020',
         label: 'Broadened industry expertise',
         description:
-          'Senior Sales Engineer at Trioworld, combining machine and film knowledge across 25+ European markets.',
+          'Senior Sales Engineer at Trioworld, combining machine and film knowledge across European markets.',
       },
       {
         year: '2022',
