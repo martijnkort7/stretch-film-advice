@@ -59,22 +59,22 @@ export function ResultsSection() {
                 </div>
                 <div className="border-t border-slate-100 bg-slate-50 px-4 py-3">
                   <p className="text-xs leading-relaxed text-slate-600">
-                    26° tilt test with plastic cans
+                    Current situation: film consumption weighed per pallet on-site
                   </p>
                 </div>
               </div>
               <div className="overflow-hidden rounded-sm border border-slate-200 shadow-sm">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/images/tilt-test-watertest.webp"
-                    alt="Tilt test with heavy rolls on pallet at 26-degree incline, load remains fully stable"
+                    src="/images/Current%20setting.jpg"
+                    alt="Wrapping machine control panel showing pre-stretch percentage settings per load zone before optimisation"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="border-t border-slate-100 bg-slate-50 px-4 py-3">
                   <p className="text-xs leading-relaxed text-slate-600">
-                    26° tilt test with heavy rolls
+                    Machine settings: second-stretch percentages per wrap zone
                   </p>
                 </div>
               </div>

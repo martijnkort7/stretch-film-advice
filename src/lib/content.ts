@@ -370,10 +370,10 @@ export const services = {
       heading: 'How I Verify Results',
       body: 'Every assessment includes holding force measurement, the most reliable indicator of pallet stability. Holding force tells you exactly how tightly the film grips the load, regardless of product type or pallet shape. In some cases, I also perform the 26-degree tilt test as an additional visual demonstration of load integrity.',
       caption:
-        'The 26-degree tilt test provides a visual demonstration of load stability. These pallets, wrapped with optimised multilayer film, exceed the stability of their previous conventional wrapping despite using significantly less film.',
-      image: '/images/tilt-test-cans.webp',
+        'Measurements are taken on-site before and after optimisation — film consumption, machine settings, and load stability are all documented to quantify the improvement.',
+      image: '/images/Current%20Weight.jpg',
       imageAlt:
-        '26-degree tilt test demonstrating pallet stability after film optimisation',
+        'Digital scale measuring current stretch film consumption per pallet on-site',
     },
   },
   faq: {
