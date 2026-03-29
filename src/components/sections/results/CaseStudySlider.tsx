@@ -104,6 +104,7 @@ export function CaseStudySlider() {
                         alt={activeCase.imageAlt}
                         fill
                         className="object-cover"
+                        style={{ objectPosition: activeCase.imagePosition ?? 'center' }}
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-950 to-navy-800">
