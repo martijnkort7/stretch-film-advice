@@ -11,20 +11,24 @@ import { services } from '@/lib/content';
 
 const processImages = [
   {
-    src: '/images/bad-stacked-boxes.webp',
-    alt: 'Poorly stacked pallet with boxes falling off due to incorrect wrapping',
+    src: '/images/Holding Force meten .jpg',
+    alt: 'Measuring holding force on a wrapped pallet with a digital scale',
+    className: 'aspect-[4/3] w-full object-cover object-center',
   },
   {
-    src: '/images/film-stretch-percentage.webp',
-    alt: 'Stretch film with pre-stretch percentage markings during implementation',
+    src: '/images/Improved pre stretch.jpg',
+    alt: 'Pre-stretch percentage marking written on wrapped pallet film',
+    className: 'aspect-[4/3] w-full object-cover object-center',
   },
   {
     src: '/images/egbert-machine-inspection.webp',
     alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
+    className: 'aspect-[4/3] w-full object-cover object-center',
   },
   {
-    src: '/images/tilt-test-boxes.webp',
+    src: '/images/26 degrees tilt test.JPG',
     alt: 'Wrapped pallet on 26-degree tilt test verifying load stability',
+    className: 'aspect-[4/3] w-full object-contain object-center bg-slate-50',
   },
 ];
 
@@ -46,7 +50,7 @@ export function ProcessSection() {
                     alt={processImages[i].alt}
                     width={640}
                     height={480}
-                    className="aspect-[4/3] w-full object-cover"
+                    className={processImages[i].className}
                   />
                 </div>
                 <span className="font-serif text-6xl text-blue-100">

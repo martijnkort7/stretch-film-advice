@@ -75,10 +75,10 @@ export function ComparisonTable({
                       i === 0 && 'w-[30%]',
                       i === highlightColumn &&
                         !isDark &&
-                        'bg-navy-950/[0.05] text-navy-950 font-bold',
+                        'bg-emerald-50 text-emerald-700 font-bold',
                       i === highlightColumn &&
                         isDark &&
-                        'bg-white/10 font-bold text-white',
+                        'bg-emerald-500/10 font-bold text-emerald-400',
                       i !== highlightColumn &&
                         isDark &&
                         'border-white/10 text-slate-400',
@@ -104,7 +104,7 @@ export function ComparisonTable({
                   <tr key={rowIndex}>
                     <td
                       className={cn(
-                        'border-b px-5 py-4 font-medium',
+                        'border-b px-5 py-5 font-medium',
                         isDark
                           ? 'border-white/10 text-white'
                           : 'text-navy-950 border-slate-200',
@@ -120,12 +120,13 @@ export function ComparisonTable({
                         <td
                           key={key}
                           className={cn(
-                            'border-b px-5 py-4 text-sm',
-                            isHighlighted && !isDark && 'bg-navy-950/[0.03]',
-                            isHighlighted && isDark && 'bg-white/[0.03]',
-                            isDark
-                              ? 'border-white/10 text-slate-300'
-                              : 'border-slate-200 text-slate-600',
+                            'border-b px-5 py-5 text-sm',
+                            isHighlighted && !isDark && 'bg-emerald-50 font-semibold text-emerald-700',
+                            isHighlighted && isDark && 'bg-emerald-500/10 font-semibold text-emerald-400',
+                            !isHighlighted && isDark && 'border-white/10 text-slate-300',
+                            !isHighlighted && !isDark && 'border-slate-200 text-slate-600',
+                            isHighlighted && isDark && 'border-white/10',
+                            isHighlighted && !isDark && 'border-slate-200',
                           )}
                         >
                           <CellValue value={row[key]} isDark={isDark} />

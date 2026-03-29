@@ -22,7 +22,7 @@ export const navigation = [
 export const homepage = {
   hero: {
     overline: 'Stretch Film Advisory',
-    heading: 'Cut Your Stretch Film\nCosts by 30-50%',
+    heading: 'Get a More Stable Pallet\nand cut your stretch film costs by 30–50%.',
     subtitle:
       'I help companies across Europe use less stretch film and get more stable pallets. Through the right multilayer film and proper machine settings, most clients save 30-50% on film costs, with results visible on the first day.',
     cta: 'Get Your Free Savings Report',
@@ -101,26 +101,26 @@ export const homepage = {
       {
         metric: 'Film Thickness',
         before: '23 micron conventional',
-        after: '10 micron Elite multilayer',
-        improvement: '57% thinner',
+        after: '12 micron Nano Multilayer',
+        improvement: '48% thinner',
       },
       {
         metric: 'Pre-stretch',
-        before: '0% (no pre-stretch)',
-        after: '300%',
-        improvement: 'From zero to full pre-stretch',
+        before: '180%',
+        after: '280%',
+        improvement: '56% more stretch force',
       },
       {
         metric: 'Film per Pallet',
-        before: '540 grams',
-        after: '200 grams',
-        improvement: '63% less film',
+        before: '378 grams',
+        after: '226 grams',
+        improvement: '40% less film',
       },
       {
         metric: 'Load Stability',
-        before: 'Adequate',
-        after: 'Equal or improved',
-        improvement: 'Holding force verified',
+        before: '12 kg holding force',
+        after: '18 kg holding force',
+        improvement: '+50% holding force',
       },
     ],
   },

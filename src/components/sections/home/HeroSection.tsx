@@ -34,14 +34,23 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-3xl leading-[1.1] tracking-tight text-white sm:text-5xl md:text-7xl"
+            className="font-serif tracking-tight text-white"
           >
-            {hero.heading.split('\n').map((line, i) => (
-              <span key={i}>
-                {line}
-                {i === 0 && <br />}
-              </span>
-            ))}
+            {hero.heading.split('\n').map((line, i, arr) => {
+              const isLast = i === arr.length - 1;
+              return (
+                <span
+                  key={i}
+                  className={
+                    isLast
+                      ? 'mt-2 block text-2xl italic text-slate-300 sm:text-4xl md:text-5xl'
+                      : 'block text-3xl leading-[1.1] sm:text-5xl md:text-7xl'
+                  }
+                >
+                  {line}
+                </span>
+              );
+            })}
           </motion.h1>
 
           <motion.p
@@ -78,7 +87,7 @@ export function HeroSection() {
                 <span className="relative z-10 transition-all duration-500">
                   {hero.cta}
                 </span>
-                <div className="absolute right-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-blue-600 transition-all duration-500 group-hover:right-[calc(100%-52px)] group-hover:rotate-45 group-hover:text-blue-600">
+                <div className="absolute right-1 flex h-12 w-12 items-center justify-center rounded-full bg-white text-blue-600 transition-all duration-500 group-hover:right-[calc(100%-52px)] group-hover:rotate-45 group-hover:bg-emerald-500 group-hover:text-white">
                   <ArrowUpRight size={16} />
                 </div>
               </Link>
