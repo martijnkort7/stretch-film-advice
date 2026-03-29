@@ -170,9 +170,11 @@ export const about = {
     quote:
       'We were among the first in Europe. We had to sell the concept of pallet wrapping itself.',
     paragraphs: [
-      'In 1981, I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Most companies had never seen a machine wrap a pallet. My first sale was a Full Web machine to Bendien in Naarden (The Netherlands), a company producing Pokon and Cysal, using 150-centimetre wide film.',
+      'My name is Egbert, and in 1981 I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Most companies had never seen a machine wrap a pallet. My first sale was a Full Web machine to Bendien in Naarden (The Netherlands), a company producing Pokon and Cysal, using 150-centimetre wide film.',
       'Over the following decades, I worked across the full supply chain. Matco was acquired by Bordex, which became part of AEP, the American packaging group. That evolved into AFP, and later Trioworld. Through every transition, I deepened my knowledge of both machines and film, a combination that very few people in this industry have.',
-      'After retiring, I found I could not sit still. I had spent over four decades building expertise that companies across Europe still need. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer. Today, I visit sites across Europe, and the pattern I see everywhere is the same: companies wasting thousands of euros on film because nobody has shown them what is possible with modern 67-layer multilayer technology and proper machine settings.',
+      'After I retired, I found I couldn\u2019t sit still. I had spent over four decades building expertise that companies across Europe still need. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer.',
+      'Today, I visit sites across Europe, and the pattern I see everywhere is the same: companies wasting thousands of euros on film. Not because they\u2019re doing anything wrong, but because no one has shown them what is possible with modern 67-layer multilayer technology and proper machine settings.',
+      'I\u2019m based in the Netherlands, and I still enjoy travelling and being on site, working with teams and solving practical problems. After all these years, that\u2019s what keeps it interesting: there\u2019s almost always a smarter way to wrap a pallet.',
     ],
   },
   timeline: {
@@ -425,7 +427,7 @@ export const results = {
     overline: 'Results',
     heading: 'Real Savings, Real Clients',
     subtitle:
-      'Every number on this page comes from an actual on-site assessment. These are not projections. These are verified results.',
+      'Every number on this page comes from an actual on-site assessment. These are not projections. These are verified results. Behind every percentage is a team that stopped worrying about film costs \u2014 and a warehouse running a little smoother.',
   },
   intro: {
     heading: 'Proof, Not Promises',
@@ -439,7 +441,7 @@ export const results = {
   cases: [
     {
       id: 'dm-hungary',
-      title: 'Retail Distribution Centre',
+      title: '30%+ Film Savings Across Automatic Lines',
       industry: 'Retail / FMCG',
       country: 'Hungary',
       client: 'DM Keten',

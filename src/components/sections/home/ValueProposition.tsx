@@ -28,7 +28,7 @@ export function ValueProposition() {
               <ul className="mt-8 space-y-6">
                 {value.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-5">
-                    <span className="shrink-0 font-serif text-4xl leading-none text-blue-600">
+                    <span className="shrink-0 font-serif text-4xl leading-none text-red-600">
                       {i + 1}
                     </span>
                     <p className="pt-1 text-base leading-relaxed text-slate-700">

@@ -166,11 +166,12 @@ export function CaseStudySlider() {
     const supportsScrollEnd = 'onscrollend' in window;
     const container: HTMLDivElement = el;
 
+    let handleScroll: (() => void) | undefined;
     if (supportsScrollEnd) {
       container.addEventListener('scrollend', syncIndex);
     } else {
       // Fallback: debounced scroll event
-      const handleScroll = () => {
+      handleScroll = () => {
         clearTimeout(scrollFallbackTimer);
         scrollFallbackTimer = setTimeout(syncIndex, 150);
       };
@@ -179,7 +180,7 @@ export function CaseStudySlider() {
 
     return () => {
       container.removeEventListener('scrollend', syncIndex);
-      container.removeEventListener('scroll', handleScroll);
+      if (handleScroll) container.removeEventListener('scroll', handleScroll);
       clearTimeout(scrollFallbackTimer);
     };
   }, [activeIndex, goTo]);
@@ -247,7 +248,7 @@ export function CaseStudySlider() {
                 exit="exit"
                 transition={transition}
               >
-                <p className="text-xs font-semibold tracking-[0.2em] text-blue-600 uppercase">
+                <p className="text-xs font-semibold tracking-[0.2em] text-red-600 uppercase">
                   {slider.caseLabel} {activeIndex + 1} {slider.ofLabel}{' '}
                   {cases.length}
                 </p>
@@ -302,6 +303,39 @@ export function CaseStudySlider() {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            {/* Swipe hint + arrow buttons — directly below image */}
+            <div className="mt-3 flex items-center justify-between">
+              <AnimatePresence>
+                {showSwipeLabel && <SwipeHint />}
+              </AnimatePresence>
+              <div className="ml-auto flex gap-2">
+                <button
+                  onClick={goPrev}
+                  disabled={activeIndex === 0}
+                  aria-label={slider.previousCase}
+                  className={cn(
+                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
+                    activeIndex === 0 ? 'cursor-not-allowed opacity-30' : 'active:bg-white',
+                  )}
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={goNext}
+                  disabled={activeIndex === cases.length - 1}
+                  aria-label={slider.nextCase}
+                  className={cn(
+                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
+                    activeIndex === cases.length - 1
+                      ? 'cursor-not-allowed opacity-30'
+                      : 'active:bg-white',
+                  )}
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
               </div>
             </div>
 
@@ -446,7 +480,7 @@ export function CaseStudySlider() {
                   transition={transition}
                   className="flex flex-col justify-center"
                 >
-                  <p className="text-xs font-semibold tracking-[0.2em] text-blue-600 uppercase">
+                  <p className="text-xs font-semibold tracking-[0.2em] text-red-600 uppercase">
                     {slider.caseLabel} {activeIndex + 1} {slider.ofLabel}{' '}
                     {cases.length}
                   </p>
@@ -533,62 +567,26 @@ export function CaseStudySlider() {
           {/* ── NAVIGATION BAR ── */}
           <div className="mt-6 border-t border-slate-200 pt-5">
 
-            {/* Mobile navigation */}
-            <div className="flex items-center justify-between md:hidden">
-              <div className="flex flex-col items-start gap-2">
-                {/* Pill dots */}
-                <div
-                  className="flex items-center gap-1.5"
-                  role="tablist"
-                  aria-label="Case study navigation"
-                >
-                  {cases.map((c, i) => (
-                    <button
-                      key={c.id}
-                      role="tab"
-                      aria-selected={i === activeIndex}
-                      aria-label={`${slider.caseLabel} ${i + 1}: ${c.title}`}
-                      onClick={() => goTo(i)}
-                      className={cn(
-                        'h-2 rounded-full transition-all duration-300',
-                        i === activeIndex ? 'w-6 bg-navy-950' : 'w-2 bg-slate-300',
-                      )}
-                    />
-                  ))}
-                </div>
-
-                {/* Swipe affordance indicator */}
-                <AnimatePresence>
-                  {showSwipeLabel && <SwipeHint />}
-                </AnimatePresence>
-              </div>
-
-              {/* Arrow buttons (mobile) */}
-              <div className="flex gap-2">
-                <button
-                  onClick={goPrev}
-                  disabled={activeIndex === 0}
-                  aria-label={slider.previousCase}
-                  className={cn(
-                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
-                    activeIndex === 0 ? 'cursor-not-allowed opacity-30' : 'active:bg-white',
-                  )}
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={goNext}
-                  disabled={activeIndex === cases.length - 1}
-                  aria-label={slider.nextCase}
-                  className={cn(
-                    'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
-                    activeIndex === cases.length - 1
-                      ? 'cursor-not-allowed opacity-30'
-                      : 'active:bg-white',
-                  )}
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
+            {/* Mobile navigation — pill dots only (arrows are above, near the image) */}
+            <div className="flex items-center md:hidden">
+              <div
+                className="flex items-center gap-1.5"
+                role="tablist"
+                aria-label="Case study navigation"
+              >
+                {cases.map((c, i) => (
+                  <button
+                    key={c.id}
+                    role="tab"
+                    aria-selected={i === activeIndex}
+                    aria-label={`${slider.caseLabel} ${i + 1}: ${c.title}`}
+                    onClick={() => goTo(i)}
+                    className={cn(
+                      'h-2 rounded-full transition-all duration-300',
+                      i === activeIndex ? 'w-6 bg-navy-950' : 'w-2 bg-slate-300',
+                    )}
+                  />
+                ))}
               </div>
             </div>
 

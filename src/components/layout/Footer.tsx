@@ -25,7 +25,7 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
               {footer.description}
             </p>
-            <p className="mt-3 text-xs font-semibold tracking-[0.15em] text-blue-400 uppercase">
+            <p className="mt-3 text-xs font-semibold tracking-[0.15em] text-red-400 uppercase">
               {footer.europeanCoverage}
             </p>
           </div>

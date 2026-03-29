@@ -53,12 +53,14 @@ export function ProcessSection() {
                     className={processImages[i].className}
                   />
                 </div>
-                <span className="font-serif text-6xl text-blue-100">
-                  {step.number}
-                </span>
-                <h3 className="text-navy-950 mt-2 font-serif text-xl">
-                  {step.heading}
-                </h3>
+                <div className="flex items-baseline gap-2 md:block">
+                  <span className="font-serif text-4xl text-blue-100 md:text-6xl">
+                    {step.number}
+                  </span>
+                  <h3 className="text-navy-950 mt-0 font-serif text-xl md:mt-2 md:text-2xl">
+                    {step.heading}
+                  </h3>
+                </div>
                 <ExpandableText text={step.body} className="mt-3" />
               </div>
             </StaggerItem>

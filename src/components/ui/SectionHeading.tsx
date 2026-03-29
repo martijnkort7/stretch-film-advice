@@ -23,7 +23,7 @@ export function SectionHeading({
         <p
           className={cn(
             'mb-4 text-xs font-semibold tracking-[0.2em] uppercase',
-            dark ? 'text-blue-400' : 'text-blue-600',
+            dark ? 'text-red-400' : 'text-red-600',
           )}
         >
           {overline}
@@ -31,7 +31,7 @@ export function SectionHeading({
       )}
       <h2
         className={cn(
-          'font-serif text-2xl leading-tight tracking-tight sm:text-3xl md:text-5xl',
+          'font-serif text-3xl leading-tight tracking-tight sm:text-4xl md:text-5xl',
           dark ? 'text-white' : 'text-navy-950',
         )}
       >

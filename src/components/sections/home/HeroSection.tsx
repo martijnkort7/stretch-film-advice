@@ -45,7 +45,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-blue-400"
+            className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-red-400"
           >
             {hero.overline}
           </motion.p>

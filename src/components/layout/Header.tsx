@@ -55,7 +55,7 @@ export function Header() {
                 width={220}
                 height={60}
                 priority
-                className={cn('h-10 w-auto', showSolid && 'mix-blend-multiply')}
+                className={cn('h-10 md:h-14 w-auto', showSolid && 'mix-blend-multiply')}
               />
             </Link>
 
@@ -75,7 +75,7 @@ export function Header() {
                     'rounded-sm border-b-2 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none',
                     pathname === item.href
                       ? showSolid
-                        ? 'border-red-600 text-blue-600'
+                        ? 'border-red-600 text-red-700'
                         : 'border-red-600 text-white'
                       : showSolid
                         ? 'border-transparent text-slate-600 hover:text-red-600'

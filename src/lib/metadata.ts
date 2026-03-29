@@ -61,7 +61,7 @@ export const baseMetadata: Metadata = {
         url: `${baseUrl}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Stretch Film Advice - Cut stretch film costs by 30-50%',
+        alt: 'Stretch Film Advice — More Stable Pallets, 30–50% Less Film',
       },
     ],
   },
@@ -69,7 +69,7 @@ export const baseMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stretch Film Advice | Cut Stretch Film Costs by 30-50%',
     description:
-      'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings.',
+      'More stable pallets and 30–50% less stretch film. Free on-site assessment across 25+ European countries.',
     images: [`${baseUrl}/images/og-image.jpg`],
   },
   alternates: {
@@ -88,9 +88,9 @@ export const homeMetadata: Metadata = {
   },
   openGraph: {
     url: baseUrl,
-    title: 'Expert Stretch Film Consulting | Cut Costs by 30-50%',
+    title: 'More Stable Pallets, 30–50% Less Film | Stretch Film Advice',
     description:
-      'Expert stretch film advisory across 25+ European countries. Achieve 30-50% cost reduction through optimal film selection and machine settings.',
+      'Most clients achieve more stable pallets and save 30–50% on stretch film costs — results visible from day one. Free on-site assessment across 25+ European countries.',
   },
 };
 

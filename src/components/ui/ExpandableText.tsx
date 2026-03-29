@@ -24,7 +24,7 @@ export function ExpandableText({ text, className }: ExpandableTextProps) {
       {!expanded && (
         <button
           onClick={() => setExpanded(true)}
-          className="mt-1 text-sm font-medium text-blue-600 md:hidden"
+          className="mt-1 text-sm font-medium text-red-600 md:hidden"
         >
           Read more
         </button>
