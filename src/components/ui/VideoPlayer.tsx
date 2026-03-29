@@ -26,7 +26,7 @@ export function VideoPlayer({
   }
 
   return (
-    <div className={`relative overflow-hidden rounded-sm ${className}`}>
+    <div className={`relative aspect-video overflow-hidden rounded-sm ${className}`}>
       <video
         ref={videoRef}
         src={src}
@@ -35,7 +35,7 @@ export function VideoPlayer({
         playsInline
         preload="none"
         aria-label={alt}
-        className="w-full"
+        className="h-full w-full object-cover"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}

@@ -34,9 +34,9 @@ export function VideoShowcase() {
 
           <FadeIn delay={0.2}>
             <VideoPlayer
-              src="/videos/wrapping-machine.mp4"
-              poster="/videos/wrapping-machine-poster.webp"
-              alt="Automatic pallet wrapping machine in operation at industrial facility"
+              src="/videos/fast-machine.mp4"
+              poster="/videos/fast-machine-poster.jpg"
+              alt="Automatic pallet wrapping machine running at high speed in industrial facility"
             />
             <p className="mt-3 text-sm text-slate-400">
               Automatic pallet wrapping machine in operation — the type of
