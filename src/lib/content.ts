@@ -393,7 +393,7 @@ export const services = {
       {
         question: 'Do I need to buy a new wrapping machine?',
         answer:
-          'Almost never. The issue is rarely the machine. It is the settings. Most companies have good equipment running at a fraction of its capability. A machine set to 150% or 200% pre-stretch can often achieve 300% with the right gear ratio. I work with approximately 40 different machine brands and types, and the vast majority can be configured on-site without any hardware changes.',
+          'Almost never. The issue is rarely the machine. It is the settings. Most companies have good equipment running at a fraction of its capability. A machine set to 150% or 200% pre-stretch can often achieve 300% with adjusted settings alone. When that is not enough, changing the pre-stretch gearing is usually all it takes. I work with approximately 40 different machine brands and types, and in both cases there is no need to buy new equipment.',
       },
       {
         question: 'How long does the process take?',
@@ -408,7 +408,7 @@ export const services = {
       {
         question: 'What if the projected savings are not achieved?',
         answer:
-          'In 45 years and over 1,000 site visits, 95% of my tests achieve more than 30% savings. The results are visible immediately during the assessment. You see the film weight drop on every pallet in real time. If the savings are not there, you have lost nothing: the assessment is completely free.',
+          'In 45 years and over 1,000 site visits, 95% of my assessments result in more stable pallets and better load security. Cost savings of more than 30% follow in the vast majority of cases. The results are visible immediately: you see the film weight drop on every pallet in real time. If neither outcome is achieved, you have lost nothing. The assessment is completely free.',
       },
     ],
   },
