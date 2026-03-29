@@ -22,13 +22,14 @@ export const navigation = [
 export const homepage = {
   hero: {
     overline: 'Stretch Film Advisory',
-    heading: 'Get a More Stable Pallet\nand cut your stretch film costs by 30–50%.',
+    heading: 'Get a more stable pallet.',
     subtitle:
-      'I help companies across Europe use less stretch film and get more stable pallets. Through the right multilayer film and proper machine settings, most clients save 30-50% on film costs, with results visible on the first day.',
-    cta: 'Get Your Free Savings Report',
+      "There's almost always a smarter way to wrap a pallet. I optimize your machines and we supply premium film to cut your costs by 30-50%.",
+    cta: 'Request a Free Audit',
     ctaSecondary: 'See How It Works',
     ctaSubtext:
       'No obligation. I visit your site for half a day, measure everything, and deliver a detailed savings report within one week.',
+    trustLine: 'INDEPENDENT ADVICE & SUPPLY ACROSS 25+ EUROPEAN COUNTRIES',
   },
   stats: [
     { value: 45, suffix: '+', label: 'Years of Experience' },
@@ -334,12 +335,7 @@ export const services = {
     overline: 'Typical Results',
     heading: 'What You Can Expect',
     subtitle: 'Real numbers from actual client assessments.',
-    headers: [
-      'Metric',
-      'Before',
-      'After',
-      'Improvement',
-    ],
+    headers: ['Metric', 'Before', 'After', 'Improvement'],
     rows: [
       {
         metric: 'Film Thickness',
@@ -455,7 +451,8 @@ export const results = {
         palletStability: 'Equal or improved',
       },
       image: '/images/Retail%20Centre%20Pallet%20Aldi%20.jpg',
-      imageAlt: 'Pallet wrapping optimisation at retail distribution centre in Hungary',
+      imageAlt:
+        'Pallet wrapping optimisation at retail distribution centre in Hungary',
       imagePosition: 'center',
       quote: '',
     },
@@ -476,7 +473,8 @@ export const results = {
         palletStability: 'More stable than before (holding force verified)',
       },
       image: '/images/From%20a-lot%20to%20less.jpg',
-      imageAlt: 'Before and after film optimisation showing 63% reduction in film usage',
+      imageAlt:
+        'Before and after film optimisation showing 63% reduction in film usage',
       imagePosition: 'center 35%',
       quote:
         'Over 50% savings in film consumption and a more stable pallet. This is what modern multilayer film can do, even on a machine without pre-stretch.',
@@ -498,7 +496,8 @@ export const results = {
         palletStability: 'Equal or improved',
       },
       image: '/images/Gear%20change.jpg',
-      imageAlt: 'High-volume pallet wrapping operation achieving over 30000 euros annual savings',
+      imageAlt:
+        'High-volume pallet wrapping operation achieving over 30000 euros annual savings',
       imagePosition: 'center',
       quote: '',
     },
@@ -555,7 +554,8 @@ export const contact = {
   form: {
     submitLabel: 'Send Message',
     submitting: 'Sending...',
-    success: 'Thank you for your message. I will get back to you within 48 hours.',
+    success:
+      'Thank you for your message. I will get back to you within 48 hours.',
     error:
       'Something went wrong. Please try emailing me directly at egbertkort@stretchfilmadvice.com.',
     audienceLabel: 'I am a...',
@@ -570,7 +570,8 @@ export const contact = {
     heading: 'Get in Touch',
     body: 'Based in the Netherlands, active across 25+ European countries. I help distributors and end-users achieve 30-50% reductions in stretch film costs through the right combination of film and machine settings.',
   },
-  microcopy: 'I respond to all inquiries within 48 hours. If urgent, call or WhatsApp directly.',
+  microcopy:
+    'I respond to all inquiries within 48 hours. If urgent, call or WhatsApp directly.',
 };
 
 export const ui = {
