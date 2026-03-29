@@ -25,7 +25,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.4, delay: 0.5 }}
-        className="pointer-events-none absolute right-16 top-1/2 hidden h-[70%] w-[22%] -translate-y-1/2 lg:block"
+        className="pointer-events-none absolute right-0 top-1/2 hidden h-[62%] w-[34%] -translate-y-1/2 lg:block"
         aria-hidden="true"
       >
         <Image
@@ -33,15 +33,15 @@ export function HeroSection() {
           alt=""
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
           style={{
             maskImage:
-              'linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 12%, black 82%, transparent 100%)',
+              'linear-gradient(to right, transparent 0%, black 32%), linear-gradient(to bottom, transparent 0%, black 8%, black 86%, transparent 100%)',
             maskComposite: 'intersect',
             WebkitMaskImage:
-              'linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 12%, black 82%, transparent 100%)',
+              'linear-gradient(to right, transparent 0%, black 32%), linear-gradient(to bottom, transparent 0%, black 8%, black 86%, transparent 100%)',
             WebkitMaskComposite: 'source-in',
-            opacity: 0.7,
+            opacity: 0.6,
           }}
         />
       </motion.div>
