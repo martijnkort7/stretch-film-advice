@@ -11,22 +11,22 @@ import { services } from '@/lib/content';
 
 const processImages = [
   {
-    src: '/images/Holding Force meten .jpg',
+    src: '/images/process/holding-force-meten.webp',
     alt: 'Measuring holding force on a wrapped pallet with a digital scale',
     className: 'aspect-[4/3] w-full object-cover object-center',
   },
   {
-    src: '/images/Improved pre stretch.jpg',
+    src: '/images/process/improved-pre-stretch.webp',
     alt: 'Pre-stretch percentage marking written on wrapped pallet film',
     className: 'aspect-[4/3] w-full object-cover object-center',
   },
   {
-    src: '/images/egbert-machine-inspection.webp',
+    src: '/images/team/egbert-machine-inspection.webp',
     alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
     className: 'aspect-[4/3] w-full object-cover object-center',
   },
   {
-    src: '/images/26 degrees tilt test.JPG',
+    src: '/images/process/26-degrees-tilt-test.webp',
     alt: 'Wrapped pallet on 26-degree tilt test verifying load stability',
     className: 'aspect-[4/3] w-full object-contain object-center bg-slate-50',
   },

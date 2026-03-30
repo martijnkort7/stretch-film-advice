@@ -23,7 +23,7 @@ export function VideoShowcase() {
           <FadeIn delay={0.1}>
             <VideoPlayer
               src="/videos/tilt-test-push.mp4"
-              poster="/videos/tilt-test-push-poster.webp"
+              poster="/videos/posters/tilt-test-push-poster.webp"
               alt="Pallet stability push test demonstrating holding force after optimised stretch film wrapping"
             />
             <p className="mt-3 text-sm text-slate-400">
@@ -35,7 +35,7 @@ export function VideoShowcase() {
           <FadeIn delay={0.2}>
             <VideoPlayer
               src="/videos/fast-machine.mp4"
-              poster="/videos/fast-machine-poster.jpg"
+              poster="/videos/posters/fast-machine-poster.webp"
               alt="Automatic pallet wrapping machine running at high speed in industrial facility"
             />
             <p className="mt-3 text-sm text-slate-400">

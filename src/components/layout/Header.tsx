@@ -46,16 +46,16 @@ export function Header() {
               }}
               className={cn(
                 'shrink-0 transition-all duration-300',
-                !showSolid && 'rounded-md bg-white px-3 py-1',
+                !showSolid && 'rounded-lg bg-white/95 px-3 py-1',
               )}
             >
               <Image
-                src="/images/logo-transparent.png"
+                src="/images/brand/logo.png"
                 alt="Stretch Film Advice"
-                width={220}
-                height={60}
+                width={2739}
+                height={564}
                 priority
-                className="h-9 w-auto md:h-11"
+                className="h-11 w-auto md:h-[52px]"
               />
             </Link>
 

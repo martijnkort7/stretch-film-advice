@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# Raw/unoptimised source images — not needed in deployment
+/public/images/raw/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

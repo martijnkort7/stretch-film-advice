@@ -8,9 +8,20 @@ interface PageHeaderProps {
   compact?: boolean;
 }
 
-export function PageHeader({ overline, heading, subtitle, compact }: PageHeaderProps) {
+export function PageHeader({
+  overline,
+  heading,
+  subtitle,
+  compact,
+}: PageHeaderProps) {
   return (
-    <section className={compact ? "bg-navy-950 pt-24 pb-8 md:pt-32 md:pb-12" : "bg-navy-950 pt-24 pb-12 md:pt-40 md:pb-28"}>
+    <section
+      className={
+        compact
+          ? 'bg-navy-950 pt-24 pb-8 md:pt-32 md:pb-12'
+          : 'bg-navy-950 pt-24 pb-12 md:pt-40 md:pb-28'
+      }
+    >
       <Container>
         <FadeIn>
           <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-red-400 uppercase">

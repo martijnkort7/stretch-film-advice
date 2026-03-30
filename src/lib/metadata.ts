@@ -58,7 +58,7 @@ export const baseMetadata: Metadata = {
       'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings across 25+ European countries.',
     images: [
       {
-        url: `${baseUrl}/images/og-image.jpg`,
+        url: `${baseUrl}/images/brand/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Stretch Film Advice — More Stable Pallets, 30–50% Less Film',
@@ -70,7 +70,7 @@ export const baseMetadata: Metadata = {
     title: 'Stretch Film Advice | Cut Stretch Film Costs by 30-50%',
     description:
       'More stable pallets and 30–50% less stretch film. Free on-site assessment across 25+ European countries.',
-    images: [`${baseUrl}/images/og-image.jpg`],
+    images: [`${baseUrl}/images/brand/og-image.jpg`],
   },
   alternates: {
     canonical: baseUrl,
@@ -161,7 +161,7 @@ export const localBusinessSchema = {
   description:
     'Expert stretch film consulting: cut costs by 30-50% through optimal film selection and machine settings.',
   url: baseUrl,
-  logo: `${baseUrl}/images/logo.png`,
+  logo: `${baseUrl}/images/brand/logo.png`,
   telephone: '+31651571072',
   email: 'egbertkort@stretchfilmadvice.com',
   address: {

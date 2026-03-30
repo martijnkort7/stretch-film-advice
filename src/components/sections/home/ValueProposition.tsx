@@ -44,7 +44,7 @@ export function ValueProposition() {
             <FadeIn delay={0.2}>
               <div className="overflow-hidden rounded-sm border border-white/10">
                 <Image
-                  src="/images/film-usage-comparison.webp"
+                  src="/images/process/film-usage-comparison.webp"
                   alt="Before and after film usage comparison — the larger ball represents excessive film use, the smaller ball shows optimised usage with less material"
                   width={1920}
                   height={1080}

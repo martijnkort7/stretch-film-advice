@@ -14,7 +14,7 @@ export function StorySection() {
             <FadeIn direction="left">
               <div className="overflow-hidden rounded-sm border border-slate-200">
                 <Image
-                  src="/images/egbert-factory-inspection.webp"
+                  src="/images/team/egbert-factory-inspection.webp"
                   alt="Egbert Kort conducting a holding force measurement at a client facility"
                   width={640}
                   height={800}
@@ -23,7 +23,7 @@ export function StorySection() {
                 />
               </div>
               <blockquote className="mt-6 border-l-2 border-red-600 pl-5">
-                <p className="font-serif text-lg italic text-slate-700">
+                <p className="font-serif text-lg text-slate-700 italic">
                   &ldquo;{about.story.quote}&rdquo;
                 </p>
               </blockquote>

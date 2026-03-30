@@ -26,7 +26,9 @@ export function VideoPlayer({
   }
 
   return (
-    <div className={`relative aspect-video overflow-hidden rounded-sm ${className}`}>
+    <div
+      className={`relative aspect-video overflow-hidden rounded-sm ${className}`}
+    >
       <video
         ref={videoRef}
         src={src}

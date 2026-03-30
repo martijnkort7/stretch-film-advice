@@ -30,6 +30,16 @@ src/components/sections/ — Page-specific sections grouped by page
 src/lib/                 — content.ts, metadata.ts, utils.ts
 ```
 
+## Development Workflow
+
+After visual changes (CSS, images, layout), always clear the Next.js cache and restart the dev server so the user sees the update immediately:
+
+```bash
+rm -rf .next && npm run dev
+```
+
+Remind the user to hard-refresh the browser (Cmd+Shift+R) to bypass browser cache.
+
 ## Code Style
 
 - Named exports, one component per file, PascalCase.tsx

@@ -18,7 +18,7 @@ export function CTASection({
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       <Image
-        src="/images/banner-factory-pallets.webp"
+        src="/images/process/banner-factory-pallets.webp"
         alt="Stretch film wrapped pallets in factory"
         fill
         className="object-cover object-center"

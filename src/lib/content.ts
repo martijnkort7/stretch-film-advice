@@ -83,7 +83,7 @@ export const homepage = {
       link: '/about',
       linkLabel: 'Learn more',
       icon: 'user' as const,
-      image: '/images/egbert-kort.webp',
+      image: '/images/team/egbert-kort.webp',
     },
     approach: {
       heading: 'The Approach',
@@ -368,7 +368,7 @@ export const services = {
       body: 'Every assessment includes holding force measurement, the most reliable indicator of pallet stability. Holding force tells you exactly how tightly the film grips the load, regardless of product type or pallet shape. In some cases, I also perform the 26-degree tilt test as an additional visual demonstration of load integrity.',
       caption:
         'Measurements are taken on-site before and after optimisation — film consumption, machine settings, and load stability are all documented to quantify the improvement.',
-      image: '/images/Current%20Weight.jpg',
+      image: '/images/process/current-weight.webp',
       imageAlt:
         'Digital scale measuring current stretch film consumption per pallet on-site',
     },
@@ -450,7 +450,7 @@ export const results = {
         savingsPercent: '30%+',
         palletStability: 'Equal or improved',
       },
-      image: '/images/Retail%20Centre%20Pallet%20Aldi%20.jpg',
+      image: '/images/process/retail-centre-pallet-aldi.webp',
       imageAlt:
         'Pallet wrapping optimisation at retail distribution centre in Hungary',
       imagePosition: 'center',
@@ -472,7 +472,7 @@ export const results = {
         savingsPercent: '63%',
         palletStability: 'More stable than before (holding force verified)',
       },
-      image: '/images/From%20a-lot%20to%20less.jpg',
+      image: '/images/process/from-a-lot-to-less.webp',
       imageAlt:
         'Before and after film optimisation showing 63% reduction in film usage',
       imagePosition: 'center 35%',
@@ -495,7 +495,7 @@ export const results = {
         savingsPercent: '30-50%',
         palletStability: 'Equal or improved',
       },
-      image: '/images/Gear%20change.jpg',
+      image: '/images/process/gear-change.webp',
       imageAlt:
         'High-volume pallet wrapping operation achieving over 30000 euros annual savings',
       imagePosition: 'center',

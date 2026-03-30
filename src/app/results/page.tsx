@@ -10,7 +10,12 @@ export const metadata = resultsMetadata;
 export default function ResultsPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema('Results', 'https://www.stretchfilmadvice.com/results')} />
+      <SchemaScript
+        schema={breadcrumbSchema(
+          'Results',
+          'https://www.stretchfilmadvice.com/results',
+        )}
+      />
       <ResultsHero />
       <CaseStudySlider />
       <CTASection

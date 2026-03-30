@@ -59,14 +59,15 @@ export function ResultsSection() {
                 </div>
                 <div className="border-t border-slate-100 bg-slate-50 px-4 py-3">
                   <p className="text-xs leading-relaxed text-slate-600">
-                    Current situation: film consumption weighed per pallet on-site
+                    Current situation: film consumption weighed per pallet
+                    on-site
                   </p>
                 </div>
               </div>
               <div className="overflow-hidden rounded-sm border border-slate-200 shadow-sm">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/images/Current%20setting.jpg"
+                    src="/images/process/current-setting.webp"
                     alt="Wrapping machine control panel showing pre-stretch percentage settings per load zone before optimisation"
                     fill
                     className="object-cover"
@@ -81,7 +82,7 @@ export function ResultsSection() {
               <div className="overflow-hidden rounded-sm border border-slate-200 shadow-sm">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/images/tilt-test-dupont.webp"
+                    src="/images/process/tilt-test-dupont.webp"
                     alt="Tilt test with DuPont bags on pallet at 26-degree incline, demonstrating containment force"
                     fill
                     className="object-cover"

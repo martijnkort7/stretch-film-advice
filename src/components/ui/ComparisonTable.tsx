@@ -75,7 +75,7 @@ export function ComparisonTable({
                       i === 0 && 'w-[30%]',
                       i === highlightColumn &&
                         !isDark &&
-                        'bg-emerald-50 text-emerald-700 font-bold',
+                        'bg-emerald-50 font-bold text-emerald-700',
                       i === highlightColumn &&
                         isDark &&
                         'bg-emerald-500/10 font-bold text-emerald-400',
@@ -121,10 +121,18 @@ export function ComparisonTable({
                           key={key}
                           className={cn(
                             'border-b px-5 py-5 text-sm',
-                            isHighlighted && !isDark && 'bg-emerald-50 font-semibold text-emerald-700',
-                            isHighlighted && isDark && 'bg-emerald-500/10 font-semibold text-emerald-400',
-                            !isHighlighted && isDark && 'border-white/10 text-slate-300',
-                            !isHighlighted && !isDark && 'border-slate-200 text-slate-600',
+                            isHighlighted &&
+                              !isDark &&
+                              'bg-emerald-50 font-semibold text-emerald-700',
+                            isHighlighted &&
+                              isDark &&
+                              'bg-emerald-500/10 font-semibold text-emerald-400',
+                            !isHighlighted &&
+                              isDark &&
+                              'border-white/10 text-slate-300',
+                            !isHighlighted &&
+                              !isDark &&
+                              'border-slate-200 text-slate-600',
                             isHighlighted && isDark && 'border-white/10',
                             isHighlighted && !isDark && 'border-slate-200',
                           )}

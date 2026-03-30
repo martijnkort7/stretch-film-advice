@@ -1,7 +1,12 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { AnimatePresence, motion, useReducedMotion, type PanInfo } from 'motion/react';
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  type PanInfo,
+} from 'motion/react';
 import { ChevronLeft, ChevronRight, Store, Factory, Truck } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
@@ -23,7 +28,7 @@ function SwipeHint() {
   return (
     <motion.div
       aria-hidden="true"
-      className="flex select-none items-center gap-1.5"
+      className="flex items-center gap-1.5 select-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -33,7 +38,12 @@ function SwipeHint() {
       <motion.div
         className="h-4 w-6 rounded-sm border border-slate-300 bg-slate-100"
         animate={{ x: [0, 6, 0] }}
-        transition={{ duration: 0.9, ease: 'easeInOut', repeat: 2, repeatDelay: 0.2 }}
+        transition={{
+          duration: 0.9,
+          ease: 'easeInOut',
+          repeat: 2,
+          repeatDelay: 0.2,
+        }}
       />
       <ChevronRight className="h-3 w-3 text-slate-400" />
     </motion.div>
@@ -187,7 +197,11 @@ export function CaseStudySlider() {
 
   // Swipe hint nudge — scroll peek animation, plays once per session
   useEffect(() => {
-    if (prefersReducedMotion || hasNudgedRef.current || getSessionFlag('caseStudyNudgeSeen')) {
+    if (
+      prefersReducedMotion ||
+      hasNudgedRef.current ||
+      getSessionFlag('caseStudyNudgeSeen')
+    ) {
       return;
     }
 
@@ -215,7 +229,10 @@ export function CaseStudySlider() {
   // Auto-dismiss swipe label after 2.5s
   useEffect(() => {
     if (!showSwipeLabel) return;
-    swipeLabelTimerRef.current = setTimeout(() => setShowSwipeLabel(false), 2500);
+    swipeLabelTimerRef.current = setTimeout(
+      () => setShowSwipeLabel(false),
+      2500,
+    );
     return () => {
       if (swipeLabelTimerRef.current) clearTimeout(swipeLabelTimerRef.current);
     };
@@ -233,10 +250,8 @@ export function CaseStudySlider() {
         />
 
         <div className="mt-10 md:mt-14">
-
           {/* ── MOBILE LAYOUT ── */}
           <div className="md:hidden">
-
             {/* Case label + title above the image */}
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
@@ -252,7 +267,7 @@ export function CaseStudySlider() {
                   {slider.caseLabel} {activeIndex + 1} {slider.ofLabel}{' '}
                   {cases.length}
                 </p>
-                <h3 className="mt-2 font-serif text-xl leading-tight tracking-tight text-navy-950">
+                <h3 className="text-navy-950 mt-2 font-serif text-xl leading-tight tracking-tight">
                   {activeCase.title}
                 </h3>
               </motion.div>
@@ -290,10 +305,12 @@ export function CaseStudySlider() {
                           alt={c.imageAlt}
                           fill
                           className="object-cover"
-                          style={{ objectPosition: c.imagePosition ?? 'center' }}
+                          style={{
+                            objectPosition: c.imagePosition ?? 'center',
+                          }}
                         />
                       ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-950 to-navy-800">
+                        <div className="from-navy-950 to-navy-800 flex h-full w-full items-center justify-center bg-gradient-to-br">
                           <CardIcon
                             className="h-16 w-16 text-slate-600/40"
                             strokeWidth={1}
@@ -318,7 +335,9 @@ export function CaseStudySlider() {
                   aria-label={slider.previousCase}
                   className={cn(
                     'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
-                    activeIndex === 0 ? 'cursor-not-allowed opacity-30' : 'active:bg-white',
+                    activeIndex === 0
+                      ? 'cursor-not-allowed opacity-30'
+                      : 'active:bg-white',
                   )}
                 >
                   <ChevronLeft className="h-5 w-5" />
@@ -432,7 +451,7 @@ export function CaseStudySlider() {
             dragElastic={0.1}
             onDragEnd={handleDragEnd}
             style={{ touchAction: 'pan-y' }}
-            className="hidden cursor-grab md:block active:cursor-grabbing"
+            className="hidden cursor-grab active:cursor-grabbing md:block"
           >
             <div className="grid grid-cols-2 gap-10">
               {/* Desktop image */}
@@ -454,10 +473,12 @@ export function CaseStudySlider() {
                         alt={activeCase.imageAlt}
                         fill
                         className="object-cover"
-                        style={{ objectPosition: activeCase.imagePosition ?? 'center' }}
+                        style={{
+                          objectPosition: activeCase.imagePosition ?? 'center',
+                        }}
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-950 to-navy-800">
+                      <div className="from-navy-950 to-navy-800 flex h-full w-full items-center justify-center bg-gradient-to-br">
                         <Icon
                           className="h-16 w-16 text-slate-600/40"
                           strokeWidth={1}
@@ -485,7 +506,7 @@ export function CaseStudySlider() {
                     {cases.length}
                   </p>
 
-                  <h3 className="mt-2 font-serif text-3xl leading-tight tracking-tight text-navy-950">
+                  <h3 className="text-navy-950 mt-2 font-serif text-3xl leading-tight tracking-tight">
                     {activeCase.title}
                   </h3>
 
@@ -566,7 +587,6 @@ export function CaseStudySlider() {
 
           {/* ── NAVIGATION BAR ── */}
           <div className="mt-6 border-t border-slate-200 pt-5">
-
             {/* Mobile navigation — pill dots only (arrows are above, near the image) */}
             <div className="flex items-center md:hidden">
               <div
@@ -583,7 +603,9 @@ export function CaseStudySlider() {
                     onClick={() => goTo(i)}
                     className={cn(
                       'h-2 rounded-full transition-all duration-300',
-                      i === activeIndex ? 'w-6 bg-navy-950' : 'w-2 bg-slate-300',
+                      i === activeIndex
+                        ? 'bg-navy-950 w-6'
+                        : 'w-2 bg-slate-300',
                     )}
                   />
                 ))}
@@ -619,7 +641,9 @@ export function CaseStudySlider() {
                   aria-label={slider.previousCase}
                   className={cn(
                     'flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 transition-colors duration-200',
-                    activeIndex === 0 ? 'cursor-not-allowed opacity-30' : 'hover:bg-white',
+                    activeIndex === 0
+                      ? 'cursor-not-allowed opacity-30'
+                      : 'hover:bg-white',
                   )}
                 >
                   <ChevronLeft className="h-5 w-5" />
@@ -639,7 +663,6 @@ export function CaseStudySlider() {
                 </button>
               </div>
             </div>
-
           </div>
         </div>
       </Container>

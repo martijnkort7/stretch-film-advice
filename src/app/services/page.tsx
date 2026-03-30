@@ -20,7 +20,12 @@ export const metadata = servicesMetadata;
 export default function ServicesPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema('Services', 'https://www.stretchfilmadvice.com/services')} />
+      <SchemaScript
+        schema={breadcrumbSchema(
+          'Services',
+          'https://www.stretchfilmadvice.com/services',
+        )}
+      />
       <SchemaScript schema={faqSchema} />
       <SchemaScript schema={howToSchema} />
       <SchemaScript schema={serviceSchema} />

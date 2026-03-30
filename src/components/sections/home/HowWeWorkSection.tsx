@@ -11,19 +11,19 @@ import { homepage } from '@/lib/content';
 
 const stepImages = [
   {
-    src: '/images/Holding%20Force%20meten%20.jpg',
+    src: '/images/process/holding-force-meten.webp',
     alt: 'Measuring holding force on a wrapped pallet with a digital scale',
   },
   {
-    src: '/images/Improved%20pre%20stretch.jpg',
+    src: '/images/process/improved-pre-stretch.webp',
     alt: 'Pre-stretch percentage marking written on wrapped pallet film',
   },
   {
-    src: '/images/egbert-machine-inspection.webp',
+    src: '/images/team/egbert-machine-inspection.webp',
     alt: 'Egbert Kort inspecting pallet wrapping equipment on-site during assessment',
   },
   {
-    src: '/images/26%20degrees%20tilt%20test.JPG',
+    src: '/images/process/26-degrees-tilt-test.webp',
     alt: 'Wrapped pallet on 26-degree tilt test verifying load stability',
   },
 ];

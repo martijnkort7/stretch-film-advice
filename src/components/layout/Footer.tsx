@@ -12,14 +12,14 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="inline-block rounded-lg bg-white px-3 py-1.5"
+              className="inline-block rounded-lg bg-white/95 px-3 py-1.5"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/brand/logo.png"
                 alt="Stretch Film Advice"
-                width={200}
-                height={55}
-                className="h-7 w-auto md:h-9"
+                width={2739}
+                height={564}
+                className="h-9 w-auto md:h-11"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">

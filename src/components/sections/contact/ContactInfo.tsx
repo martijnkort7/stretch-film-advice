@@ -12,9 +12,7 @@ export function ContactInfo() {
       <p className="mt-4 text-base leading-relaxed text-slate-600">
         {contact.info.body}
       </p>
-      <p className="mt-3 text-sm text-slate-500">
-        {contact.microcopy}
-      </p>
+      <p className="mt-3 text-sm text-slate-500">{contact.microcopy}</p>
 
       <div className="mt-8 space-y-6">
         <div>

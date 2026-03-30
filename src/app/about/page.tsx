@@ -13,7 +13,12 @@ export const metadata = aboutMetadata;
 export default function AboutPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema('About', 'https://www.stretchfilmadvice.com/about')} />
+      <SchemaScript
+        schema={breadcrumbSchema(
+          'About',
+          'https://www.stretchfilmadvice.com/about',
+        )}
+      />
       <PageHeader
         overline={about.header.overline}
         heading={about.header.heading}

@@ -126,7 +126,7 @@ export function HeroSection() {
             aria-hidden="true"
           >
             <Image
-              src="/images/egbert-kort.webp"
+              src="/images/team/egbert-kort.webp"
               alt=""
               fill
               priority

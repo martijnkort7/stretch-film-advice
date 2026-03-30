@@ -13,7 +13,12 @@ export const metadata = contactMetadata;
 export default function ContactPage() {
   return (
     <>
-      <SchemaScript schema={breadcrumbSchema('Contact', 'https://www.stretchfilmadvice.com/contact')} />
+      <SchemaScript
+        schema={breadcrumbSchema(
+          'Contact',
+          'https://www.stretchfilmadvice.com/contact',
+        )}
+      />
       <PageHeader
         overline={contact.header.overline}
         heading={contact.header.heading}
