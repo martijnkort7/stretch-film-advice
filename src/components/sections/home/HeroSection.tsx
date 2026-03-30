@@ -12,11 +12,11 @@ export function HeroSection() {
   const { hero } = homepage;
 
   return (
-    <section className="relative flex min-h-[85dvh] min-h-[85vh] flex-col justify-center overflow-hidden bg-black md:min-h-screen">
-      <Container className="relative z-10 py-24 pt-24 md:py-32">
-        <div className="grid items-center lg:grid-cols-2 lg:gap-16">
+    <section className="relative flex min-h-[85svh] flex-col overflow-hidden bg-black md:h-screen">
+      <Container className="relative z-10 py-16 pt-24 md:py-28 md:flex md:flex-1 md:flex-col md:justify-center">
+        <div className="grid items-center lg:grid-cols-2 lg:gap-16 lg:flex-1 lg:items-stretch">
           {/* LEFT COLUMN — text content */}
-          <div>
+          <div className="lg:self-center">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.5 }}
-            className="relative hidden min-h-[520px] lg:block"
+            className="relative hidden lg:block"
             aria-hidden="true"
           >
             <Image
@@ -130,13 +130,15 @@ export function HeroSection() {
               alt=""
               fill
               priority
-              className="object-cover object-top"
+              unoptimized
+              className="object-cover object-[center_top]"
               style={{
+                opacity: 0.95,
+                filter: 'saturate(0.88) brightness(1.04)',
                 maskImage:
-                  'radial-gradient(ellipse 80% 90% at 65% 50%, black 35%, transparent 75%)',
+                  'linear-gradient(to right, transparent 0%, black 12%, black 100%)',
                 WebkitMaskImage:
-                  'radial-gradient(ellipse 80% 90% at 65% 50%, black 35%, transparent 75%)',
-                opacity: 0.65,
+                  'linear-gradient(to right, transparent 0%, black 12%, black 100%)',
               }}
             />
           </motion.div>
