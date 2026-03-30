@@ -12,8 +12,8 @@ export function HeroSection() {
   const { hero } = homepage;
 
   return (
-    <section className="relative min-h-[85dvh] min-h-[85vh] overflow-hidden bg-black md:min-h-screen">
-      <Container className="relative z-10 pt-28 pb-12 sm:py-32 md:py-40">
+    <section className="relative flex min-h-[85dvh] min-h-[85vh] flex-col justify-center overflow-hidden bg-black md:min-h-screen">
+      <Container className="relative z-10 py-24 pt-24 md:py-32">
         <div className="grid items-center lg:grid-cols-2 lg:gap-16">
           {/* LEFT COLUMN — text content */}
           <div>
