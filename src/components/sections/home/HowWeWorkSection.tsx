@@ -53,12 +53,14 @@ export function HowWeWorkSection() {
                     className="aspect-[4/3] w-full object-cover"
                   />
                 </div>
-                <span className="font-serif text-5xl text-blue-100">
-                  {step.number}
-                </span>
-                <h3 className="text-navy-950 mt-2 font-serif text-xl">
-                  {step.heading}
-                </h3>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-serif text-5xl text-blue-100">
+                    {step.number}
+                  </span>
+                  <h3 className="text-navy-950 font-serif text-xl">
+                    {step.heading}
+                  </h3>
+                </div>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
                   {step.body}
                 </p>

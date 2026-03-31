@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -37,6 +39,13 @@ export function ValueProposition() {
                   </li>
                 ))}
               </ul>
+              <Link
+                href="/case-studies"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-800"
+              >
+                See real results from client assessments
+                <ArrowRight size={14} />
+              </Link>
             </FadeIn>
           </div>
 

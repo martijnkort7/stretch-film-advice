@@ -5,7 +5,7 @@ import { ExperienceHighlights } from '@/components/sections/about/ExperienceHigh
 import { WhyDifferent } from '@/components/sections/about/WhyDifferent';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { about } from '@/lib/content';
-import { aboutMetadata, breadcrumbSchema } from '@/lib/metadata';
+import { aboutMetadata, breadcrumbSchema, personSchema } from '@/lib/metadata';
 import { SchemaScript } from '@/components/ui/SchemaScript';
 
 export const metadata = aboutMetadata;
@@ -19,6 +19,7 @@ export default function AboutPage() {
           'https://www.stretchfilmadvice.com/about',
         )}
       />
+      <SchemaScript schema={personSchema} />
       <PageHeader
         overline={about.header.overline}
         heading={about.header.heading}

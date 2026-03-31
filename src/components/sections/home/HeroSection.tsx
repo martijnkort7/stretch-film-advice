@@ -13,8 +13,8 @@ export function HeroSection() {
 
   return (
     <section className="relative flex min-h-[85svh] flex-col overflow-hidden bg-black md:h-screen">
-      <Container className="relative z-10 py-16 pt-24 md:py-28 md:flex md:flex-1 md:flex-col md:justify-center">
-        <div className="grid items-center lg:grid-cols-2 lg:gap-16 lg:flex-1 lg:items-stretch">
+      <Container className="relative z-10 py-16 pt-24 md:flex md:flex-1 md:flex-col md:justify-center md:py-28">
+        <div className="grid items-center lg:flex-1 lg:grid-cols-2 lg:items-stretch lg:gap-16">
           {/* LEFT COLUMN — text content */}
           <div className="lg:self-center">
             <motion.p

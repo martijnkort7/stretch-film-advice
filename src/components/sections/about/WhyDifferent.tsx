@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -26,6 +28,15 @@ export function WhyDifferent() {
             rows={different.comparison.rows}
             highlightColumn={3}
           />
+          <div className="mt-8 text-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-800"
+            >
+              See how the process works
+              <ArrowRight size={14} />
+            </Link>
+          </div>
         </FadeIn>
       </Container>
     </Section>

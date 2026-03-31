@@ -129,10 +129,10 @@ export const resultsMetadata: Metadata = {
   description:
     'Real case studies with verified savings. See how companies across Europe cut stretch film costs by 30-63% through better multilayer film and proper machine settings. 95% success rate.',
   alternates: {
-    canonical: `${baseUrl}/results`,
+    canonical: `${baseUrl}/case-studies`,
   },
   openGraph: {
-    url: `${baseUrl}/results`,
+    url: `${baseUrl}/case-studies`,
     title: 'Stretch Film Savings — Real Results from 1,000+ Assessments',
     description:
       'Real numbers from real assessments. 95% of projects achieve 30%+ savings on stretch film costs.',
@@ -308,6 +308,29 @@ export const serviceSchema = {
       },
     ],
   },
+};
+
+export const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Egbert Kort',
+  jobTitle: 'Founder & Stretch Film Consultant',
+  url: `${baseUrl}/about`,
+  image: `${baseUrl}/images/team/egbert-kort.webp`,
+  worksFor: {
+    '@type': 'ProfessionalService',
+    name: 'Stretch Film Advice',
+    url: baseUrl,
+  },
+  knowsAbout: [
+    'stretch film optimization',
+    'pallet wrapping machine settings',
+    'multilayer stretch film technology',
+    'pre-stretch configuration',
+    'load stability testing',
+    'holding force measurement',
+  ],
+  sameAs: ['https://www.linkedin.com/in/egbert-kort-73b4b321/'],
 };
 
 export function breadcrumbSchema(pageName: string, pageUrl: string) {

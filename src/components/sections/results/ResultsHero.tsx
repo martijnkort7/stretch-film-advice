@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { results } from '@/lib/content';
@@ -13,6 +15,13 @@ export function ResultsHero() {
           <h1 className="max-w-4xl font-serif text-3xl leading-tight tracking-tight text-white sm:text-4xl md:text-6xl">
             {results.header.heading}
           </h1>
+          <Link
+            href="/services"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+          >
+            Learn about the assessment process
+            <ArrowRight size={14} />
+          </Link>
         </FadeIn>
 
         <FadeIn delay={0.2}>

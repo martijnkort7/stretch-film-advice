@@ -24,7 +24,7 @@ export const homepage = {
     overline: 'Stretch Film Advisory',
     heading: 'Get a more stable pallet.',
     subtitle:
-      "Most pallets I see are not as stable as they could be, and use far more film than necessary. I optimise your machine settings and supply the right multilayer film to give you a more stable pallet at 30-50% lower cost.",
+      'Most pallets I see are not as stable as they could be, and use far more film than necessary. I optimise your machine settings and supply the right multilayer film to give you a more stable pallet at 30-50% lower cost.',
     cta: 'Book Your Free Assessment',
     ctaSecondary: 'See How It Works',
     ctaSubtext:
@@ -410,6 +410,10 @@ export const services = {
       },
     ],
   },
+  videoShowcase: {
+    overline: 'See It In Action',
+    heading: 'Watch the Process',
+  },
   cta: {
     heading: 'See the Results on Your Own Pallets',
     subtitle:
@@ -533,25 +537,6 @@ export const contact = {
     subtitle:
       'Whether you distribute stretch film or use it on your production line, the first step is always a conversation. Tell me about your situation and I will call you back within a few days to discuss whether an on-site visit makes sense.',
   },
-  audiences: {
-    heading: 'Who I Work With',
-    cards: [
-      {
-        title: 'End-Users',
-        description:
-          'Companies using pallet wrapping machines who want to cut film costs and improve load stability. Whether you wrap 50 pallets a day or 500, the process is the same.',
-        expectation:
-          'I visit your site for half a day, deliver a detailed report within a week, and verify the results on the same day as implementation. Most projects are completed within two weeks.',
-      },
-      {
-        title: 'Distributors',
-        description:
-          'Stretch film distributors looking to offer their clients proven cost savings through better film and proper machine settings.',
-        expectation:
-          'I provide on-site assessments at your clients\u2019 facilities, train your sales team on film performance, and deliver measurable results that strengthen your client relationships.',
-      },
-    ],
-  },
   form: {
     submitLabel: 'Send Message',
     submitting: 'Sending...',
@@ -590,7 +575,6 @@ export const ui = {
   callNow: 'Call',
   callNowAria: 'Call Stretch Film Advice',
   linkedInLabel: 'LinkedIn',
-  whatToExpect: 'What to expect',
   contactInfoEmail: 'Email',
   contactInfoPhone: 'Phone',
 };

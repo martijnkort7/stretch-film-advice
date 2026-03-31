@@ -5,15 +5,18 @@ import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { VideoPlayer } from '@/components/ui/VideoPlayer';
+import { services } from '@/lib/content';
 
 export function VideoShowcase() {
+  const { videoShowcase } = services;
+
   return (
     <Section variant="navy">
       <Container>
         <FadeIn>
           <SectionHeading
-            overline="See It In Action"
-            heading="Watch the Process"
+            overline={videoShowcase.overline}
+            heading={videoShowcase.heading}
             dark
             align="center"
           />
