@@ -453,7 +453,7 @@ export function CaseStudySlider() {
             style={{ touchAction: 'pan-y' }}
             className="hidden cursor-grab active:cursor-grabbing md:block"
           >
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid min-h-[420px] grid-cols-2 gap-10">
               {/* Desktop image */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                 <AnimatePresence mode="wait" custom={direction}>
@@ -499,7 +499,7 @@ export function CaseStudySlider() {
                   animate="center"
                   exit="exit"
                   transition={transition}
-                  className="flex flex-col justify-center"
+                  className="flex flex-col justify-start"
                 >
                   <p className="text-xs font-semibold tracking-[0.2em] text-red-600 uppercase">
                     {slider.caseLabel} {activeIndex + 1} {slider.ofLabel}{' '}

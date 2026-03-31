@@ -24,11 +24,11 @@ export const homepage = {
     overline: 'Stretch Film Advisory',
     heading: 'Get a more stable pallet.',
     subtitle:
-      "There's almost always a smarter way to wrap a pallet. I optimize your machines and we supply premium film to cut your costs by 30-50%.",
-    cta: 'Request a Free Audit',
+      "Most pallets I see are not as stable as they could be, and use far more film than necessary. I optimise your machine settings and supply the right multilayer film to give you a more stable pallet at 30-50% lower cost.",
+    cta: 'Book Your Free Assessment',
     ctaSecondary: 'See How It Works',
     ctaSubtext:
-      'No obligation. I visit your site for half a day, measure everything, and deliver a detailed savings report within one week.',
+      'No obligation. I visit your site for 3-4 hours, measure everything, and deliver a detailed savings report within one week. The assessment is free because I earn from the film, not from the advice.',
     trustLine: 'INDEPENDENT ADVICE & SUPPLY ACROSS 25+ EUROPEAN COUNTRIES',
   },
   stats: [
@@ -43,7 +43,7 @@ export const homepage = {
     body: 'Most companies I visit have good machines, but the wrong settings. Their pre-stretch is set to 200% when 300% is achievable. They use 23-micron film when 10-micron performs better. They wrap five times when three would hold. The root cause is always the same: not knowing what modern film and proper settings can do.',
     points: [
       'A company wrapping 200 pallets a day can save over €30,000 per year',
-      'Modern 67-layer multilayer film outperforms conventional film at half the thickness',
+      'Modern 67-layer multilayer film holds loads tighter at half the thickness, so you use less material and get a more stable pallet',
       '95% of my assessments achieve more than 30% film reduction',
     ],
   },
@@ -55,7 +55,7 @@ export const homepage = {
       {
         number: '01',
         heading: 'Assessment',
-        body: 'I visit your site for half a day. I measure holding force, stretch percentage, film weight per pallet, and wrap patterns.',
+        body: 'I visit your site for half a day. I measure holding force (how tightly the film grips your load), stretch percentage, film weight per pallet, and wrap patterns.',
       },
       {
         number: '02',
@@ -79,7 +79,7 @@ export const homepage = {
     heading: 'Expertise Meets Experience',
     advisor: {
       heading: 'The Advisor',
-      body: '45 years in pallet wrapping. Over 1,000 sites assessed across 25+ countries. I was one of the first people in Europe to sell pallet wrapping machines, back in 1981. I know roughly 40 different machine brands and types, and I know exactly how to set each one for minimum film usage.',
+      body: '45 years in pallet wrapping. Over 1,000 sites assessed across 25+ countries. I was one of the first people in Europe to sell pallet wrapping machines, back in 1981. I know roughly 40 different machine brands and types, so I can optimise your equipment regardless of what is on your floor.',
       link: '/about',
       linkLabel: 'Learn more',
       icon: 'user' as const,
@@ -126,12 +126,12 @@ export const homepage = {
     ],
   },
   industries: {
-    overline: 'Industries We Serve',
+    overline: 'Industries I Serve',
     heading: 'Saving Film Across Every Sector',
     items: [
       {
         heading: 'Manufacturing',
-        body: 'From automotive parts to building materials. High-volume lines with the most to gain from optimised settings and modern multilayer film.',
+        body: 'From automotive parts to building materials. High-volume lines where even a small reduction per pallet adds up to five-figure annual savings.',
         icon: 'factory' as const,
       },
       {
@@ -423,7 +423,7 @@ export const results = {
     overline: 'Results',
     heading: 'Real Savings, Real Clients',
     subtitle:
-      'Every number on this page comes from an actual on-site assessment. These are not projections. These are verified results. Behind every percentage is a team that stopped worrying about film costs \u2014 and a warehouse running a little smoother.',
+      'Every number on this page comes from an actual on-site assessment. These are not projections. These are verified results. Behind every percentage is a team that stopped worrying about film costs, reclaimed budget, and proved to management that the savings are real.',
   },
   intro: {
     heading: 'Proof, Not Promises',
@@ -519,7 +519,7 @@ export const results = {
     swipeLabel: 'Swipe to navigate',
   },
   cta: {
-    heading: 'These Results Are Typical, Not Exceptional',
+    heading: 'This Is What I See at Nearly Every Site',
     subtitle:
       'I see the same pattern at almost every site I visit. Let me show you what is possible at your facility. The assessment is free.',
     button: 'See How Much You Can Save',
@@ -531,7 +531,7 @@ export const contact = {
     overline: 'Contact',
     heading: 'Request Your Free Film Assessment',
     subtitle:
-      'Whether you distribute stretch film or use it on your production line, the first step is always a conversation. Tell me about your situation and I will get back to you within 48 hours.',
+      'Whether you distribute stretch film or use it on your production line, the first step is always a conversation. Tell me about your situation and I will call you back within a few days to discuss whether an on-site visit makes sense.',
   },
   audiences: {
     heading: 'Who I Work With',
@@ -556,7 +556,7 @@ export const contact = {
     submitLabel: 'Send Message',
     submitting: 'Sending...',
     success:
-      'Thank you for your message. I will get back to you within 48 hours.',
+      'Thank you for your message. I will get back to you as soon as possible.',
     error:
       'Something went wrong. Please try emailing me directly at egbertkort@stretchfilmadvice.com.',
     audienceLabel: 'I am a...',
@@ -572,7 +572,7 @@ export const contact = {
     body: 'Based in the Netherlands, active across 25+ European countries. I help distributors and end-users achieve 30-50% reductions in stretch film costs through the right combination of film and machine settings.',
   },
   microcopy:
-    'I respond to all inquiries within 48 hours. If urgent, call or WhatsApp directly.',
+    'I respond to all inquiries within a few working days. If urgent, call or WhatsApp directly.',
 };
 
 export const ui = {
