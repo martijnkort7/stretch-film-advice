@@ -171,10 +171,11 @@ export const about = {
     quote:
       'We were among the first in Europe. We had to sell the concept of pallet wrapping itself.',
     paragraphs: [
-      'My name is Egbert, and in 1981 I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Over the following decades, through multiple company transitions, I deepened my knowledge of both machines and film. A combination very few people in this industry have.',
-      'After I retired, I found I couldn\u2019t sit still. Four decades of expertise, and companies across Europe still needed it. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer.',
-      'Today, I visit sites across Europe and see the same pattern: companies wasting thousands of euros on film. Not because they\u2019re doing anything wrong, but because no one has shown them what\u2019s possible with modern 67-layer multilayer technology and proper machine settings.',
-      'I\u2019m based in the Netherlands and still enjoy travelling and being on site, working with teams and solving practical problems. After all these years, there\u2019s almost always a smarter way to wrap a pallet.',
+      'My name is Egbert, and in 1981 I started selling pallet wrapping machines at Matco BV. Pallet wrapping was so new in Europe that I had to sell the concept itself. Most companies had never seen a machine wrap a pallet. My first sale was a Full Web machine to Bendien in Naarden, using 150-centimetre wide film.',
+      'Over the following decades, I worked across the full supply chain. Matco became part of AEP, which evolved into AFP, and later Trioworld. Through every transition, I deepened my knowledge of both machines and film, a combination very few people in this industry have.',
+      'After I retired, I couldn\u2019t sit still. Four decades of expertise that companies across Europe still need. So I founded Stretch Film Advice, working as an independent expert and agent for the world\u2019s largest stretch film producer.',
+      'Today, I visit sites across Europe and see the same pattern everywhere: companies wasting thousands of euros on film. Not because they\u2019re doing anything wrong, but because no one has shown them what is possible with modern 67-layer multilayer technology and proper machine settings.',
+      'I\u2019m based in the Netherlands, and I still enjoy travelling and being on site. After all these years, that\u2019s what keeps it interesting: there\u2019s almost always a smarter way to wrap a pallet.',
     ],
   },
   timeline: {
@@ -367,7 +368,7 @@ export const services = {
       heading: 'How I Verify Results',
       body: 'Every assessment includes holding force measurement, the most reliable indicator of pallet stability. Holding force tells you exactly how tightly the film grips the load, regardless of product type or pallet shape. In some cases, I also perform the 26-degree tilt test as an additional visual demonstration of load integrity.',
       caption:
-        'Measurements are taken on-site before and after optimisation — film consumption, machine settings, and load stability are all documented to quantify the improvement.',
+        'Measurements are taken on-site before and after optimisation. Film consumption, machine settings, and load stability are all documented to quantify the improvement.',
       image: '/images/process/current-weight.webp',
       imageAlt:
         'Digital scale measuring current stretch film consumption per pallet on-site',
