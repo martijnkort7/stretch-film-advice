@@ -38,7 +38,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center font-medium transition-[color,background-color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+    'inline-flex items-center justify-center font-medium transition-[color,background-color,box-shadow,transform] duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
     variants[variant],
     sizes[size],
     disabled && 'cursor-not-allowed opacity-50',

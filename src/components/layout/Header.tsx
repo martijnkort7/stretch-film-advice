@@ -72,14 +72,14 @@ export function Header() {
                   }
                   aria-current={pathname === item.href ? 'page' : undefined}
                   className={cn(
-                    'rounded-sm border-b-2 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none',
+                    'relative rounded-sm pb-1 text-sm font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-red-600 after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none',
                     pathname === item.href
                       ? showSolid
-                        ? 'border-red-600 text-red-700'
-                        : 'border-red-600 text-white'
+                        ? 'text-red-700 after:scale-x-100'
+                        : 'text-white after:scale-x-100'
                       : showSolid
-                        ? 'border-transparent text-slate-600 hover:text-red-600'
-                        : 'border-transparent text-white/80 hover:text-white',
+                        ? 'text-slate-600 hover:text-red-600'
+                        : 'text-white/80 hover:text-white',
                   )}
                 >
                   {item.label}

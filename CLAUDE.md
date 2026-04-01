@@ -1,6 +1,6 @@
 # Stretch Film Advice
 
-Professional 4-page website for Egbert Kort / Stretch Film Advice — premium consulting positioning. Advises on multilayer stretch film + machine settings across 17 European countries.
+Professional 5-page website for Egbert Kort / Stretch Film Advice — premium consulting positioning. Advises on multilayer stretch film + machine settings across 17 European countries.
 
 ## Commands
 
@@ -37,8 +37,6 @@ After visual changes (CSS, images, layout), always clear the Next.js cache and r
 ```bash
 rm -rf .next && npm run dev
 ```
-
-Remind the user to hard-refresh the browser (Cmd+Shift+R) to bypass browser cache.
 
 ## Code Style
 

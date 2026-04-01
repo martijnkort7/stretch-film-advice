@@ -19,7 +19,7 @@ export function ContactInfo() {
           <p className={labelClasses}>{ui.contactInfoEmail}</p>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="text-navy-950 mt-1 block text-base transition-colors hover:text-red-600"
+            className="text-navy-950 mt-1 inline-block text-base transition-[color,transform] duration-200 hover:translate-x-0.5 hover:text-red-600"
           >
             {siteConfig.email}
           </a>
@@ -29,7 +29,7 @@ export function ContactInfo() {
           <p className={labelClasses}>{ui.contactInfoPhone}</p>
           <a
             href={`tel:${siteConfig.phone}`}
-            className="text-navy-950 mt-1 block text-base transition-colors hover:text-red-600"
+            className="text-navy-950 mt-1 inline-block text-base transition-[color,transform] duration-200 hover:translate-x-0.5 hover:text-red-600"
           >
             {siteConfig.phoneDisplay}
           </a>
@@ -41,10 +41,10 @@ export function ContactInfo() {
             href={siteConfig.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-navy-950 mt-1 inline-flex items-center gap-2 text-base transition-colors hover:text-red-600"
+            className="group text-navy-950 mt-1 inline-flex items-center gap-2 text-base transition-[color,transform] duration-200 hover:translate-x-0.5 hover:text-red-600"
           >
             <svg
-              className="h-4 w-4"
+              className="h-4 w-4 transition-transform duration-200 group-hover:scale-110"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"
@@ -61,10 +61,10 @@ export function ContactInfo() {
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-navy-950 mt-1 inline-flex items-center gap-2 text-base transition-colors hover:text-red-600"
+            className="group text-navy-950 mt-1 inline-flex items-center gap-2 text-base transition-[color,transform] duration-200 hover:translate-x-0.5 hover:text-red-600"
           >
             <svg
-              className="h-4 w-4"
+              className="h-4 w-4 transition-transform duration-200 group-hover:scale-110"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"

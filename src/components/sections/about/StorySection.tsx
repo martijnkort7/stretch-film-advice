@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'motion/react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { FadeIn } from '@/components/motion/FadeIn';
@@ -22,7 +25,14 @@ export function StorySection() {
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
-              <blockquote className="mt-6 border-l-2 border-red-600 pl-5">
+              <blockquote className="relative mt-6 pl-5">
+                <motion.div
+                  className="absolute top-0 left-0 w-0.5 bg-red-600"
+                  initial={{ height: 0 }}
+                  whileInView={{ height: '100%' }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                />
                 <p className="font-serif text-lg text-slate-700 italic">
                   &ldquo;{about.story.quote}&rdquo;
                 </p>

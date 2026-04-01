@@ -72,10 +72,10 @@ export function HowWeWorkSection() {
         <div className="mt-12 text-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-medium text-red-600 transition-colors hover:text-red-700"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-red-600 transition-colors hover:text-red-700"
           >
             {howWeWork.linkLabel}
-            <span aria-hidden="true">&rarr;</span>
+            <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
           </Link>
         </div>
       </Container>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
+import { MagneticWrap } from '@/components/ui/MagneticWrap';
 import { FadeIn } from '@/components/motion/FadeIn';
 import { homepage } from '@/lib/content';
 
@@ -35,10 +36,12 @@ export function CTASection({
             <p className="mt-6 text-lg leading-relaxed text-slate-300">
               {subtitle}
             </p>
-            <div className="mt-10">
-              <Button href="/contact" variant="primary" size="lg">
-                {button}
-              </Button>
+            <div className="mt-10 inline-flex w-full justify-center">
+              <MagneticWrap>
+                <Button href="/contact" variant="primary" size="lg">
+                  {button}
+                </Button>
+              </MagneticWrap>
             </div>
           </div>
         </FadeIn>

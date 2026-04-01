@@ -38,7 +38,7 @@ export function ServiceCards() {
                 className="group flex h-full flex-col border border-white/10 p-8 transition-colors duration-300 hover:border-white/30 md:p-10"
               >
                 <svg
-                  className="h-8 w-8 text-blue-400 transition-transform duration-300 group-hover:scale-110"
+                  className="h-8 w-8 text-blue-400 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}

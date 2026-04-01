@@ -101,7 +101,13 @@ export function ComparisonTable({
                 const valueKeys = keys.slice(1);
 
                 return (
-                  <tr key={rowIndex}>
+                  <tr
+                    key={rowIndex}
+                    className={cn(
+                      'transition-colors duration-200',
+                      isDark ? 'hover:bg-white/5' : 'hover:bg-slate-50',
+                    )}
+                  >
                     <td
                       className={cn(
                         'border-b px-5 py-5 font-medium',

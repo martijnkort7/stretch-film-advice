@@ -37,7 +37,7 @@ export function ExperienceHighlights() {
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-400/10 transition-colors duration-300 group-hover:bg-blue-400/20">
                     <Icon
-                      className="h-5 w-5 text-blue-400 transition-transform duration-300 group-hover:scale-110"
+                      className="h-5 w-5 text-blue-400 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
                       aria-hidden="true"
                     />
                   </div>

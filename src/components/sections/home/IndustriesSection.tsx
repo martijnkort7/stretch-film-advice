@@ -42,7 +42,7 @@ export function IndustriesSection() {
                   className="group flex h-full flex-col rounded-sm border border-slate-200 p-8 transition-shadow duration-300 hover:border-blue-200 hover:shadow-lg"
                 >
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-sm bg-blue-50 text-blue-600 transition-colors duration-300 group-hover:bg-blue-100">
-                    <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />
+                    <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" />
                   </div>
                   <h3 className="text-navy-950 text-lg font-semibold">
                     {item.heading}

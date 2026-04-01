@@ -40,7 +40,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-slate-300 transition-colors hover:text-white"
+                    className="relative text-sm text-slate-300 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100"
                   >
                     {item.label}
                   </Link>
@@ -49,7 +49,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-slate-300 transition-colors hover:text-white"
+                  className="relative text-sm text-slate-300 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100"
                 >
                   {ui.contactLabel}
                 </Link>
@@ -66,7 +66,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="transition-colors hover:text-white"
+                  className="relative transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100"
                 >
                   {siteConfig.email}
                 </a>
@@ -76,7 +76,7 @@ export function Footer() {
                   href={siteConfig.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-medium text-blue-400 transition-colors hover:text-blue-300"
+                  className="relative inline-flex items-center gap-2 font-medium text-blue-400 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-blue-300 after:transition-transform after:duration-300 hover:text-blue-300 hover:after:scale-x-100"
                   aria-label={ui.connectOnLinkedInAria}
                 >
                   <svg
@@ -93,7 +93,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="transition-colors hover:text-white"
+                  className="relative transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100"
                 >
                   {siteConfig.phoneDisplay}
                 </a>
@@ -103,7 +103,7 @@ export function Footer() {
                   href={siteConfig.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                  className="relative inline-flex items-center gap-2 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100"
                   aria-label={ui.contactViaWhatsApp}
                 >
                   <svg

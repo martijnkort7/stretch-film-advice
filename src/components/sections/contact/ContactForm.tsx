@@ -8,10 +8,13 @@ import { contact, formLabels } from '@/lib/content';
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 const inputClasses =
-  'mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-400 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+  'peer mt-1.5 block w-full border border-slate-200 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-400 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
 
 const errorInputClasses =
-  'mt-1.5 block w-full border border-red-400 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-400 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+  'peer mt-1.5 block w-full border border-red-400 bg-white px-4 py-3 text-navy-950 placeholder:text-slate-400 transition-colors focus:border-red-600 focus:ring-0 focus:outline-none';
+
+const focusLineClasses =
+  'absolute bottom-0 left-0 h-0.5 w-full origin-center scale-x-0 bg-red-600 transition-transform duration-300 peer-focus:scale-x-100';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -151,19 +154,22 @@ export function ContactForm() {
         >
           {formLabels.name} <span className="text-red-600">*</span>
         </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          autoComplete="name"
-          placeholder={formLabels.namePlaceholder}
-          aria-describedby={nameError ? 'name-error' : undefined}
-          aria-invalid={nameError ? true : undefined}
-          onBlur={() => handleBlur('name')}
-          onChange={(e) => handleChange('name', e.target.value)}
-          className={nameError ? errorInputClasses : inputClasses}
-        />
+        <div className="relative">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autoComplete="name"
+            placeholder={formLabels.namePlaceholder}
+            aria-describedby={nameError ? 'name-error' : undefined}
+            aria-invalid={nameError ? true : undefined}
+            onBlur={() => handleBlur('name')}
+            onChange={(e) => handleChange('name', e.target.value)}
+            className={nameError ? errorInputClasses : inputClasses}
+          />
+          <div className={focusLineClasses} />
+        </div>
         {nameError && (
           <p id="name-error" role="alert" className="mt-1 text-sm text-red-600">
             {nameError}
@@ -178,19 +184,22 @@ export function ContactForm() {
         >
           {formLabels.email} <span className="text-red-600">*</span>
         </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          autoComplete="email"
-          placeholder={formLabels.emailPlaceholder}
-          aria-describedby={emailError ? 'email-error' : undefined}
-          aria-invalid={emailError ? true : undefined}
-          onBlur={() => handleBlur('email')}
-          onChange={(e) => handleChange('email', e.target.value)}
-          className={emailError ? errorInputClasses : inputClasses}
-        />
+        <div className="relative">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autoComplete="email"
+            placeholder={formLabels.emailPlaceholder}
+            aria-describedby={emailError ? 'email-error' : undefined}
+            aria-invalid={emailError ? true : undefined}
+            onBlur={() => handleBlur('email')}
+            onChange={(e) => handleChange('email', e.target.value)}
+            className={emailError ? errorInputClasses : inputClasses}
+          />
+          <div className={focusLineClasses} />
+        </div>
         {emailError && (
           <p
             id="email-error"
@@ -209,19 +218,22 @@ export function ContactForm() {
         >
           {formLabels.company} <span className="text-red-600">*</span>
         </label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          required
-          autoComplete="organization"
-          placeholder={formLabels.companyPlaceholder}
-          aria-describedby={companyError ? 'company-error' : undefined}
-          aria-invalid={companyError ? true : undefined}
-          onBlur={() => handleBlur('company')}
-          onChange={(e) => handleChange('company', e.target.value)}
-          className={companyError ? errorInputClasses : inputClasses}
-        />
+        <div className="relative">
+          <input
+            type="text"
+            id="company"
+            name="company"
+            required
+            autoComplete="organization"
+            placeholder={formLabels.companyPlaceholder}
+            aria-describedby={companyError ? 'company-error' : undefined}
+            aria-invalid={companyError ? true : undefined}
+            onBlur={() => handleBlur('company')}
+            onChange={(e) => handleChange('company', e.target.value)}
+            className={companyError ? errorInputClasses : inputClasses}
+          />
+          <div className={focusLineClasses} />
+        </div>
         {companyError && (
           <p
             id="company-error"
@@ -240,13 +252,16 @@ export function ContactForm() {
         >
           {contact.form.audienceLabel} <span className="text-red-600">*</span>
         </label>
-        <select id="audience" name="audience" required className={inputClasses}>
-          {contact.form.audienceOptions.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
+        <div className="relative">
+          <select id="audience" name="audience" required className={inputClasses}>
+            {contact.form.audienceOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+          <div className={focusLineClasses} />
+        </div>
       </div>
 
       <div>
@@ -256,14 +271,17 @@ export function ContactForm() {
         >
           {formLabels.phone}
         </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          autoComplete="tel"
-          placeholder={formLabels.phonePlaceholder}
-          className={inputClasses}
-        />
+        <div className="relative">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autoComplete="tel"
+            placeholder={formLabels.phonePlaceholder}
+            className={inputClasses}
+          />
+          <div className={focusLineClasses} />
+        </div>
       </div>
 
       <div>
@@ -273,18 +291,21 @@ export function ContactForm() {
         >
           {formLabels.message} <span className="text-red-600">*</span>
         </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows={6}
-          placeholder={formLabels.messagePlaceholder}
-          aria-describedby={messageError ? 'message-error' : undefined}
-          aria-invalid={messageError ? true : undefined}
-          onBlur={() => handleBlur('message')}
-          onChange={(e) => handleChange('message', e.target.value)}
-          className={`${messageError ? errorInputClasses : inputClasses} resize-y`}
-        />
+        <div className="relative">
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows={6}
+            placeholder={formLabels.messagePlaceholder}
+            aria-describedby={messageError ? 'message-error' : undefined}
+            aria-invalid={messageError ? true : undefined}
+            onBlur={() => handleBlur('message')}
+            onChange={(e) => handleChange('message', e.target.value)}
+            className={`${messageError ? errorInputClasses : inputClasses} resize-y`}
+          />
+          <div className={focusLineClasses} />
+        </div>
         {messageError && (
           <p
             id="message-error"

@@ -41,10 +41,10 @@ export function ValueProposition() {
               </ul>
               <Link
                 href="/case-studies"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-800"
+                className="group mt-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-800"
               >
                 See real results from client assessments
-                <ArrowRight size={14} />
+                <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </FadeIn>
           </div>

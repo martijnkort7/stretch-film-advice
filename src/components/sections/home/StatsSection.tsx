@@ -1,6 +1,7 @@
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { AnimatedCounter } from '@/components/motion/AnimatedCounter';
+import { FadeIn } from '@/components/motion/FadeIn';
 import { homepage } from '@/lib/content';
 
 export function StatsSection() {
@@ -17,9 +18,11 @@ export function StatsSection() {
                   prefix={stat.prefix}
                 />
               </div>
-              <p className="mt-3 text-sm font-medium tracking-[0.15em] text-slate-500 uppercase">
-                {stat.label}
-              </p>
+              <FadeIn delay={2.2}>
+                <p className="mt-3 text-sm font-medium tracking-[0.15em] text-slate-500 uppercase">
+                  {stat.label}
+                </p>
+              </FadeIn>
             </div>
           ))}
         </div>
