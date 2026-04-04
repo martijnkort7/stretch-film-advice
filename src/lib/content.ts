@@ -16,7 +16,7 @@ export const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Results', href: '/results' },
+  { label: 'Results', href: '/case-studies' },
 ];
 
 export const homepage = {
