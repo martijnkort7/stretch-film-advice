@@ -586,6 +586,14 @@ export const notFoundPage = {
   backToHome: 'Back to Home',
 };
 
+export const errorPage = {
+  code: 'Error',
+  heading: 'Something Went Wrong',
+  body: 'An unexpected error occurred. Please try again or return to the homepage.',
+  tryAgain: 'Try Again',
+  backToHome: 'Back to Home',
+};
+
 export const formLabels = {
   name: 'Name',
   email: 'Email',

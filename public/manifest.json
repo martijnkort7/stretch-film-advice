@@ -1,0 +1,13 @@
+{
+  "name": "Stretch Film Advice",
+  "short_name": "SFA",
+  "description": "Cut stretch film costs by 30-50%",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0A1628",
+  "theme_color": "#0A1628",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

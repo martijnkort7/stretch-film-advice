@@ -75,6 +75,7 @@ export const baseMetadata: Metadata = {
   alternates: {
     canonical: baseUrl,
   },
+  manifest: '/manifest.json',
   other: {
     'theme-color': '#0A1628',
   },
