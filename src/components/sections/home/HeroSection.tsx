@@ -111,7 +111,7 @@ export function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.0 }}
-              className="mt-8 text-xs tracking-widest text-gray-500 uppercase"
+              className="mt-8 text-xs tracking-widest text-gray-400 uppercase"
             >
               {hero.trustLine}
             </motion.p>

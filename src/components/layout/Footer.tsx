@@ -19,6 +19,7 @@ export function Footer() {
                 alt="Stretch Film Advice"
                 width={2739}
                 height={564}
+                sizes="(max-width: 768px) 160px, 200px"
                 className="h-9 w-auto md:h-11"
               />
             </Link>

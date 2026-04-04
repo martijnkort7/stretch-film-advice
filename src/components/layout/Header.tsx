@@ -54,6 +54,7 @@ export function Header() {
                 alt="Stretch Film Advice"
                 width={2739}
                 height={564}
+                sizes="(max-width: 768px) 200px, 250px"
                 priority
                 className="h-11 w-auto md:h-[52px]"
               />
