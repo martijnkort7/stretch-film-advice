@@ -34,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         <SchemaScript schema={localBusinessSchema} />
+        <meta name="apple-mobile-web-app-title" content="SFA" />
       </head>
       <body className="antialiased">
         <a
