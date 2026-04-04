@@ -33,7 +33,7 @@ export function CTASection({
             <h2 className="font-serif text-3xl leading-tight tracking-tight text-white md:text-5xl">
               {heading}
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-slate-300">
+            <p className="mt-6 text-lg leading-relaxed text-slate-200">
               {subtitle}
             </p>
             <div className="mt-10 inline-flex w-full justify-center">

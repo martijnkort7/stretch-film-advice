@@ -22,7 +22,7 @@ export function Footer() {
                 className="h-9 w-auto md:h-11"
               />
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-300">
               {footer.description}
             </p>
             <p className="mt-3 text-xs font-semibold tracking-[0.15em] text-red-400 uppercase">
@@ -32,7 +32,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm font-semibold tracking-[0.2em] text-slate-400 uppercase">
+            <h3 className="text-sm font-semibold tracking-[0.2em] text-slate-300 uppercase">
               {ui.navigationLabel}
             </h3>
             <ul className="mt-4 space-y-3">
@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold tracking-[0.2em] text-slate-400 uppercase">
+            <h3 className="text-sm font-semibold tracking-[0.2em] text-slate-300 uppercase">
               {ui.contactLabel}
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
@@ -122,7 +122,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-white/10 pt-8 text-sm text-slate-500">
+        <div className="mt-16 border-t border-white/10 pt-8 text-sm text-slate-400">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p>{footer.copyright}</p>
             <p>KvK: {siteConfig.kvk}</p>
