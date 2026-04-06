@@ -10,7 +10,7 @@ export const baseMetadata: Metadata = {
     template: '%s | Stretch Film Advice',
   },
   description:
-    'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings. 45+ years of pallet wrapping experience across 25+ European countries.',
+    'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings. 45+ years of experience across 25+ European countries.',
   keywords: [
     'stretch film',
     'pallet wrapping',

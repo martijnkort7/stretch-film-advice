@@ -127,7 +127,7 @@ export function HeroSection() {
           >
             <Image
               src="/images/team/egbert-kort.webp"
-              alt=""
+              alt="Egbert Kort — stretch film consultant"
               fill
               priority
               unoptimized
