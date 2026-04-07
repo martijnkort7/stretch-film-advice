@@ -24,6 +24,13 @@
 .DS_Store
 *.pem
 
+# claude code skills (installed externally, not project code)
+.agents/
+skills-lock.json
+
+# vscode
+.vscode/
+
 # Raw/unoptimised source images — not needed in deployment
 /public/images/raw/
 
