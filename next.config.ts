@@ -4,6 +4,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'stretchfilmadvice.com' }],
+        destination: 'https://www.stretchfilmadvice.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/results',
         destination: '/case-studies',
         permanent: true,
