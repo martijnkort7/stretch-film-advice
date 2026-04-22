@@ -13,20 +13,7 @@ export function HeroSection() {
 
   return (
     <section className="relative flex min-h-screen flex-col overflow-hidden bg-[#0b1a2e] md:h-screen">
-      {/* Mobile portrait — full-width above text, fades into background */}
-      <div className="relative h-[45svh] w-full shrink-0 md:hidden">
-        <Image
-          src="/images/team/egbert-kort.webp"
-          alt="Egbert Kort — stretch film consultant"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_top]"
-        />
-        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b1a2e] to-transparent" />
-      </div>
-
-      <Container className="relative z-10 flex flex-1 flex-col justify-center py-8 md:py-28">
+      <Container className="relative z-10 flex flex-1 flex-col justify-center pt-24 pb-12 md:py-28">
         <div className="grid items-center lg:flex-1 lg:grid-cols-[1.6fr_1fr] lg:items-stretch lg:gap-16">
           {/* LEFT COLUMN — text content */}
           <div className="lg:self-center">
