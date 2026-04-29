@@ -133,9 +133,7 @@ export function MultilayerDifference() {
                           />
                         </div>
                         <figcaption className="mt-3 text-sm leading-relaxed text-slate-500">
-                          Strain–force curve at 6, 60, and 240 m/min. The
-                          shaded area marks the lockout zone — where the film
-                          delivers its working holding force.
+                          {multilayer.forTechnician.strainCurveCaption}
                         </figcaption>
                       </figure>
                     </div>

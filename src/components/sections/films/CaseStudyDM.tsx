@@ -54,8 +54,8 @@ export function CaseStudyDM() {
           </p>
         </FadeIn>
 
-        {/* TODO image: DM Hungary before — pallet wrapped with 17µm standard film, 178g, 9.5kg holding force. ~1200x1500 JPG, /public/images/films/dm-hungary-before.jpg */}
-        {/* TODO image: DM Hungary after — same pallet line wrapped with Nano SE 15µm, 104g, 19kg holding force. ~1200x1500 JPG, /public/images/films/dm-hungary-after.jpg */}
+        {/* TODO image: DM Hungary before. Pallet wrapped with 17µm standard film, 178g, 9.5kg holding force. ~1200x1500 JPG, /public/images/films/dm-hungary-before.jpg */}
+        {/* TODO image: DM Hungary after. Same pallet line wrapped with Nano SE 15µm, 104g, 19kg holding force. ~1200x1500 JPG, /public/images/films/dm-hungary-after.jpg */}
 
         <FadeIn delay={0.2} className="mt-16">
           <div className="grid gap-8 lg:grid-cols-5 lg:items-center lg:gap-12">

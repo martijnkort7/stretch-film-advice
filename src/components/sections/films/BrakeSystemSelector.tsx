@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
@@ -156,10 +155,10 @@ export function BrakeSystemSelector() {
 
                     <div className="border-t border-slate-100 pt-5">
                       <p className="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">
-                        The mistake I see most
+                        How to pick
                       </p>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-600 italic">
-                        {card.commonMistake}
+                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                        {card.pickHint}
                       </p>
                     </div>
 
@@ -219,26 +218,43 @@ export function BrakeSystemSelector() {
           })}
         </StaggerChildren>
 
-        <FadeIn delay={0.1} className="mt-12">
-          <div className="border border-dashed border-slate-300 bg-slate-50 px-6 py-6 text-center md:px-8">
-            <p className="text-base text-slate-700">
-              <span className="text-navy-950 font-medium">
-                {brakeSystems.notSurePrompt}
-              </span>{' '}
-              <Link
-                href="/contact"
-                className="font-medium text-blue-600 underline-offset-4 transition-colors hover:text-blue-800 hover:underline"
-              >
-                {brakeSystems.notSureCta}
-              </Link>
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-500">
-              {brakeSystems.universalFallback}
-            </p>
+        <FadeIn delay={0.1} className="mt-20 lg:mt-24">
+          <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+            <div className="lg:col-span-2">
+              <p className="text-xs font-semibold tracking-[0.2em] text-red-600 uppercase">
+                {brakeSystems.mistakes.overline}
+              </p>
+              <h3 className="text-navy-950 mt-4 font-serif text-3xl leading-tight tracking-tight md:text-4xl">
+                {brakeSystems.mistakes.heading}
+              </h3>
+              <p className="mt-6 text-base leading-relaxed text-slate-600">
+                {brakeSystems.mistakes.body}
+              </p>
+            </div>
+            <ol className="lg:col-span-3 space-y-6">
+              {brakeSystems.mistakes.items.map((item, i) => (
+                <li
+                  key={item.brakeSystem}
+                  className="grid grid-cols-[auto_1fr] gap-x-6 border-t border-slate-200 pt-6"
+                >
+                  <span className="text-navy-950/40 font-serif text-2xl tabular-nums md:text-3xl">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <p className="text-navy-950 font-serif text-lg tracking-tight md:text-xl">
+                      {item.brakeSystem}
+                    </p>
+                    <p className="mt-2 text-base leading-relaxed text-slate-600 italic">
+                      {item.mistake}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.15} className="mt-12">
+        <FadeIn delay={0.15} className="mt-12 lg:mt-16">
           <div className="bg-navy-950 px-8 py-12 md:px-16 md:py-16">
             <div className="bg-red-600 mb-6 h-0.5 w-12" />
             <blockquote className="font-serif text-2xl leading-snug tracking-tight text-white md:text-3xl">

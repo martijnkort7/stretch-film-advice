@@ -127,7 +127,7 @@ export const servicesMetadata: Metadata = {
 
 export const filmsMetadata: Metadata = {
   title:
-    'Films & Applications — Multilayer Stretch Film Matched to Your Machine',
+    'Films & Applications: Multilayer Stretch Film Matched to Your Machine',
   description:
     'How to choose the right multilayer stretch film for your pallet wrapping machine. Brake-system guide, full film range from Elite to Nano XE, and a real result: €17,800 saved per year at DM Hungary.',
   alternates: {
@@ -138,6 +138,14 @@ export const filmsMetadata: Metadata = {
     title: 'Films & Applications | Multilayer Stretch Film Matched to Your Machine',
     description:
       'Match the right multilayer film to your pallet wrapping machine. Brake-system guide, full film range, and verified €17,800/year savings from a real DM Hungary line.',
+    images: [
+      {
+        url: `${baseUrl}/images/brand/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Stretch Film Advice. More stable pallets, 30–50% less film.',
+      },
+    ],
   },
 };
 

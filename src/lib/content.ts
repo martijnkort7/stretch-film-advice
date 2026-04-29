@@ -444,7 +444,7 @@ export const films = {
       },
       {
         heading: 'Thinner',
-        body: 'A 9-micron multilayer at the right pre-stretch routinely outperforms 15- and 17-micron “power” films. Thinner film does not mean weaker pallet — it means less plastic per pallet.',
+        body: 'A 9-micron multilayer at the right pre-stretch routinely outperforms 15- and 17-micron “power” films. Thinner film does not mean a weaker pallet; it means less plastic per pallet.',
       },
       {
         heading: 'Less film, less cost',
@@ -459,20 +459,22 @@ export const films = {
     forTechnician: {
       label: 'For the technician',
       paragraphs: [
-        'Multilayer film is co-extruded in 33 or 67 individual layers. Each layer is tuned for a specific property — stretch, holding force, cling, puncture resistance — so the film as a whole performs in ways a single-layer film cannot. 67-layer constructions distribute these properties more finely, which is why they are the better choice for heavier or more difficult loads.',
+        'Multilayer film is co-extruded in 33 or 67 individual layers. Each layer is tuned for a specific property: stretch, holding force, cling, or puncture resistance. Combined, the film performs in ways a single-layer film cannot. 67-layer constructions distribute these properties more finely, which is why they are the better choice for heavier or more difficult loads.',
         'The polymers used are C6 and C8 metallocenes from Dow and ExxonMobil. Raw materials are not spot-bought; the supply is contractually guaranteed, so quality and consistency are repeatable batch to batch.',
-        'Total elongation can reach 400%. Usable stretch — the working point on the strain–force curve where the film locks out and grips the load — typically sits between 200% and 350%, depending on the construction. The diagram below plots force against elongation at three line speeds; the highlighted region shows the lockout zone where the film delivers maximum holding force.',
+        'Total elongation can reach 400%. Usable stretch, the working point on the strain–force curve where the film locks out and grips the load, typically sits between 200% and 350%, depending on the construction. The diagram below plots force against elongation at three line speeds; the highlighted region shows the lockout zone where the film delivers maximum holding force.',
       ],
       strainCurveImage: '/images/films/strain-force-curve.png',
       strainCurveAlt:
         'Strain–force diagram for multilayer stretch film, plotting force in newtons against elongation percentage at three line speeds, with the lockout zone highlighted',
+      strainCurveCaption:
+        'Strain–force curve at 6, 60, and 240 m/min. The shaded area marks the lockout zone, where the film delivers its working holding force.',
     },
   },
   caseStudy: {
     overline: 'Real-world result',
     heading: 'DM Hungary: €17,800 saved per year, on one line.',
     intro:
-      'A DM distribution centre in Hungary wraps roughly 400 pallets a day on automatic lines. Switching from 17-micron standard film at 170% pre-stretch to Nano SE 15-micron at 270% pre-stretch cut film consumption by 42% per pallet — and doubled the holding force on the load.',
+      'A DM distribution centre in Hungary wraps roughly 400 pallets a day on automatic lines. Switching from 17-micron standard film at 170% pre-stretch to Nano SE 15-micron at 270% pre-stretch cut film consumption by 42% per pallet. Holding force on the load doubled.',
     savings: {
       value: 17800,
       prefix: '€',
@@ -520,12 +522,12 @@ export const films = {
     eumosAlt:
       'EUMOS 40509 acceleration test of a wrapped pallet, showing the load held within tolerance with less than 2% layer displacement at 1280mm',
     eumosCaption:
-      'Independent stability proof, EUMOS 40509: the multilayer-wrapped pallet stays within tolerance under acceleration — less than 2% layer displacement, less than 10% flexible deviation.',
+      'Independent stability proof, EUMOS 40509: the multilayer-wrapped pallet stays within tolerance under acceleration. Less than 2% layer displacement, less than 10% flexible deviation.',
   },
   brakeSystems: {
     overline: 'Match your machine',
     heading: 'Three brake systems. One film for each.',
-    body: 'Every pallet wrapping machine on the market uses one of three brake systems. The brake system is what determines how much the film is pre-stretched on its way from the roll to the pallet — and that, in turn, determines which film will deliver the best result. Identify your brake system, then pick the matched film.',
+    body: 'Every pallet wrapping machine on the market uses one of three brake systems. The brake system determines how much the film is pre-stretched on its way from the roll to the pallet. That, in turn, determines which film will deliver the best result. Identify your brake system, then pick the matched film.',
     cards: [
       {
         id: 'core-electronic',
@@ -533,13 +535,13 @@ export const films = {
         prestretch: '0% pre-stretch',
         prestretchRange: 'No pre-stretch',
         recognise:
-          'A single brake acts directly on the film core. There is no pre-stretch unit between the roll and the pallet — the film is wrapped at whatever stretch the machine can pull manually, typically nothing.',
-        commonMistake:
-          'Many operations on this machine class use a 15- or 17-micron “power” film and assume the thickness compensates. It does not. Without pre-stretch, the film locks out far below its working range.',
+          'A single brake acts directly on the film core. There is no pre-stretch unit between the roll and the pallet. The film is wrapped at whatever stretch the machine can pull manually, typically nothing.',
         recommendedFilms: [
           { name: 'Elite 8', spec: '8µm, very high puncture resistance' },
           { name: 'Elite 10', spec: '10µm, the all-rounder for this brake type' },
         ],
+        pickHint:
+          'Default to Elite 10. Reach for Elite 8 only when puncture resistance is the bottleneck: sharp edges, exposed corners, irregular boxes.',
         mechanismImage: '/images/films/brake-core-electronic.jpeg',
         mechanismAlt:
           'Technical illustration of a core/electronic brake system: the brake acts directly on the film core, with no pre-stretch unit',
@@ -550,15 +552,15 @@ export const films = {
         prestretch: '150–250% pre-stretch',
         prestretchRange: '150–250%',
         recognise:
-          'Two brake rollers connected by a fixed pair of gears. The gear ratio sets the pre-stretch — most commonly 200% or 250%, sometimes 300%. To change the pre-stretch you swap the gears.',
-        commonMistake:
-          'Operators often run the machine at the lowest gear ratio out of habit, even when the film can deliver more. A 250% gear set with the right film almost always pays back the conversion in weeks.',
+          'Two brake rollers connected by a fixed pair of gears. The gear ratio sets the pre-stretch: most commonly 200% or 250%, sometimes 300%. To change the pre-stretch you swap the gears.',
         recommendedFilms: [
-          { name: 'Nano SE 12', spec: '12µm, light to medium loads' },
-          { name: 'Nano SE 15', spec: '15µm, the workhorse' },
+          { name: 'Nano SE 12', spec: '12µm, lighter A pallets' },
+          { name: 'Nano SE 15', spec: '15µm, A and B pallets' },
           { name: 'Nano SP 15', spec: '15µm, higher strength' },
           { name: 'Nano SP 17', spec: '17µm, heavy or unstable loads' },
         ],
+        pickHint:
+          'Default to Nano SE 15 for A and B pallets. Move to SP 17 when the load is heavier or the boxes irregular.',
         mechanismImage: '/images/films/brake-1-motor-gears.jpeg',
         mechanismAlt:
           'Photograph of a 1-motor fixed-gear-ratio pre-stretch unit: two brake rollers connected by interchangeable gears',
@@ -569,33 +571,51 @@ export const films = {
         prestretch: '200–400% pre-stretch',
         prestretchRange: '200–400%',
         recognise:
-          'Two brake rollers, each with its own motor. The pre-stretch is set on the display — anywhere from 100% to 400% — by changing the speed ratio between the two motors. The most flexible class of machine and the one that makes multilayer film pay.',
-        commonMistake:
-          'The most common waste I see is on this machine class: the film is rated for 300% but the operator runs it at 200% because that is how the previous film was set. The full multilayer benefit only shows up at 250%+.',
+          'Two brake rollers, each with its own motor. The pre-stretch is set on the display, anywhere from 100% to 400%, by changing the speed ratio between the two motors. The most flexible class of machine and the one that makes multilayer film pay.',
         recommendedFilms: [
           { name: 'Nano XE 9', spec: '9µm, the light film that beats heavy ones' },
-          { name: 'Nano XE 12', spec: '12µm, the default for A and B pallets to 600 kg' },
+          { name: 'Nano XE 12', spec: '12µm, A and B pallets up to 600 kg' },
           { name: 'Nano XE 15', spec: '15µm, medium-heavy loads' },
           { name: 'Nano XE 17', spec: '17µm, heavy or difficult loads' },
         ],
+        pickHint:
+          'Default to Nano XE 12 for A and B pallets up to 600 kg. Step up to 15 or 17 for heavier or unstable loads.',
         mechanismImage: '/images/films/brake-2-motor-cad.jpeg',
         mechanismAlt:
           'CAD render of a 2-motor independently-driven pre-stretch unit: two brake rollers each driven by its own motor',
       },
     ],
-    notSurePrompt: 'Not sure which brake system is on your machine?',
-    notSureCta: 'Send a photo to /contact and I will tell you within the day.',
+    mistakes: {
+      overline: 'What goes wrong',
+      heading: 'Three mistakes I see most often.',
+      body: 'Same machine, same film, very different result. The misconfiguration almost always falls into one of three patterns, one for each brake-system class.',
+      items: [
+        {
+          brakeSystem: 'Core / Electronic brake',
+          mistake:
+            'Many operations on this machine class run a 15- or 17-micron “power” film and assume the thickness compensates. It does not. Without pre-stretch, the film locks out far below its working range.',
+        },
+        {
+          brakeSystem: '1-motor with fixed gear ratio',
+          mistake:
+            'Operators often run the machine at the lowest gear ratio out of habit, even when the film can deliver more. A 250% gear set with the right film almost always pays back the conversion in weeks.',
+        },
+        {
+          brakeSystem: '2-motor independently driven',
+          mistake:
+            'The film is rated for 300% but the dial sits at 200%, because that is how the previous film was set. The full multilayer benefit only shows up at 250% and above.',
+        },
+      ],
+    },
     closingQuote: {
-      text: 'Most operations have a good machine and a good film, but the machine is set wrong. If the film is rated for 300% pre-stretch and the dial is at 200%, you are throwing money out the window every shift.',
+      text: 'If the film is rated for 300% pre-stretch and the dial sits at 200%, you’re throwing money out the window every shift.',
       attribution: 'Egbert Kort',
     },
-    universalFallback:
-      'A note on Nano XE: it works on every brake system, including a Core/Electronic brake. It is rarely the most economical choice for the simpler machines — but if you want one film that will work everywhere, it is that one.',
   },
   palletGuide: {
     overline: 'Pick by pallet',
     heading: 'Then check it against the pallet.',
-    body: 'Once the brake system has narrowed the family, the pallet itself sets the thickness. The shape of the load matters — A, B, or C profile — and so does the weight. The two together tell you whether to choose the lighter or heavier micron in the family the brake system points to.',
+    body: 'Once the brake system has narrowed the family, the pallet itself sets the thickness. The shape of the load (A, B, or C profile) matters, and so does the weight. The two together tell you whether to choose the lighter or heavier micron in the family the brake system points to.',
     profileImage: '/images/films/pallet-types-abc.jpg',
     profileAlt:
       'Diagram showing three pallet load profiles: A profile (regular, fully stacked), B profile (slightly irregular), and C profile (irregular, overhanging or unstable)',
@@ -604,15 +624,15 @@ export const films = {
     profiles: [
       {
         label: 'A profile',
-        body: 'Regular, fully stacked, stable on the pallet. The easiest case — the lighter micron in the family is usually enough.',
+        body: 'Lighter micron, fewer wraps.',
       },
       {
         label: 'B profile',
-        body: 'Slightly irregular: small overhangs, mixed boxes, edges that are not flush. Step up one micron and add wrap revolutions if needed.',
+        body: 'Same micron, more revolutions.',
       },
       {
         label: 'C profile',
-        body: 'Irregular, overhanging, sharp edges, or top-heavy. Use the heavier micron in the family and increase the number of wraps; do not switch family.',
+        body: 'Heavier micron, more wraps.',
       },
     ],
     weightBands: {
@@ -638,14 +658,14 @@ export const films = {
           film: 'Elite 8',
           micron: '8 µm',
           brake: 'Core / Electronic',
-          stretch: '—',
+          stretch: 'n/a',
           spot: 'Very high puncture resistance, light A pallets',
         },
         {
           film: 'Elite 10',
           micron: '10 µm',
           brake: 'Core / Electronic',
-          stretch: '—',
+          stretch: 'n/a',
           spot: 'All-round film for machines without pre-stretch',
         },
         {
@@ -653,14 +673,14 @@ export const films = {
           micron: '12 µm',
           brake: '1-motor',
           stretch: '250%',
-          spot: 'A pallets, light to medium loads',
+          spot: 'A pallets, lower film weight per pallet',
         },
         {
           film: 'Nano SE 15',
           micron: '15 µm',
           brake: '1-motor',
           stretch: '250%',
-          spot: 'A and B pallets, the workhorse SKU',
+          spot: 'A and B pallets, the SE default',
         },
         {
           film: 'Nano SP 15',
@@ -688,7 +708,7 @@ export const films = {
           micron: '12 µm',
           brake: '2-motor',
           stretch: '330%',
-          spot: 'A and B pallets up to 600 kg — the default',
+          spot: 'A and B pallets up to 600 kg, the default',
         },
         {
           film: 'Nano XE 15',
@@ -737,8 +757,9 @@ export const films = {
       ],
     },
     recycledCallout: {
+      overline: 'Sustainability and a tax angle',
       heading: '30% recycled content, no Plastic Packaging Tax',
-      body: 'There is a multilayer variant with 30% recycled content. The performance is identical — same construction, same holding force, same stretch — with 30% less virgin plastic. It also falls outside the UK Plastic Packaging Tax. For European distributors with UK customers, this is a commercial lever, not a sustainability bolt-on.',
+      body: 'There is a multilayer variant with 30% recycled content. The performance is identical: same construction, same holding force, same stretch, with 30% less virgin plastic. It also falls outside the UK Plastic Packaging Tax. For European distributors with UK customers, this is a commercial lever, not a sustainability bolt-on.',
     },
   },
   faq: {
@@ -754,29 +775,29 @@ export const films = {
         question:
           'Why is multilayer film more expensive per roll but cheaper per pallet?',
         answer:
-          'A roll of multilayer film costs more because it is built from C6 and C8 polymers in 33 or 67 microscopic layers. But one metre of multilayer film stretches to as much as five metres on the pallet — so you wrap many more pallets per roll. In the field, cost per pallet drops by 30–50%, even though the price per kilogram is higher.',
+          'A roll of multilayer film costs more because it is built from C6 and C8 polymers in 33 or 67 microscopic layers. But one metre of multilayer film stretches to as much as five metres on the pallet, so you wrap many more pallets per roll. In the field, cost per pallet drops by 30–50%, even though the price per kilogram is higher.',
       },
       {
         question: 'Can a thinner film really hold a more stable pallet?',
         answer:
-          'Yes, and we measure it on every job. A 10-micron multilayer routinely produces a more stable pallet than a 23-micron standard film. Stability does not come from thickness, it comes from holding force — and a properly set multilayer film delivers a much higher holding force at half the gauge. We measure before and after, so you see the proof on your own pallets.',
+          'Yes, and we measure it on every job. A 10-micron multilayer routinely produces a more stable pallet than a 23-micron standard film. Stability does not come from thickness; it comes from holding force. A properly set multilayer film delivers a much higher holding force at half the gauge. We measure before and after, so you see the proof on your own pallets.',
       },
       {
         question: 'What is the difference between 33-layer and 67-layer multilayer film?',
         answer:
-          'Both are multilayer. A 67-layer construction distributes the polymer properties — stretch, strength, puncture resistance — across more microscopic layers, which gives a stronger combined performance. For heavier or more difficult pallets, 67-layer is the better choice.',
+          'Both are multilayer. A 67-layer construction distributes the polymer properties (stretch, strength, puncture resistance) across more microscopic layers, which gives a stronger combined performance. For heavier or more difficult pallets, 67-layer is the better choice.',
       },
       {
         question: 'Which film is right for heavy pallets above 1000 kg?',
         answer:
-          'For heavy pallets, the answer is almost always Nano XE — 12, 15, or 17 micron — on a 2-motor brake system. That combination delivers the highest holding force and the most stability, even on irregular loads. The exact micron depends on the load profile; we determine it in a test on site, with much less film than the customer is using today.',
+          'For heavy pallets, the answer is almost always Nano XE (12, 15, or 17 micron) on a 2-motor brake system. That combination delivers the highest holding force and the most stability, even on irregular loads. The exact micron depends on the load profile; we determine it in a test on site, with much less film than the customer is using today.',
       },
     ],
   },
   cta: {
     heading: 'Match the right film to your machine.',
     subtitle:
-      'Tell me which machine you run and what you are wrapping. I will recommend the film, the pre-stretch setting, and what to expect on cost per pallet — in writing, before any visit.',
+      'Tell me which machine you run and what you are wrapping. I will recommend the film, the pre-stretch setting, and what to expect on cost per pallet, in writing, before any visit.',
     button: 'Contact us',
   },
 };

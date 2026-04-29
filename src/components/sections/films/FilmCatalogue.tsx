@@ -52,7 +52,7 @@ export function FilmCatalogue() {
         <FadeIn delay={0.2} className="mt-16">
           <div className="border-l-4 border-emerald-500 bg-white px-6 py-7 md:px-10 md:py-9">
             <p className="text-xs font-semibold tracking-[0.2em] text-emerald-700 uppercase">
-              Sustainability — and a tax angle
+              {catalogue.recycledCallout.overline}
             </p>
             <h3 className="text-navy-950 mt-3 font-serif text-2xl tracking-tight md:text-3xl">
               {catalogue.recycledCallout.heading}
