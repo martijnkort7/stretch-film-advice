@@ -21,7 +21,7 @@ export function StorySection() {
                   alt="Egbert Kort conducting a holding force measurement at a client facility"
                   width={640}
                   height={800}
-                  priority
+                  sizes="(max-width: 1024px) 100vw, 640px"
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
