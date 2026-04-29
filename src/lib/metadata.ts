@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { services } from '@/lib/content';
+import { films, services } from '@/lib/content';
 
 const baseUrl = 'https://www.stretchfilmadvice.com';
 
@@ -122,6 +122,22 @@ export const servicesMetadata: Metadata = {
     title: 'Free Stretch Film Assessment — Save 30-50% on Film Costs',
     description:
       'Comprehensive stretch film services: free on-site assessments, film selection advisory, machine configuration, training, and troubleshooting.',
+  },
+};
+
+export const filmsMetadata: Metadata = {
+  title:
+    'Films & Applications — Multilayer Stretch Film Matched to Your Machine',
+  description:
+    'How to choose the right multilayer stretch film for your pallet wrapping machine. Brake-system guide, full film range from Elite to Nano XE, and a real result: €17,800 saved per year at DM Hungary.',
+  alternates: {
+    canonical: `${baseUrl}/films`,
+  },
+  openGraph: {
+    url: `${baseUrl}/films`,
+    title: 'Films & Applications | Multilayer Stretch Film Matched to Your Machine',
+    description:
+      'Match the right multilayer film to your pallet wrapping machine. Brake-system guide, full film range, and verified €17,800/year savings from a real DM Hungary line.',
   },
 };
 
@@ -359,6 +375,19 @@ export const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: services.faq.items.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+export const filmsFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: films.faq.items.map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: {

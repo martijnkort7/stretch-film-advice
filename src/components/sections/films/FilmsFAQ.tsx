@@ -1,0 +1,28 @@
+import { Section } from '@/components/ui/Section';
+import { Container } from '@/components/ui/Container';
+import { SectionHeading } from '@/components/ui/SectionHeading';
+import { FAQAccordion } from '@/components/ui/FAQAccordion';
+import { FadeIn } from '@/components/motion/FadeIn';
+import { films } from '@/lib/content';
+
+export function FilmsFAQ() {
+  const { faq } = films;
+
+  return (
+    <Section variant="light">
+      <Container>
+        <FadeIn>
+          <SectionHeading
+            overline={faq.overline}
+            heading={faq.heading}
+            align="center"
+          />
+        </FadeIn>
+
+        <FadeIn delay={0.15} className="mx-auto mt-12 max-w-3xl">
+          <FAQAccordion items={faq.items} />
+        </FadeIn>
+      </Container>
+    </Section>
+  );
+}
