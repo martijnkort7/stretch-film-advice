@@ -2,6 +2,8 @@
 
 Professional 5-page website for Egbert Kort / Stretch Film Advice — premium consulting positioning. Advises on multilayer stretch film + machine settings across 17 European countries.
 
+**Design system:** see [DESIGN.md](./DESIGN.md) — single source of truth for visual identity, tokens, components, motion, voice, and anti-patterns. Read it before generating new pages, sections, or components.
+
 ## Commands
 
 - `npm run dev` — Development server (port 3000)
@@ -47,9 +49,6 @@ rm -rf .next && npm run dev
 
 ## Rules
 
-Detailed guidelines in `.claude/rules/` (auto-loaded per file path):
-
-- `project-conventions.md` — Content architecture, SEO, images, form specs, env vars
-- `vercel-react-best-practices.md` — Server Components, bundle size, performance
-- `web-design-guidelines.md` — Accessibility, forms, touch targets, animations
-- `anthropic-frontend-design.md` — Visual identity, typography, color, anti-patterns
+- `DESIGN.md` (root) — Visual identity, components, motion, voice, accessibility, anti-patterns. **Single source of truth for design.**
+- `.claude/rules/project-conventions.md` — Content architecture, SEO, images, form specs, env vars
+- `.claude/rules/vercel-react-best-practices.md` — Server Components, bundle size, performance
