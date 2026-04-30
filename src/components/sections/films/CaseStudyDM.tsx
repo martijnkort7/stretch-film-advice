@@ -21,6 +21,41 @@ export function CaseStudyDM() {
           />
         </FadeIn>
 
+        <FadeIn delay={0.1} className="mt-12 lg:mt-16">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+            <figure>
+              <div className="overflow-hidden rounded-sm border border-white/10 bg-white">
+                <Image
+                  src={caseStudy.beforeImage}
+                  alt={caseStudy.beforeAlt}
+                  width={1535}
+                  height={594}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="h-auto w-full object-contain"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm leading-relaxed text-slate-400">
+                {caseStudy.beforeCaption}
+              </figcaption>
+            </figure>
+            <figure>
+              <div className="overflow-hidden rounded-sm border border-white/10 bg-white">
+                <Image
+                  src={caseStudy.afterImage}
+                  alt={caseStudy.afterAlt}
+                  width={1998}
+                  height={809}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="h-auto w-full object-contain"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm leading-relaxed text-slate-400">
+                {caseStudy.afterCaption}
+              </figcaption>
+            </figure>
+          </div>
+        </FadeIn>
+
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-5 lg:items-center lg:gap-16">
           <FadeIn className="lg:col-span-2" direction="left">
             <div className="text-white">
@@ -53,9 +88,6 @@ export function CaseStudyDM() {
             {caseStudy.metricsCaption}
           </p>
         </FadeIn>
-
-        {/* TODO image: DM Hungary before. Pallet wrapped with 17µm standard film, 178g, 9.5kg holding force. ~1200x1500 JPG, /public/images/films/dm-hungary-before.jpg */}
-        {/* TODO image: DM Hungary after. Same pallet line wrapped with Nano SE 15µm, 104g, 19kg holding force. ~1200x1500 JPG, /public/images/films/dm-hungary-after.jpg */}
 
         <FadeIn delay={0.2} className="mt-16">
           <div className="grid gap-8 lg:grid-cols-5 lg:items-center lg:gap-12">

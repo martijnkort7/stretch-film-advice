@@ -111,15 +111,30 @@ export function MultilayerDifference() {
                 >
                   <div className="border-t border-slate-200 px-6 py-8 md:px-8 md:py-10">
                     <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
-                      <div className="space-y-5">
-                        {multilayer.forTechnician.paragraphs.map((paragraph, i) => (
-                          <p
-                            key={i}
-                            className="text-base leading-relaxed text-slate-600"
-                          >
-                            {paragraph}
-                          </p>
-                        ))}
+                      <div>
+                        <p className="text-base leading-relaxed text-slate-600">
+                          {multilayer.forTechnician.lead}
+                        </p>
+                        <ol className="mt-6 space-y-5">
+                          {multilayer.forTechnician.arguments.map((argument, i) => (
+                            <li key={argument.heading} className="flex gap-4">
+                              <span className="text-navy-950/40 font-serif text-lg tabular-nums shrink-0 w-6">
+                                {String(i + 1).padStart(2, '0')}
+                              </span>
+                              <div>
+                                <p className="text-navy-950 text-base font-semibold">
+                                  {argument.heading}
+                                </p>
+                                <p className="mt-1 text-base leading-relaxed text-slate-600">
+                                  {argument.body}
+                                </p>
+                              </div>
+                            </li>
+                          ))}
+                        </ol>
+                        <p className="mt-6 border-t border-slate-200 pt-5 text-base leading-relaxed text-slate-600">
+                          {multilayer.forTechnician.practical}
+                        </p>
                       </div>
                       <figure>
                         <div className="overflow-hidden rounded-sm border border-slate-200 bg-white">

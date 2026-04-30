@@ -458,11 +458,43 @@ export const films = {
       'A multilayer film is built from 33 or 67 microscopic layers, each tuned for a specific property: strength, stretch, cling, or puncture resistance.',
     forTechnician: {
       label: 'For the technician',
-      paragraphs: [
-        'Multilayer film is co-extruded in 33 or 67 individual layers. Each layer is tuned for a specific property: stretch, holding force, cling, or puncture resistance. Combined, the film performs in ways a single-layer film cannot. 67-layer constructions distribute these properties more finely, which is why they are the better choice for heavier or more difficult loads.',
-        'The polymers used are C6 and C8 metallocenes from Dow and ExxonMobil. Raw materials are not spot-bought; the supply is contractually guaranteed, so quality and consistency are repeatable batch to batch.',
-        'Total elongation can reach 400%. Usable stretch, the working point on the strain–force curve where the film locks out and grips the load, typically sits between 200% and 350%, depending on the construction. The diagram below plots force against elongation at three line speeds; the highlighted region shows the lockout zone where the film delivers maximum holding force.',
+      lead: 'Multilayer film outperforms single-layer film for eight engineering reasons; together, they explain why a 12-micron multilayer routinely beats a 17- or 23-micron single-layer film.',
+      arguments: [
+        {
+          heading: 'Functional layer separation.',
+          body: 'Each layer has its own job: outer layers for cling, core layers for strength, middle layers for stretch. A single-layer film has to compromise on each; a multilayer film does not.',
+        },
+        {
+          heading: 'Crack propagation is stopped.',
+          body: 'When a single-layer film tears, the tear runs through the whole film. In a multilayer film, each layer slows the tear at its boundary, so a small puncture stays a small puncture.',
+        },
+        {
+          heading: 'Stress is shared, not concentrated.',
+          body: 'The layered structure spreads mechanical load across many interfaces, like laminated safety glass in a car windshield. Sharp pallet edges no longer cause sudden failure.',
+        },
+        {
+          heading: 'Polymers work as a team.',
+          body: 'Different polymers are combined in different layers: mLLDPE for strength, C6 and C8 metallocenes for stretch, tackifiers for cling. The combined performance is greater than the sum of the parts.',
+        },
+        {
+          heading: 'Strength at lower thickness.',
+          body: 'Thinner individual layers have fewer defects, so a 12-micron multilayer film matches or beats a 17- to 23-micron single-layer film. Material use drops by 30–50%.',
+        },
+        {
+          heading: 'Higher stretch, better recovery.',
+          body: 'Multilayer films can be pre-stretched to 300% or 400% and still snap back tight against the load. Yield per roll goes up; holding force goes up.',
+        },
+        {
+          heading: 'Consistent from roll to roll.',
+          body: 'Modern multilayer lines control thickness and layer distribution very precisely. Raw materials come from long-term supply contracts, not the open market, so the film performs the same on Monday as it does on Friday.',
+        },
+        {
+          heading: 'Nano (33 to 67 layers) goes further.',
+          body: 'With more, thinner layers, there are more interfaces to absorb energy. Puncture resistance climbs again, and the film can be made thinner still.',
+        },
       ],
+      practical:
+        'In the field, this is why a 17-micron film is replaced by a 12-micron film, film weight per pallet drops from 280 g to 160 g, and holding force still goes up. The multilayer film is a better engineered material system, not just a better polymer.',
       strainCurveImage: '/images/films/strain-force-curve.png',
       strainCurveAlt:
         'Strain–force diagram for multilayer stretch film, plotting force in newtons against elongation percentage at three line speeds, with the lockout zone highlighted',
@@ -518,6 +550,14 @@ export const films = {
     },
     metricsCaption:
       'Measured on the same line, on the same loads, before and after the switch. Volume: ~400 pallets/day.',
+    beforeImage: '/images/films/dm-hungary-before.jpg',
+    beforeAlt:
+      'DM Hungary pallet wrapped with 17-micron standard film at 170% pre-stretch, before the switch to multilayer.',
+    beforeCaption: 'Before: 17µm standard film at 170% pre-stretch.',
+    afterImage: '/images/films/dm-hungary-after.jpg',
+    afterAlt:
+      'Same DM Hungary pallet line wrapped with Nano SE 15-micron multilayer film at 270% pre-stretch, after the switch.',
+    afterCaption: 'After: Nano SE 15µm at 270% pre-stretch.',
     eumosImage: '/images/films/eumos-acceleration-test.jpeg',
     eumosAlt:
       'EUMOS 40509 acceleration test of a wrapped pallet, showing the load held within tolerance with less than 2% layer displacement at 1280mm',
@@ -535,7 +575,7 @@ export const films = {
         prestretch: '0% pre-stretch',
         prestretchRange: 'No pre-stretch',
         recognise:
-          'A single brake acts directly on the film core. There is no pre-stretch unit between the roll and the pallet. The film is wrapped at whatever stretch the machine can pull manually, typically nothing.',
+          'A single brake acts directly on the film core. There is no pre-stretch unit between the roll and the pallet. The film is applied with little or no pre-stretch.',
         recommendedFilms: [
           { name: 'Elite 8', spec: '8µm, very high puncture resistance' },
           { name: 'Elite 10', spec: '10µm, the all-rounder for this brake type' },
@@ -571,7 +611,7 @@ export const films = {
         prestretch: '200–400% pre-stretch',
         prestretchRange: '200–400%',
         recognise:
-          'Two brake rollers, each with its own motor. The pre-stretch is set on the display, anywhere from 100% to 400%, by changing the speed ratio between the two motors. The most flexible class of machine and the one that makes multilayer film pay.',
+          'Two brake rollers, each with its own motor. The pre-stretch is set on the display, anywhere from 100% to 400%, by changing the speed ratio between the two motors. The most flexible type of machine, and the one where multilayer film delivers the biggest savings.',
         recommendedFilms: [
           { name: 'Nano XE 9', spec: '9µm, the light film that beats heavy ones' },
           { name: 'Nano XE 12', spec: '12µm, A and B pallets up to 600 kg' },
@@ -588,7 +628,7 @@ export const films = {
     mistakes: {
       overline: 'What goes wrong',
       heading: 'Three mistakes I see most often.',
-      body: 'Same machine, same film, very different result. The misconfiguration almost always falls into one of three patterns, one for each brake-system class.',
+      body: 'Same machine, same film, very different result. The wrong setting almost always follows one of three patterns, one for each type of brake system.',
       items: [
         {
           brakeSystem: 'Core / Electronic brake',
@@ -598,7 +638,7 @@ export const films = {
         {
           brakeSystem: '1-motor with fixed gear ratio',
           mistake:
-            'Operators often run the machine at the lowest gear ratio out of habit, even when the film can deliver more. A 250% gear set with the right film almost always pays back the conversion in weeks.',
+            'Operators often run the machine at the lowest gear ratio out of habit, even when the film can deliver more. A 250% gear set, with the right film, almost always pays back the change in a few weeks.',
         },
         {
           brakeSystem: '2-motor independently driven',
@@ -643,13 +683,13 @@ export const films = {
         { range: '≥1000 kg', recommendation: '15–17 µm' },
       ],
       note:
-        'The weight band sets the floor on thickness. The brake system sets the family. Together they pick the SKU.',
+        'The weight band sets the minimum thickness. The brake system sets the film family. Together, they point you to the right product.',
     },
   },
   catalogue: {
     overline: 'The full lineup',
     heading: 'Every film in the range, with the spec that matters.',
-    body: 'Two tables, separated because the conversation is different. Machine-wrap films are chosen against your brake system and load. Hand-wrap films are chosen against the operator and the throughput.',
+    body: 'Two tables, because the choice works differently for each. Machine-wrap films are picked based on your brake system and load. Hand-wrap films are picked based on the operator and how many pallets you wrap per shift.',
     machineWrap: {
       heading: 'Machine-wrap films',
       headers: ['Film', 'Micron', 'Brake system', 'Max pre-stretch', 'Sweet spot'],
@@ -756,11 +796,29 @@ export const films = {
         },
       ],
     },
-    recycledCallout: {
-      overline: 'Sustainability and a tax angle',
-      heading: '30% recycled content, no Plastic Packaging Tax',
-      body: 'There is a multilayer variant with 30% recycled content. The performance is identical: same construction, same holding force, same stretch, with 30% less virgin plastic. It also falls outside the UK Plastic Packaging Tax. For European distributors with UK customers, this is a commercial lever, not a sustainability bolt-on.',
-    },
+  },
+  elite: {
+    overline: 'Product spotlight',
+    heading: 'Elite: the film for machines without pre-stretch.',
+    lead: 'Elite is a stretch film built for machines that have no pre-stretch unit between the roll and the pallet: Core and Electronic brake systems. It locks out at low stretch, so it grips the load even on machines that cannot pre-stretch the film for you. The range covers two films, one for each common job.',
+    skus: [
+      {
+        name: 'Elite 8',
+        spec: '8µm, very high puncture resistance for sharp edges and exposed corners.',
+      },
+      {
+        name: 'Elite 10',
+        spec: '10µm, the everyday all-rounder for machines without a pre-stretch unit.',
+      },
+    ],
+    benefits: [
+      'High puncture and tear resistance, especially at pallet corners.',
+      'Locks out at low stretch, with no pre-stretch unit needed.',
+      'Holds the load tight for stable transport.',
+      'Less film per pallet than older 23-micron films.',
+      'Lighter rolls, easier for the operator to handle.',
+      'Replaces 23-micron and heavier films on the same machines.',
+    ],
   },
   faq: {
     overline: 'Frequently Asked Questions',
@@ -797,7 +855,7 @@ export const films = {
   cta: {
     heading: 'Match the right film to your machine.',
     subtitle:
-      'Tell me which machine you run and what you are wrapping. I will recommend the film, the pre-stretch setting, and what to expect on cost per pallet, in writing, before any visit.',
+      'Tell me which machine you run and what you are wrapping. I will recommend the film, the pre-stretch setting, and the expected cost per pallet. In writing, before any visit.',
     button: 'Contact us',
   },
 };

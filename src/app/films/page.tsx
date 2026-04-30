@@ -4,6 +4,7 @@ import { CaseStudyDM } from '@/components/sections/films/CaseStudyDM';
 import { BrakeSystemSelector } from '@/components/sections/films/BrakeSystemSelector';
 import { PalletGuide } from '@/components/sections/films/PalletGuide';
 import { FilmCatalogue } from '@/components/sections/films/FilmCatalogue';
+import { EliteSpotlight } from '@/components/sections/films/EliteSpotlight';
 import { FilmsFAQ } from '@/components/sections/films/FilmsFAQ';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { films } from '@/lib/content';
@@ -36,6 +37,7 @@ export default function FilmsPage() {
       <BrakeSystemSelector />
       <PalletGuide />
       <FilmCatalogue />
+      <EliteSpotlight />
       <FilmsFAQ />
       <CTASection
         heading={films.cta.heading}
