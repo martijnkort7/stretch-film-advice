@@ -41,11 +41,31 @@ export const homepage = {
     overline: 'The Problem',
     heading: 'You Are Probably Using Twice the Film You Need',
     body: 'Most companies I visit have good machines, but the wrong settings. Their pre-stretch is set to 200% when 300% is achievable. They use 23-micron film when 10-micron performs better. They wrap five times when three would hold. The root cause is always the same: not knowing what modern film and proper settings can do.',
-    points: [
-      'A company wrapping 200 pallets a day can save over €30,000 per year',
-      'Modern 67-layer multilayer film holds loads tighter at half the thickness, so you use less material and get a more stable pallet',
-      '95% of my assessments achieve more than 30% film reduction',
+    evidence: [
+      {
+        kpi: '€30,000+',
+        caption: 'Annual savings for a company wrapping 200 pallets a day.',
+      },
+      {
+        kpi: '67-layer',
+        caption:
+          'Modern multilayer film holds loads tighter at half the thickness — less material, more stable pallet.',
+      },
+      {
+        kpi: '95%',
+        caption: 'Of my assessments achieve more than 30% film reduction.',
+      },
     ],
+    imageCaption: {
+      before: 'Standard film · 23 μ',
+      after: 'Multilayer film · 10 μ',
+      description: 'Two compressed balls of film used to wrap an identical load.',
+      tagline: 'Less material, equal protection.',
+    },
+    cta: {
+      label: 'See Verified Results',
+      href: '/case-studies',
+    },
   },
   howWeWork: {
     overline: 'The Process',
