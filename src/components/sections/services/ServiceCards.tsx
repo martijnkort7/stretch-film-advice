@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'motion/react';
+import { ArrowUpRight } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -61,6 +63,19 @@ export function ServiceCards() {
             </StaggerItem>
           ))}
         </StaggerChildren>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/films"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:outline-none"
+          >
+            Learn how multilayer stretch film works
+            <ArrowUpRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </Link>
+        </div>
       </Container>
     </Section>
   );

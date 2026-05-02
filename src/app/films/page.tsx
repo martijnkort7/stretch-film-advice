@@ -7,6 +7,7 @@ import { FilmCatalogue } from '@/components/sections/films/FilmCatalogue';
 import { EliteSpotlight } from '@/components/sections/films/EliteSpotlight';
 import { FilmsFAQ } from '@/components/sections/films/FilmsFAQ';
 import { CTASection } from '@/components/sections/home/CTASection';
+import { InlineCta } from '@/components/sections/InlineCta';
 import { films } from '@/lib/content';
 import {
   filmsMetadata,
@@ -35,9 +36,17 @@ export default function FilmsPage() {
       <MultilayerDifference />
       <CaseStudyDM />
       <BrakeSystemSelector />
+      <InlineCta
+        heading="Not sure which brake system you have?"
+        body="Tell me what you run and I will identify it, recommend the right film, and quote a per-pallet cost in writing."
+      />
       <PalletGuide />
       <FilmCatalogue />
       <EliteSpotlight />
+      <InlineCta
+        heading="Pick the right film for your line."
+        body="A 30-minute call is enough for a first recommendation. A free on-site assessment is enough for a guaranteed savings figure."
+      />
       <FilmsFAQ />
       <CTASection
         heading={films.cta.heading}

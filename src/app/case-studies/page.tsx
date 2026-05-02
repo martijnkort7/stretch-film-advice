@@ -12,7 +12,7 @@ export default function ResultsPage() {
     <>
       <SchemaScript
         schema={breadcrumbSchema(
-          'Results',
+          'Case Studies',
           'https://www.stretchfilmadvice.com/case-studies',
         )}
       />

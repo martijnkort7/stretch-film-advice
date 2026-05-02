@@ -13,16 +13,15 @@ export const siteConfig = {
 };
 
 export const navigation = [
-  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Films & Applications', href: '/films' },
+  { label: 'Films', href: '/films' },
   { label: 'Services', href: '/services' },
   { label: 'Results', href: '/case-studies' },
 ];
 
 export const homepage = {
   hero: {
-    overline: 'Stretch Film Advisory',
+    overline: 'Stretch Film Advisory · 30-50% Less Film',
     heading: 'Get a more stable pallet.',
     subtitle:
       'Most pallets I see are not as stable as they could be, and use far more film than necessary. I optimise your machine settings and supply the right multilayer film to give you a more stable pallet at 30-50% lower cost.',
@@ -126,6 +125,34 @@ export const homepage = {
       },
     ],
   },
+  // TODO: replace placeholder quotes with real client testimonials before launch.
+  testimonials: {
+    overline: 'What Clients Say',
+    heading: 'Trusted across European production lines',
+    items: [
+      {
+        quote:
+          'Egbert spent half a day on our line and identified savings we had assumed were impossible. The new film and settings paid back inside three months.',
+        name: 'Operations Manager',
+        company: 'Distribution centre',
+        country: 'Germany',
+      },
+      {
+        quote:
+          'Independent advice — that is what set this apart. We bought film through Egbert because his recommendation was clearly the right one, not because he sold it to us.',
+        name: 'Plant Manager',
+        company: 'FMCG manufacturer',
+        country: 'Netherlands',
+      },
+      {
+        quote:
+          'Same pallet stability, 38% less film, less downtime per shift. Difficult to find anything to push back on.',
+        name: 'Logistics Director',
+        company: '3PL operator',
+        country: 'Hungary',
+      },
+    ],
+  },
   industries: {
     overline: 'Industries I Serve',
     heading: 'Saving Film Across Every Sector',
@@ -156,7 +183,7 @@ export const homepage = {
     heading: 'Find Out How Much Film You Are Wasting',
     subtitle:
       'The assessment is free and takes half a day. Most companies discover they can cut film costs by 30-50% while improving pallet stability.',
-    button: 'See How Much You Can Save',
+    button: 'Book Your Free Assessment',
   },
 };
 
@@ -274,7 +301,7 @@ export const about = {
     heading: '45 Years of Experience, One Phone Call Away',
     subtitle:
       'Whether you distribute stretch film or use it on your own line, I can show you exactly where your savings are. The first step is always a conversation.',
-    button: 'Let\u2019s Talk',
+    button: 'Book Your Free Assessment',
   },
 };
 
@@ -419,7 +446,7 @@ export const services = {
     heading: 'See the Results on Your Own Pallets',
     subtitle:
       'I will visit your site, measure your current setup, and show you exactly how much film you can save. The assessment is free and takes half a day.',
-    button: 'Get Your Free Savings Report',
+    button: 'Book Your Free Assessment',
   },
 };
 
@@ -451,7 +478,7 @@ export const films = {
         body: 'One metre of multilayer film stretches to as much as five metres on the pallet. You wrap more pallets per roll, with 30–50% lower film consumption. The cost per roll is higher; the cost per pallet is lower.',
       },
     ],
-    crossSectionImage: '/images/films/multilayer-cross-section.png',
+    crossSectionImage: '/images/films/multilayer-cross-section.webp',
     crossSectionAlt:
       'Cross-section of multilayer stretch film showing dozens of coloured microscopic layers stacked together',
     crossSectionCaption:
@@ -856,7 +883,7 @@ export const films = {
     heading: 'Match the right film to your machine.',
     subtitle:
       'Tell me which machine you run and what you are wrapping. I will recommend the film, the pre-stretch setting, and the expected cost per pallet. In writing, before any visit.',
-    button: 'Contact us',
+    button: 'Book Your Free Assessment',
   },
 };
 
@@ -964,7 +991,7 @@ export const results = {
     heading: 'This Is What I See at Nearly Every Site',
     subtitle:
       'I see the same pattern at almost every site I visit. Let me show you what is possible at your facility. The assessment is free.',
-    button: 'See How Much You Can Save',
+    button: 'Book Your Free Assessment',
   },
 };
 
@@ -1000,6 +1027,8 @@ export const contact = {
 
 export const ui = {
   getInTouch: 'Get in Touch',
+  primaryCta: 'Book Your Free Assessment',
+  primaryCtaShort: 'Free Assessment',
   skipToContent: 'Skip to content',
   openMenu: 'Open menu',
   closeMenu: 'Close menu',

@@ -39,6 +39,7 @@ export function Header() {
           <div className="flex h-20 items-center justify-between">
             <Link
               href="/"
+              aria-label="Stretch Film Advice — home"
               onClick={() => {
                 if (isHome) {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -50,10 +51,10 @@ export function Header() {
               )}
             >
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/logo.webp"
                 alt="Stretch Film Advice"
-                width={2739}
-                height={564}
+                width={1200}
+                height={247}
                 sizes="(max-width: 768px) 200px, 250px"
                 priority
                 className="h-11 w-auto md:h-[52px]"

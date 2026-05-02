@@ -14,6 +14,8 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { results } from '@/lib/content';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import type { ElementType } from 'react';
 
 const industryIcons: Record<string, ElementType> = {
@@ -664,6 +666,19 @@ export function CaseStudySlider() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/films"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-700 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+          >
+            See the multilayer stretch film behind these results
+            <ArrowUpRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </Link>
         </div>
       </Container>
     </Section>

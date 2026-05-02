@@ -143,10 +143,8 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 }}
                 aria-current={pathname === '/contact' ? 'page' : undefined}
                 className={cn(
-                  'text-sm font-medium tracking-widest uppercase transition-colors',
-                  pathname === '/contact'
-                    ? 'text-white'
-                    : 'text-white/60 hover:text-white',
+                  'inline-block rounded-full bg-red-600 px-6 py-3 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-red-700',
+                  pathname === '/contact' && 'bg-red-700',
                 )}
               >
                 {ui.getInTouch}

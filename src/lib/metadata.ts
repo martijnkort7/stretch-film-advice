@@ -7,7 +7,7 @@ export const baseMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: 'Stretch Film Advice | Cut Stretch Film Costs by 30-50%',
-    template: '%s | Stretch Film Advice',
+    template: '%s',
   },
   description:
     'Cut stretch film costs by 30-50% with expert advice on film selection and machine settings. 45+ years of experience across 25+ European countries.',
@@ -96,7 +96,7 @@ export const homeMetadata: Metadata = {
 };
 
 export const aboutMetadata: Metadata = {
-  title: 'About Egbert Kort — 45+ Years of Stretch Film Expertise',
+  title: 'About Egbert Kort — 45 Years in Stretch Film',
   description:
     'With 45+ years in the pallet wrapping industry across Europe, Egbert Kort combines machine expertise with film knowledge to deliver measurable savings at over 1,000 sites. Learn his story.',
   alternates: {
@@ -104,14 +104,14 @@ export const aboutMetadata: Metadata = {
   },
   openGraph: {
     url: `${baseUrl}/about`,
-    title: 'About Egbert Kort | 45+ Years of Pallet Wrapping Expertise',
+    title: 'About Egbert Kort — 45 Years in Stretch Film',
     description:
       '45+ years of pallet wrapping machine experience combined with deep stretch film knowledge. Over 1,000 sites assessed across 25+ countries.',
   },
 };
 
 export const servicesMetadata: Metadata = {
-  title: 'Free Stretch Film Assessment — Save 30-50% on Film Costs',
+  title: 'Free Stretch Film Assessment — Save 30-50%',
   description:
     'From on-site assessment to verified results: a proven 4-step process to cut your stretch film costs by 30-50%. Free half-day assessment, detailed report within one week. Over 1,000 sites assessed.',
   alternates: {
@@ -119,15 +119,14 @@ export const servicesMetadata: Metadata = {
   },
   openGraph: {
     url: `${baseUrl}/services`,
-    title: 'Free Stretch Film Assessment — Save 30-50% on Film Costs',
+    title: 'Free Stretch Film Assessment — Save 30-50%',
     description:
       'Comprehensive stretch film services: free on-site assessments, film selection advisory, machine configuration, training, and troubleshooting.',
   },
 };
 
 export const filmsMetadata: Metadata = {
-  title:
-    'Films & Applications: Multilayer Stretch Film Matched to Your Machine',
+  title: 'Multilayer Stretch Film for Your Machine',
   description:
     'How to choose the right multilayer stretch film for your pallet wrapping machine. Brake-system guide, full film range from Elite to Nano XE, and a real result: €17,800 saved per year at DM Hungary.',
   alternates: {
@@ -135,7 +134,7 @@ export const filmsMetadata: Metadata = {
   },
   openGraph: {
     url: `${baseUrl}/films`,
-    title: 'Films & Applications | Multilayer Stretch Film Matched to Your Machine',
+    title: 'Multilayer Stretch Film for Your Machine',
     description:
       'Match the right multilayer film to your pallet wrapping machine. Brake-system guide, full film range, and verified €17,800/year savings from a real DM Hungary line.',
     images: [
@@ -150,7 +149,7 @@ export const filmsMetadata: Metadata = {
 };
 
 export const resultsMetadata: Metadata = {
-  title: 'Stretch Film Savings — Real Results from 1,000+ Assessments',
+  title: 'Stretch Film Case Studies — 30-63% Savings',
   description:
     'Real case studies with verified savings. See how companies across Europe cut stretch film costs by 30-63% through better multilayer film and proper machine settings. 95% success rate.',
   alternates: {
@@ -158,14 +157,14 @@ export const resultsMetadata: Metadata = {
   },
   openGraph: {
     url: `${baseUrl}/case-studies`,
-    title: 'Stretch Film Savings — Real Results from 1,000+ Assessments',
+    title: 'Stretch Film Case Studies — 30-63% Savings',
     description:
       'Real numbers from real assessments. 95% of projects achieve 30%+ savings on stretch film costs.',
   },
 };
 
 export const contactMetadata: Metadata = {
-  title: 'Contact — Request Your Free Stretch Film Assessment',
+  title: 'Contact — Free Stretch Film Assessment',
   description:
     'Request a free stretch film assessment for your facility. Get a detailed savings report within one week, covering film selection and machine settings. No obligation, serving 25+ European countries.',
   alternates: {
@@ -173,7 +172,7 @@ export const contactMetadata: Metadata = {
   },
   openGraph: {
     url: `${baseUrl}/contact`,
-    title: 'Contact | Request Your Free Stretch Film Assessment',
+    title: 'Contact — Free Stretch Film Assessment',
     description:
       'Get in touch for a free stretch film assessment. Serving distributors and end-users across 25+ European countries.',
   },
@@ -186,7 +185,7 @@ export const localBusinessSchema = {
   description:
     'Expert stretch film consulting: cut costs by 30-50% through optimal film selection and machine settings.',
   url: baseUrl,
-  logo: `${baseUrl}/images/brand/logo.png`,
+  logo: `${baseUrl}/images/brand/logo.webp`,
   telephone: '+31651571072',
   email: 'egbertkort@stretchfilmadvice.com',
   address: {

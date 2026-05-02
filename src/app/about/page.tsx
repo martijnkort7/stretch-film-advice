@@ -4,6 +4,7 @@ import { TimelineSection } from '@/components/sections/about/TimelineSection';
 import { ExperienceHighlights } from '@/components/sections/about/ExperienceHighlights';
 import { WhyDifferent } from '@/components/sections/about/WhyDifferent';
 import { CTASection } from '@/components/sections/home/CTASection';
+import { InlineCta } from '@/components/sections/InlineCta';
 import { about } from '@/lib/content';
 import { aboutMetadata, breadcrumbSchema, personSchema } from '@/lib/metadata';
 import { SchemaScript } from '@/components/ui/SchemaScript';
@@ -27,6 +28,10 @@ export default function AboutPage() {
       />
       <StorySection />
       <TimelineSection />
+      <InlineCta
+        heading="45 years of pallet wrapping, available to your team."
+        body="The same precision that built this track record is one assessment away. Half a day on-site, a written report within a week, no obligation."
+      />
       <ExperienceHighlights />
       <WhyDifferent />
       <CTASection

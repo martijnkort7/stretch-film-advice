@@ -12,13 +12,14 @@ export function Footer() {
           <div>
             <Link
               href="/"
+              aria-label="Stretch Film Advice — home"
               className="inline-block rounded-lg bg-white/95 px-3 py-1.5"
             >
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/logo.webp"
                 alt="Stretch Film Advice"
-                width={2739}
-                height={564}
+                width={1200}
+                height={247}
                 sizes="(max-width: 768px) 160px, 200px"
                 className="h-9 w-auto md:h-11"
               />

@@ -17,12 +17,7 @@ export function HeroSection() {
         <div className="grid items-center lg:flex-1 lg:grid-cols-[1.6fr_1fr] lg:items-stretch lg:gap-16">
           {/* LEFT COLUMN — text content */}
           <div className="lg:self-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mb-6 flex items-center gap-3"
-            >
+            <div className="mb-6 flex items-center gap-3">
               <div className="relative size-11 shrink-0 overflow-hidden rounded-full ring-1 ring-white/15 hidden md:block lg:hidden">
                 <Image
                   src="/images/team/egbert-kort.webp"
@@ -35,14 +30,13 @@ export function HeroSection() {
               <p className="text-xs font-semibold tracking-[0.25em] text-red-400 uppercase">
                 {hero.overline}
               </p>
-            </motion.div>
+            </div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.6,
-                delay: 0.3,
+                duration: 0.5,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="font-sans text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
@@ -50,19 +44,14 @@ export function HeroSection() {
               {hero.heading}
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:mt-8 sm:text-lg"
-            >
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:mt-8 sm:text-lg">
               {hero.subtitle}
-            </motion.p>
+            </p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className="mt-6 sm:mt-10"
             >
               {/* Mobile: rectangular buttons */}
@@ -109,39 +98,22 @@ export function HeroSection() {
               </div>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              className="mt-5 text-sm text-slate-400"
-            >
-              {hero.ctaSubtext}
-            </motion.p>
+            <p className="mt-5 text-sm text-slate-400">{hero.ctaSubtext}</p>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.0 }}
-              className="mt-8 text-xs tracking-widest text-gray-400 uppercase"
-            >
+            <p className="mt-8 text-xs tracking-widest text-gray-400 uppercase">
               {hero.trustLine}
-            </motion.p>
+            </p>
           </div>
 
           {/* RIGHT COLUMN — portrait, desktop only */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.4, delay: 0.5 }}
-            className="relative hidden lg:block"
-            aria-hidden="true"
-          >
+          <div className="relative hidden lg:block" aria-hidden="true">
             <Image
               src="/images/team/egbert-kort.webp"
               alt="Egbert Kort — stretch film consultant"
               fill
               priority
-              unoptimized
+              quality={90}
+              sizes="(min-width: 1024px) 40vw, 0px"
               className="object-cover object-[center_top]"
               style={{
                 opacity: 0.95,
@@ -152,7 +124,7 @@ export function HeroSection() {
                   'linear-gradient(to right, transparent 0%, black 12%, black 100%)',
               }}
             />
-          </motion.div>
+          </div>
         </div>
       </Container>
     </section>

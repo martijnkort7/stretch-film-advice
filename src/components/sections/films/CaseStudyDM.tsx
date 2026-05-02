@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -107,6 +109,19 @@ export function CaseStudyDM() {
               {caseStudy.eumosCaption}
             </p>
           </div>
+        </FadeIn>
+
+        <FadeIn delay={0.25} className="mt-12">
+          <Link
+            href="/case-studies"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-red-400 transition-colors hover:text-red-300 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:outline-none"
+          >
+            See all 30-63% stretch film savings stories
+            <ArrowUpRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </Link>
         </FadeIn>
       </Container>
     </Section>
