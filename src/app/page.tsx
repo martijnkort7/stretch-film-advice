@@ -5,7 +5,6 @@ import { IndustriesSection } from '@/components/sections/home/IndustriesSection'
 import { HowWeWorkSection } from '@/components/sections/home/HowWeWorkSection';
 import { ExpertisePreview } from '@/components/sections/home/ExpertisePreview';
 import { BeforeAfterSection } from '@/components/sections/home/BeforeAfterSection';
-import { TestimonialsSection } from '@/components/sections/home/TestimonialsSection';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { homeMetadata } from '@/lib/metadata';
 
@@ -21,7 +20,6 @@ export default function HomePage() {
       <HowWeWorkSection />
       <ExpertisePreview />
       <BeforeAfterSection />
-      <TestimonialsSection />
       <CTASection />
     </>
   );

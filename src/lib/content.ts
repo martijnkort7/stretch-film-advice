@@ -125,34 +125,6 @@ export const homepage = {
       },
     ],
   },
-  // TODO: replace placeholder quotes with real client testimonials before launch.
-  testimonials: {
-    overline: 'What Clients Say',
-    heading: 'Trusted across European production lines',
-    items: [
-      {
-        quote:
-          'Egbert spent half a day on our line and identified savings we had assumed were impossible. The new film and settings paid back inside three months.',
-        name: 'Operations Manager',
-        company: 'Distribution centre',
-        country: 'Germany',
-      },
-      {
-        quote:
-          'Independent advice — that is what set this apart. We bought film through Egbert because his recommendation was clearly the right one, not because he sold it to us.',
-        name: 'Plant Manager',
-        company: 'FMCG manufacturer',
-        country: 'Netherlands',
-      },
-      {
-        quote:
-          'Same pallet stability, 38% less film, less downtime per shift. Difficult to find anything to push back on.',
-        name: 'Logistics Director',
-        company: '3PL operator',
-        country: 'Hungary',
-      },
-    ],
-  },
   industries: {
     overline: 'Industries I Serve',
     heading: 'Saving Film Across Every Sector',
