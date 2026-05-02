@@ -17,7 +17,7 @@ export function HeroSection() {
         <div className="grid items-center lg:flex-1 lg:grid-cols-[1.6fr_1fr] lg:items-stretch lg:gap-16">
           {/* LEFT COLUMN — text content */}
           <div className="lg:self-center">
-            <div className="mb-6 flex items-center gap-3">
+            <div className="mb-6 hidden items-center gap-3 md:flex">
               <div className="relative size-11 shrink-0 overflow-hidden rounded-full ring-1 ring-white/15 hidden md:block lg:hidden">
                 <Image
                   src="/images/team/egbert-kort.webp"
