@@ -526,7 +526,7 @@ export const films = {
           metric: 'Pre-stretch on pallet',
           before: '170%',
           after: '270%',
-          result: '+100 pts',
+          result: '+100 pp',
         },
         {
           metric: 'Film per pallet',
