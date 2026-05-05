@@ -572,11 +572,17 @@ export const films = {
     beforeImage: '/images/films/dm-hungary-before.jpg',
     beforeAlt:
       'DM Hungary pallet wrapped with 17-micron standard film at 170% pre-stretch, before the switch to multilayer.',
-    beforeCaption: 'Before: 17µm standard film at 170% pre-stretch.',
+    beforeIndex: '01',
+    beforeLabel: 'Before',
+    beforeMetaPrimary: '17µm standard film',
+    beforeMetaSecondary: '178 g per pallet · 9.5 kg holding force',
     afterImage: '/images/films/dm-hungary-after.jpg',
     afterAlt:
       'Same DM Hungary pallet line wrapped with Nano SE 15-micron multilayer film at 270% pre-stretch, after the switch.',
-    afterCaption: 'After: Nano SE 15µm at 270% pre-stretch.',
+    afterIndex: '02',
+    afterLabel: 'After',
+    afterMetaPrimary: 'Nano SE 15µm multilayer',
+    afterMetaSecondary: '104 g per pallet · 19 kg holding force',
     eumosImage: '/images/films/eumos-acceleration-test.jpeg',
     eumosAlt:
       'EUMOS 40509 acceleration test of a wrapped pallet, showing the load held within tolerance with less than 2% layer displacement at 1280mm',

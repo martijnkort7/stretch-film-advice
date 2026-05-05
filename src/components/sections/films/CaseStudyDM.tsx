@@ -23,40 +23,71 @@ export function CaseStudyDM() {
           />
         </FadeIn>
 
-        <FadeIn delay={0.1} className="mt-12 lg:mt-16">
-          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
-            <figure>
-              <div className="overflow-hidden rounded-sm border border-white/10 bg-white">
-                <Image
-                  src={caseStudy.beforeImage}
-                  alt={caseStudy.beforeAlt}
-                  width={1535}
-                  height={594}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="h-auto w-full object-contain"
-                />
-              </div>
-              <figcaption className="mt-3 text-sm leading-relaxed text-slate-400">
-                {caseStudy.beforeCaption}
-              </figcaption>
-            </figure>
-            <figure>
-              <div className="overflow-hidden rounded-sm border border-white/10 bg-white">
-                <Image
-                  src={caseStudy.afterImage}
-                  alt={caseStudy.afterAlt}
-                  width={1998}
-                  height={809}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="h-auto w-full object-contain"
-                />
-              </div>
-              <figcaption className="mt-3 text-sm leading-relaxed text-slate-400">
-                {caseStudy.afterCaption}
-              </figcaption>
-            </figure>
+        <div className="mt-12 border-y border-slate-700 lg:mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <FadeIn
+              delay={0.1}
+              className="border-b border-slate-700 md:border-r md:border-b-0"
+            >
+              <figure className="pt-6 pb-7 md:pr-6 lg:pr-10">
+                <header className="flex items-baseline gap-4 pb-5">
+                  <span className="font-serif text-3xl leading-none text-slate-500 tabular-nums">
+                    {caseStudy.beforeIndex}
+                  </span>
+                  <span className="text-[11px] font-semibold tracking-[0.2em] text-red-400 uppercase">
+                    {caseStudy.beforeLabel}
+                  </span>
+                </header>
+                <div className="relative aspect-[247/100] overflow-hidden">
+                  <Image
+                    src={caseStudy.beforeImage}
+                    alt={caseStudy.beforeAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="pt-5">
+                  <p className="font-sans text-base leading-snug font-medium text-white">
+                    {caseStudy.beforeMetaPrimary}
+                  </p>
+                  <p className="mt-1.5 font-sans text-sm leading-relaxed text-slate-400">
+                    {caseStudy.beforeMetaSecondary}
+                  </p>
+                </figcaption>
+              </figure>
+            </FadeIn>
+            <FadeIn delay={0.25}>
+              <figure className="pt-6 pb-7 md:pl-6 lg:pl-10">
+                <header className="flex items-baseline gap-4 pb-5">
+                  <span className="font-serif text-3xl leading-none text-slate-500 tabular-nums">
+                    {caseStudy.afterIndex}
+                  </span>
+                  <span className="text-[11px] font-semibold tracking-[0.2em] text-red-400 uppercase">
+                    {caseStudy.afterLabel}
+                  </span>
+                </header>
+                <div className="relative aspect-[247/100] overflow-hidden">
+                  <Image
+                    src={caseStudy.afterImage}
+                    alt={caseStudy.afterAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="pt-5">
+                  <p className="font-sans text-base leading-snug font-medium text-white">
+                    {caseStudy.afterMetaPrimary}
+                  </p>
+                  <p className="mt-1.5 font-sans text-sm leading-relaxed text-slate-400">
+                    {caseStudy.afterMetaSecondary}
+                  </p>
+                </figcaption>
+              </figure>
+            </FadeIn>
           </div>
-        </FadeIn>
+        </div>
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-5 lg:items-center lg:gap-16">
           <FadeIn className="lg:col-span-2" direction="left">
